@@ -3,13 +3,13 @@
   "id": "scraping_tweets",
   "type": "step_based",
   "name": "scraping_tweets",
-  "active": false,
+  "active": true,
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1583515220366
+    "lastModifiedOn": 1583515313705
   },
   "checklists": {
     "checklists": []
@@ -20,8 +20,48 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
-  "reporters": [],
+  "triggers": [
+    {
+      "id": "2Aavocx8",
+      "type": "temporal",
+      "name": "weekly update",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "frequency": "Weekly",
+        "daysOfWeek": [
+          "Sunday"
+        ],
+        "dayOfMonth": 1,
+        "minute": 0,
+        "hour": 1,
+        "count": 5
+      }
+    }
+  ],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "mail-scenario",
+        "configuration": {
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "sender": "makoto.miyazaki@dataiku.com",
+          "recipient": "makoto.miyazaki@dataiku.com",
+          "sendAsHTML": false,
+          "attachments": [],
+          "messageSource": "TEMPLATE_FILE",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        }
+      },
+      "id": "gCSoab4v",
+      "name": "scraping twitter notification",
+      "runConditionEnabled": true,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
   "params": {
     "steps": []
   },
