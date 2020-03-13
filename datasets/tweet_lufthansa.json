@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584026831094
+    "lastModifiedOn": 1584099159022
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,93 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "screen_name",
+        "type": "string"
+      },
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "name": "tweet_id",
+        "type": "string"
+      },
+      {
+        "name": "tweet_url",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "timestamp_epochs",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "text_html",
+        "type": "string"
+      },
+      {
+        "name": "links",
+        "type": "string"
+      },
+      {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
+        "name": "has_media",
+        "type": "string"
+      },
+      {
+        "name": "img_urls",
+        "type": "string"
+      },
+      {
+        "name": "video_url",
+        "type": "string"
+      },
+      {
+        "name": "likes",
+        "type": "string"
+      },
+      {
+        "name": "retweets",
+        "type": "string"
+      },
+      {
+        "name": "replies",
+        "type": "string"
+      },
+      {
+        "name": "is_replied",
+        "type": "string"
+      },
+      {
+        "name": "is_reply_to",
+        "type": "string"
+      },
+      {
+        "name": "parent_tweet_id",
+        "type": "string"
+      },
+      {
+        "name": "reply_to_users",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
