@@ -21,9 +21,6 @@ cols = ['screen_name', 'username', 'user_id', 'tweet_id', 'tweet_url', 'timestam
 df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-datetime.date.today() - datetime.timedelta(4)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 company = 'lufthansa'
 enddate = datetime.date.today()
 begindate = enddate - datetime.timedelta(4)
