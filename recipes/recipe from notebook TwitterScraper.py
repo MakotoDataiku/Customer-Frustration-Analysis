@@ -54,8 +54,6 @@ for row, tweet in enumerate(list_of_tweets):
         df.loc[row,'parent_tweet_id'] = tweet.parent_tweet_id
         df.loc[row,'reply_to_users'] = tweet.reply_to_users
 
-
-
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Recipe outputs
 tweet_lufthansa = dataiku.Dataset("tweet_lufthansa")
