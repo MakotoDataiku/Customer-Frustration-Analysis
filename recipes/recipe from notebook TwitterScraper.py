@@ -21,9 +21,12 @@ cols = ['screen_name', 'username', 'user_id', 'tweet_id', 'tweet_url', 'timestam
 df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+datetime.date.today() - datetime.timedelta(4)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 company = 'lufthansa'
-begindate = datetime.date(2020,3,9)
 enddate = datetime.date.today()
+begindate = enddate - datetime.timedelta(4)
 list_of_tweets = query_tweets(company,
                           begindate = begindate,
                           enddate = enddate,
