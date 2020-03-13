@@ -22,7 +22,7 @@ df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 company = 'lufthansa'
-begindate = datetime.date(2020,1,1)
+begindate = datetime.date(2020,3,9)
 enddate = datetime.date.today()
 list_of_tweets = query_tweets(company,
                           begindate = begindate,
