@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584298832223
+    "lastModifiedOn": 1584315380756
   },
   "creationTag": {
     "versionNumber": 0,
@@ -123,11 +123,8 @@
         "type": "string"
       },
       {
-        "name": "links",
-        "type": "array",
-        "arrayContent": {
-          "type": "string"
-        }
+        "name": "links_new",
+        "type": "string"
       },
       {
         "name": "hashtags",
