@@ -85,55 +85,16 @@
     },
     {
       "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 3
-        }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "links_0_0",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": "\u0027",
-        "outColPrefix": "links_0_0_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "ColumnsSelector",
       "params": {
         "columns": [
-          "links",
-          "links_0_0_2",
-          "links_0_0_1",
-          "links_0_0",
-          "links_0"
+          "links_0",
+          "links"
         ],
         "keep": false,
         "appliesTo": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "links_0_0_0",
-            "to": "links_new"
-          }
-        ]
       },
       "alwaysShowComment": false
     }
