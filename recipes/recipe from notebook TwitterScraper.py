@@ -25,9 +25,10 @@ company = 'lufthansa'
 enddate = datetime.date.today()
 begindate = enddate - datetime.timedelta(4)
 list_of_tweets = query_tweets(company,
-                          begindate = begindate,
-                          enddate = enddate,
-                          poolsize = 10)
+                              begindate = begindate,
+                              enddate = enddate,
+                              poolsize = 10, 
+                              lang = 'en')
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for row, tweet in enumerate(list_of_tweets):
