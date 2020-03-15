@@ -42,74 +42,33 @@
       "alwaysShowComment": false
     },
     {
-      "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 1
-        }
-      },
+      "preview": true,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "ColumnSplitter",
+      "type": "FindReplace",
       "params": {
-        "inCol": "links",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": "[",
-        "outColPrefix": "links_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 1
-        }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "links_0",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": "]",
-        "outColPrefix": "links_0_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
+        "output": "links",
+        "mapping": [
+          {
+            "from": "[",
+            "to": ""
+          },
+          {
+            "from": "]",
+            "to": ""
+          },
+          {
+            "from": "\u0027",
+            "to": ""
+          }
+        ],
+        "normalization": "EXACT",
         "columns": [
-          "links_0",
           "links"
         ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnRenamer",
-      "params": {
-        "renamings": [
-          {
-            "from": "links_0_0",
-            "to": "links_new"
-          }
-        ]
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
       },
       "alwaysShowComment": false
     }
