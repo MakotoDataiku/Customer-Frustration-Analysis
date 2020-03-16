@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584305534171
+    "lastModifiedOn": 1584317150609
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,97 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "screen_name",
+        "type": "string"
+      },
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "user_id",
+        "type": "bigint"
+      },
+      {
+        "name": "tweet_id",
+        "type": "bigint"
+      },
+      {
+        "name": "tweet_url",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "timestamp_epochs",
+        "type": "bigint"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "text_html",
+        "type": "string"
+      },
+      {
+        "name": "links",
+        "type": "string"
+      },
+      {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
+        "name": "has_media",
+        "type": "boolean"
+      },
+      {
+        "name": "img_urls",
+        "type": "string"
+      },
+      {
+        "name": "video_url",
+        "type": "double"
+      },
+      {
+        "name": "likes",
+        "type": "bigint"
+      },
+      {
+        "name": "retweets",
+        "type": "bigint"
+      },
+      {
+        "name": "replies",
+        "type": "bigint"
+      },
+      {
+        "name": "is_replied",
+        "type": "boolean"
+      },
+      {
+        "name": "is_reply_to",
+        "type": "boolean"
+      },
+      {
+        "name": "parent_tweet_id",
+        "type": "double"
+      },
+      {
+        "name": "reply_to_users",
+        "type": "string"
+      },
+      {
+        "name": "company",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
