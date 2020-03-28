@@ -19,6 +19,7 @@ cols = ['screen_name', 'username', 'user_id', 'tweet_id', 'tweet_url', 'timestam
            'parent_tweet_id', 'reply_to_users']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df_big = pd.DataFrame(columns=cols)
 df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -62,6 +63,7 @@ for company in companies_list:
             df.loc[row,'reply_to_users'] = tweet.reply_to_users
 
     df["company"] = company
+    df_big = pd.concat([df_big, df], ignore_index=True)
 
 # Recipe outputs
 tweets = dataiku.Dataset("tweets")
