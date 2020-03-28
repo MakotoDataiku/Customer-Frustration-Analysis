@@ -56,6 +56,8 @@ for row, tweet in enumerate(list_of_tweets):
         df.loc[row,'reply_to_users'] = tweet.reply_to_users
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df["company"] = company
+
 # Recipe outputs
 tweets = dataiku.Dataset("tweets")
 tweets.write_with_schema(df)
