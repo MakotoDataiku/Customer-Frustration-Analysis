@@ -31,6 +31,10 @@ n_days = ast.literal_eval(dataiku.get_custom_variables()['n_days'])
 for company in companies_list:
     print(company)
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+for company in companies_list:
+    print(company)
+
     enddate = datetime.date.today()
     begindate = enddate - datetime.timedelta(n_days)
     list_of_tweets = query_tweets(company,
@@ -68,4 +72,4 @@ for company in companies_list:
 
 # Recipe outputs
 tweets = dataiku.Dataset("tweets")
-tweets.write_with_schema(df)
+tweets.write_with_schema(df_big)
