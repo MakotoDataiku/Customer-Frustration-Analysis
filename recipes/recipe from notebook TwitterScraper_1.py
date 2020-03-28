@@ -21,7 +21,7 @@ cols = ['screen_name', 'username', 'user_id', 'tweet_id', 'tweet_url', 'timestam
 df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-company = 'lufthansa'
+company = 
 enddate = datetime.date.today()
 begindate = enddate - datetime.timedelta(4)
 list_of_tweets = query_tweets(company,
@@ -57,5 +57,5 @@ for row, tweet in enumerate(list_of_tweets):
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Recipe outputs
-tweet_lufthansa = dataiku.Dataset("tweet_lufthansa")
-tweet_lufthansa.write_with_schema(df)
+tweets = dataiku.Dataset("tweets")
+tweets.write_with_schema(df)
