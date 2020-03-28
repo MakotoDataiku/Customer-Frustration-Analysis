@@ -1,11 +1,7 @@
 {
   "company": [
     "Lufthansa",
-    "Ryanair",
-    "Emirates",
-    "United Airlines",
-    "Delta Air Lines",
-    "Air France"
+    "Ryanair"
   ],
-  "n_days": 2
+  "n_days": 1
 }
