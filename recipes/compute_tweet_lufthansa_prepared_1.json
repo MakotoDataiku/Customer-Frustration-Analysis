@@ -11,6 +11,9 @@
           "map": {
             "tweet_lufthansa": {
               "repartition": 10
+            },
+            "tweets": {
+              "repartition": 10
             }
           }
         },
@@ -69,11 +72,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585423134011
+    "lastModifiedOn": 1585423156020
   },
   "creationTag": {
     "versionNumber": 0,
