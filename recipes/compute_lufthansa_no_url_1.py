@@ -6,8 +6,8 @@ from dataiku import pandasutils as pdu
 import re
 
 # Read recipe inputs
-tweet_lufthansa_prepared = dataiku.Dataset("tweet_lufthansa_prepared")
-tweet_lufthansa_prepared_df = tweet_lufthansa_prepared.get_dataframe()
+tweets_prep = dataiku.Dataset("tweets_prep")
+tweets_prep_df = tweets_prep.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # tweet_lufthansa_prepared_df['text_noURL'] = tweet_lufthansa_prepared_df.apply\
@@ -20,16 +20,16 @@ def URLremover(text):
     return text
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-tweet_lufthansa_prepared_df['text'] = tweet_lufthansa_prepared_df.text.apply(URLremover)
+tweets_prep_df['text'] = tweets_prep_df.text.apply(URLremover)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
 # NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
 
-lufthansa_no_url_df = tweet_lufthansa_prepared_df # For this sample code, simply copy input to output
+tweets_noURL_df = tweets_prep_df # For this sample code, simply copy input to output
 
 
 # Write recipe outputs
-lufthansa_no_url = dataiku.Dataset("lufthansa_no_url")
-lufthansa_no_url.write_with_schema(lufthansa_no_url_df)
+tweets_noURL = dataiku.Dataset("tweets_noURL")
+tweets_noURL.write_with_schema(tweets_noURL_df)
