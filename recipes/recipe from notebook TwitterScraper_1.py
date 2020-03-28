@@ -29,6 +29,7 @@ n_days = ast.literal_eval(dataiku.get_custom_variables()['n_days'])
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for company in companies_list:
+    print(company)
 
     enddate = datetime.date.today()
     begindate = enddate - datetime.timedelta(n_days)
