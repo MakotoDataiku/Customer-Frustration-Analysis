@@ -24,12 +24,13 @@ df = pd.DataFrame(columns=cols)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 companies = dataiku.get_custom_variables()['company']
 companies_list = ast.literal_eval(companies)
+n_days = dataiku.get_custom_variables()['n_days']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for company in companies_list:
 
     enddate = datetime.date.today()
-    begindate = enddate - datetime.timedelta(5)
+    begindate = enddate - datetime.timedelta(n_days)
     list_of_tweets = query_tweets(company,
                                   begindate = begindate,
                                   enddate = enddate,
