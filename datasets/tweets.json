@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585430091539
+    "lastModifiedOn": 1585434587069
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,47 +87,7 @@
   "schema": {
     "columns": [
       {
-        "name": "screen_name",
-        "type": "string"
-      },
-      {
-        "name": "username",
-        "type": "string"
-      },
-      {
-        "name": "user_id",
-        "type": "string"
-      },
-      {
-        "name": "tweet_id",
-        "type": "string"
-      },
-      {
-        "name": "tweet_url",
-        "type": "string"
-      },
-      {
-        "name": "timestamp",
-        "type": "string"
-      },
-      {
-        "name": "timestamp_epochs",
-        "type": "string"
-      },
-      {
-        "name": "text",
-        "type": "string"
-      },
-      {
-        "name": "text_html",
-        "type": "string"
-      },
-      {
-        "name": "links",
-        "type": "string"
-      },
-      {
-        "name": "hashtags",
+        "name": "company",
         "type": "string"
       },
       {
@@ -135,23 +95,11 @@
         "type": "string"
       },
       {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
         "name": "img_urls",
-        "type": "string"
-      },
-      {
-        "name": "video_url",
-        "type": "string"
-      },
-      {
-        "name": "likes",
-        "type": "string"
-      },
-      {
-        "name": "retweets",
-        "type": "string"
-      },
-      {
-        "name": "replies",
         "type": "string"
       },
       {
@@ -163,11 +111,67 @@
         "type": "string"
       },
       {
+        "name": "likes",
+        "type": "string"
+      },
+      {
+        "name": "links",
+        "type": "string"
+      },
+      {
         "name": "parent_tweet_id",
         "type": "string"
       },
       {
+        "name": "replies",
+        "type": "string"
+      },
+      {
         "name": "reply_to_users",
+        "type": "string"
+      },
+      {
+        "name": "retweets",
+        "type": "string"
+      },
+      {
+        "name": "screen_name",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "text_html",
+        "type": "string"
+      },
+      {
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "timestamp_epochs",
+        "type": "string"
+      },
+      {
+        "name": "tweet_id",
+        "type": "string"
+      },
+      {
+        "name": "tweet_url",
+        "type": "string"
+      },
+      {
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "video_url",
         "type": "string"
       }
     ],
