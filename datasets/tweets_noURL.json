@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585423273250
+    "lastModifiedOn": 1585434783172
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,23 +87,63 @@
   "schema": {
     "columns": [
       {
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "name": "has_media",
+        "type": "boolean"
+      },
+      {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
+        "name": "img_urls",
+        "type": "string"
+      },
+      {
+        "name": "is_replied",
+        "type": "boolean"
+      },
+      {
+        "name": "is_reply_to",
+        "type": "boolean"
+      },
+      {
+        "name": "likes",
+        "type": "bigint"
+      },
+      {
+        "name": "links",
+        "type": "string"
+      },
+      {
+        "name": "parent_tweet_id",
+        "type": "double"
+      },
+      {
+        "name": "replies",
+        "type": "bigint"
+      },
+      {
+        "name": "reply_to_users",
+        "type": "string"
+      },
+      {
+        "name": "retweets",
+        "type": "bigint"
+      },
+      {
         "name": "screen_name",
         "type": "string"
       },
       {
-        "name": "username",
+        "name": "text",
         "type": "string"
       },
       {
-        "name": "user_id",
-        "type": "bigint"
-      },
-      {
-        "name": "tweet_id",
-        "type": "bigint"
-      },
-      {
-        "name": "tweet_url",
+        "name": "text_html",
         "type": "string"
       },
       {
@@ -115,64 +155,24 @@
         "type": "bigint"
       },
       {
-        "name": "text",
+        "name": "tweet_id",
+        "type": "bigint"
+      },
+      {
+        "name": "tweet_url",
         "type": "string"
       },
       {
-        "name": "text_html",
-        "type": "string"
+        "name": "user_id",
+        "type": "bigint"
       },
       {
-        "name": "links",
-        "type": "string"
-      },
-      {
-        "name": "hashtags",
-        "type": "string"
-      },
-      {
-        "name": "has_media",
-        "type": "boolean"
-      },
-      {
-        "name": "img_urls",
+        "name": "username",
         "type": "string"
       },
       {
         "name": "video_url",
         "type": "double"
-      },
-      {
-        "name": "likes",
-        "type": "bigint"
-      },
-      {
-        "name": "retweets",
-        "type": "bigint"
-      },
-      {
-        "name": "replies",
-        "type": "bigint"
-      },
-      {
-        "name": "is_replied",
-        "type": "boolean"
-      },
-      {
-        "name": "is_reply_to",
-        "type": "boolean"
-      },
-      {
-        "name": "parent_tweet_id",
-        "type": "double"
-      },
-      {
-        "name": "reply_to_users",
-        "type": "string"
-      },
-      {
-        "name": "company",
-        "type": "string"
       }
     ],
     "userModified": false
