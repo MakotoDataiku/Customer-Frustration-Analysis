@@ -7,5 +7,10 @@
     "Delta Air Lines",
     "Air France"
   ],
-  "n_days": 2
+  "n_days": 2,
+  "stopwords": [
+    1,
+    2,
+    3
+  ]
 }
