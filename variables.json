@@ -9,7 +9,7 @@
   ],
   "n_days": 2,
   "stopwords": [
-    1,
-    2
+    "real",
+    "value"
   ]
 }
