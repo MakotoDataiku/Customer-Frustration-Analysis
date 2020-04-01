@@ -8,8 +8,10 @@
     "Air France"
   ],
   "n_days": 2,
-  "stopwords": [
-    "real",
-    "value"
+  "exclude_stopwords": [
+    "it",
+    "this",
+    "they",
+    "these"
   ]
 }
