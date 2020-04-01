@@ -359,61 +359,21 @@ def extract_aspects(reviews,nlp,sid, text_column, review_id, product_id):
     return aspect_list
 
 
-def aspect_extraction(nlp, sid, arg, csvname, tsvname, text_column, review_id, product_id):
+def aspect_extraction(nlp, sid, arg, csvname, tsvname, text_column, review_id, product_id, folder_path):
     usecols =  ['review_id','review_body','product_id']
-
-    # UNCOMMENT THIS WHEN RUNNING ON AWS
-    if arg == 0 :
-        print("$$$$$$ Running for the one whole file $$$$$$")
-
-        s3_filename = "amazon_reviews_us_Electronics_v1_00.tsv.gz"
-        raw_data = fetch_s3(s3_filename, usecols)
-
-        # reviews = clean_data.clean_data(reviews)
-        # aspect_list = extract_aspects(reviews,nlp,sid)
-        print("Working on Chunks!!!")
-        chunk_count = 0
-        #reviews = pd.DataFrame()
-        for reviews in raw_data:
-            chunk_count = chunk_count + 1
-            reviews = clean_data.clean_data(reviews)
-            time_start = time()
-            aspect_list = extract_aspects(reviews,nlp,sid)
-            time_end = time()
-            print("Time for aspect extraction: {0:.2}s".format(time_end-time_start))
-            print(f'Updating chunk results : {chunk_count}')
-            time_start_1 = time()
-            print("Appending to JSON FIle")
-            aspect_list = list(aspect_list)
-            with open('data/interim/reviews_aspect_raw.json', 'a') as outfile:
-                json.dump(aspect_list, outfile)
-            time_end_1 = time()
-            print("Time for Writing: {0:.2}s".format(time_end_1-time_start_1))
-
-            print("Finished writing results to JSON!!")
-            print("----------------***----------------")
-
-    else :
-        print("&&&&& Running for the toy file &&&&&")
-        # reviews = pd.read_table("data/raw/toy.tsv",error_bad_lines=False, usecols= usecols)
-        if tsvname:
-            reviews = pd.read_table(tsvname, error_bad_lines=False, usecols= usecols)
-        elif csvname:
-            reviews = pd.read_csv(csvname)
-        else:
-            print("Please enter the csv or tsv file name")
-        
-        if reviews.shape[0]>1000000:
-            reviews = reviews.sample(n=1000, random_state=222)
-            print("Since review data frame was too big, sample has been taken")
-        else:
-            reviews = reviews
-        reviews = clean_data.clean_data(reviews, text_column = text_column)
-        aspect_list = extract_aspects(reviews,nlp,sid, text_column, review_id, product_id)
-        aspect_list = list(aspect_list)
-        with open('data/interim/reviews_aspect_raw.json', 'w') as outfile:
-            json.dump(aspect_list, outfile)
-        #reviews = pd.concat([reviews,chunk])
+    reviews = data
+    if reviews.shape[0]>1000000:
+        reviews = reviews.sample(n=1000, random_state=222)
+        print("Since review data frame was too big, sample has been taken")
+    else:
+        reviews = reviews
+    reviews = clean_data.clean_data(reviews, text_column = text_column)
+    aspect_list = extract_aspects(reviews,nlp,sid, text_column, review_id, product_id)
+    aspect_list = list(aspect_list)
+    json_path = folder_path + "/reviews_aspect_raw.json"
+    with open(json_path, 'w') as outfile:
+        json.dump(aspect_list, outfile)
+    #reviews = pd.concat([reviews,chunk])
 
     #print(f'Shape of the merged file:{reviews.shape}')
 
