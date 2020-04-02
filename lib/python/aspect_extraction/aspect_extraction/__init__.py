@@ -4,7 +4,7 @@ import json
 from clean_data.clean_data import clean_data
 from aspect_extraction.extract_aspects import extract_aspects
 
-def aspect_extraction(nlp, sid, arg, csvname, tsvname, text_column, review_id, product_id, folder_path):
+def aspect_extraction(nlp, sid, arg, data, text_column, review_id, product_id, folder_path):
     usecols =  ['review_id','review_body','product_id']
     reviews = data
     if reviews.shape[0]>1000000:
