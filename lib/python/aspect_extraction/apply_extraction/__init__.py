@@ -2,6 +2,7 @@
 import spacy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob import TextBlob
+import dataiku
 
 prod_pronouns = dataiku.get_custom_variables()['prod_pronouns']
 prod_pronouns = ast.literal_eval(prod_pronouns)
