@@ -1,7 +1,7 @@
 import pandas as pd
 from sys import argv
 import re
-from clearn_data.demojify import demojify
+from clean_data.demojify import demojify
 
 #Input file name as argv to run
 
