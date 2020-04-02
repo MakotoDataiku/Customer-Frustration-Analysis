@@ -1,8 +1,6 @@
-def extract_aspects(reviews,nlp,sid, text_column, review_id, product_id):
+from aspect_extraction.apply_extraction import apply_extraction
 
-    #reviews = df[['review_id', 'review_body']]
-    # nlp = init_spacy()
-    # sid = init_nltk()
+def extract_aspects(reviews,nlp,sid, text_column, review_id, product_id):
 
     print("Entering Apply function!")
     aspect_list = reviews.apply(lambda row: apply_extraction(row,nlp,sid, 

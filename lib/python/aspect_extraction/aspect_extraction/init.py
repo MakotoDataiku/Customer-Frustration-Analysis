@@ -1,3 +1,6 @@
+import os
+import pandas as pd
+import json
 from clean_data.clean_data import clean_data
 from aspect_extraction.extract_aspects import extract_aspects
 
