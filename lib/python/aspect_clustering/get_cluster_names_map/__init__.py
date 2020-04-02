@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 def get_cluster_names_map(asp_to_cluster_map, aspect_freq_map):
     # assigns the most frequent noun for each cluster
     cluster_id_to_name_map = defaultdict()
