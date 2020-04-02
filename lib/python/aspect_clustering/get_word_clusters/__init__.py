@@ -2,7 +2,7 @@ from aspect_clustering.get_word_vectors import get_word_vectors
 import dataiku
 from sklearn import cluster
 
-NUM_CLUSTERS = dataiku.get_custom_variables()['NUM_CLUSTERS']
+NUM_CLUSTERS = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
 
 def get_word_clusters(unique_aspects, nlp):
     print("Found {} unique aspects for this product".format(len(unique_aspects)))
