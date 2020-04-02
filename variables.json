@@ -8,6 +8,7 @@
     "Air France"
   ],
   "n_days": 2,
+  "NUM_CLUSTERS": 4,
   "exclude_stopwords": [
     "it",
     "this",
