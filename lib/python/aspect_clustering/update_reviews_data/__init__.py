@@ -22,6 +22,8 @@ def update_reviews_data(reviews_data, nlp):
         updated_reviews.append(this_product_upd_reviews)
         print("updated reviews added")
     reviews_clustered = aspect_to_pandas(updated_reviews)
-    reviews_clustered.to_csv('data/processed/reviews_clustered.csv', index=True, index_label=False)
+    # reviews_clustered.to_csv('data/processed/reviews_clustered.csv', index=True, index_label=False)
     reviews_grouped = assign_groups(prod_id, reviews_clustered, nlp)
-    reviews_grouped.to_csv('data/processed/reviews_grouped.csv', index=True, index_label=False)
+    # reviews_grouped.to_csv('data/processed/reviews_grouped.csv', index=True, index_label=False)
+    
+    return reviews_clustered, reviews_grouped
