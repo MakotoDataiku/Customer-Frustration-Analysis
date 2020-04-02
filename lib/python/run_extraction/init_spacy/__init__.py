@@ -1,4 +1,6 @@
 import spacy
+import dataiku
+import ast
 
 stopwords = dataiku.get_custom_variables()['stopwords']
 stopwords = ast.literal_eval(stopwords)
