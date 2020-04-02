@@ -14,6 +14,12 @@
     "they",
     "these"
   ],
+  "prod_pronouns": [
+    "it",
+    "this",
+    "they",
+    "these"
+  ],
   "stopwords": [
     "i",
     "me",
