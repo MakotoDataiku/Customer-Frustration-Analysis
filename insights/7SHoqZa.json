@@ -207,11 +207,11 @@
   "name": "Sentiment luggage on sentiment_by_companies",
   "dashboardCreationId": "O2kuPnx",
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585840259247
+    "lastModifiedOn": 1585840262483
   },
   "creationTag": {
     "versionNumber": 0,
