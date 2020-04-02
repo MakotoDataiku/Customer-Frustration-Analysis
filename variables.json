@@ -1,10 +1,5 @@
 {
   "company": [
-    "Lufthansa",
-    "Ryanair",
-    "Emirates",
-    "United Airlines",
-    "Delta Air Lines",
     "Air France"
   ],
   "NUM_CLUSTERS": 4,
