@@ -32,16 +32,20 @@
         {
           "ref": "aspects_clustered",
           "appendMode": false
+        },
+        {
+          "ref": "aspects_grouped",
+          "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585817415487
+    "lastModifiedOn": 1585817431495
   },
   "creationTag": {
     "versionNumber": 0,
