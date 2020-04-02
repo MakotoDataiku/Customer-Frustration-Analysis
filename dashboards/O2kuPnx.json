@@ -14,9 +14,9 @@
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
-              "showXAxis": true,
+              "showXAxis": false,
               "showYAxis": true,
-              "showLegend": false,
+              "showLegend": true,
               "showTooltips": true,
               "autoPlayAnimation": true
             },
@@ -37,7 +37,7 @@
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
-              "showXAxis": true,
+              "showXAxis": false,
               "showYAxis": true,
               "showLegend": false,
               "showTooltips": true,
@@ -60,7 +60,7 @@
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
-              "showXAxis": true,
+              "showXAxis": false,
               "showYAxis": true,
               "showLegend": false,
               "showTooltips": true,
@@ -83,7 +83,7 @@
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
-              "showXAxis": true,
+              "showXAxis": false,
               "showYAxis": true,
               "showLegend": false,
               "showTooltips": true,
@@ -107,11 +107,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585840135829
+    "lastModifiedOn": 1585840183091
   },
   "creationTag": {
     "versionNumber": 0,
