@@ -7,13 +7,14 @@
     "Delta Air Lines",
     "Air France"
   ],
-  "n_days": 2,
   "NUM_CLUSTERS": 4,
+  "n_days": 2,
   "exclude_stopwords": [
     "it",
     "this",
     "they",
-    "these"
+    "these",
+    "those"
   ],
   "prod_pronouns": [
     "it",
