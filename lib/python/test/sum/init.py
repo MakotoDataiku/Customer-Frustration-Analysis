@@ -1,3 +1,3 @@
-def test(x):
+def sum(x):
     y = x + 1
     return y
