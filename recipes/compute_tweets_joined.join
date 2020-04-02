@@ -1,0 +1,157 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "conditionsMode": "AND",
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": []
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "company",
+      "table": 0
+    },
+    {
+      "name": "has_media",
+      "table": 0
+    },
+    {
+      "name": "hashtags",
+      "table": 0
+    },
+    {
+      "name": "img_urls",
+      "table": 0
+    },
+    {
+      "name": "is_replied",
+      "table": 0
+    },
+    {
+      "name": "is_reply_to",
+      "table": 0
+    },
+    {
+      "name": "likes",
+      "table": 0
+    },
+    {
+      "name": "links",
+      "table": 0
+    },
+    {
+      "name": "parent_tweet_id",
+      "table": 0
+    },
+    {
+      "name": "replies",
+      "table": 0
+    },
+    {
+      "name": "reply_to_users",
+      "table": 0
+    },
+    {
+      "name": "retweets",
+      "table": 0
+    },
+    {
+      "name": "screen_name",
+      "table": 0
+    },
+    {
+      "name": "text",
+      "table": 0
+    },
+    {
+      "name": "text_html",
+      "table": 0
+    },
+    {
+      "name": "timestamp",
+      "table": 0
+    },
+    {
+      "name": "timestamp_epochs",
+      "table": 0
+    },
+    {
+      "name": "tweet_id",
+      "table": 0
+    },
+    {
+      "name": "tweet_url",
+      "table": 0
+    },
+    {
+      "name": "user_id",
+      "table": 0
+    },
+    {
+      "name": "username",
+      "table": 0
+    },
+    {
+      "name": "video_url",
+      "table": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "index": 0,
+      "computedColumns": []
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "index": 1,
+      "computedColumns": []
+    }
+  ],
+  "enableAutoCastInJoinConditions": false
+}
