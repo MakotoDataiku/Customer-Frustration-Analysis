@@ -2,11 +2,9 @@ import spacy
 import dataiku
 import ast
 
-stopwords = dataiku.get_custom_variables()['stopwords']
-stopwords = ast.literal_eval(stopwords)
+stopwords = dataiku.get_custom_variables(typed=True)['stopwords']
 
-exclude_stopwords = dataiku.get_custom_variables()['exclude_stopwords']
-exclude_stopwords = ast.literal_eval(exclude_stopwords)
+exclude_stopwords = dataiku.get_custom_variables(typed=True)['exclude_stopwords']
 
 def init_spacy(model_path):
     print("\nLoading spaCy Model....")

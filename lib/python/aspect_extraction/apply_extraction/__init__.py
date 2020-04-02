@@ -5,8 +5,7 @@ from textblob import TextBlob
 import dataiku
 import ast
 
-prod_pronouns = dataiku.get_custom_variables()['prod_pronouns']
-prod_pronouns = ast.literal_eval(prod_pronouns)
+prod_pronouns = dataiku.get_custom_variables(typed=True)['prod_pronouns']
 
 def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     review_body = row[text_column]
