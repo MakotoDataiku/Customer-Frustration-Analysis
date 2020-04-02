@@ -2,6 +2,7 @@ import pandas as pd
 from sys import argv
 import re
 from clean_data.demojify import demojify
+import dataiku
 
 #Input file name as argv to run
 
