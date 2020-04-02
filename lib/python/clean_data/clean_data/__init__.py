@@ -1,8 +1,7 @@
 import pandas as pd
 from sys import argv
-import emoji
-from emoji import UNICODE_EMOJI
 import re
+from clearn_data.demojify import demojify
 
 #Input file name as argv to run
 
@@ -12,9 +11,6 @@ import re
 #         sep = "\t", header=0, error_bad_lines = False)
 
 
-def demojify(text):
-    new_text = re.sub(emoji.get_emoji_regexp(), r" ", text)
-    return new_text
 
 def clean_data(df, text_column):
     # text_column: column name of the text
