@@ -27,12 +27,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     rule2_pairs = extract_rule2(doc, ner_heads)
     rule3_pairs = extract_rule3(doc, ner_heads)
     rule4_pairs = extract_rule4(doc, ner_heads)
-    
-
-
-    
-
-    rule5_pairs = []
+    rule5_pairs = extract_rule5(doc, ner_heads)
     
 
 
@@ -42,29 +37,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
 
     rule6_pairs = []
-    for token in doc:
-        children = token.children
-        A = "999999"
-        M = "999999"
-        if(token.pos_ == "INTJ" and not token.is_stop):
-            for child in children :
-                if(child.dep_ == "nsubj" and not child.is_stop):
-                    if child.idx in ner_heads:
-                        A = ner_heads[child.idx].text
-                    else:
-                        A = child.text
-                    M = token.text
-                    # check_spelling(child.text)
-
-        if(A != "999999" and M != "999999"):
-            if A in prod_pronouns :
-                A = product_id
-            dict6 = {"noun" : A, 
-                     "adj" : M, 
-                     "rule" : 6, 
-                     "polarity_nltk" : sid.polarity_scores(M)['compound'],
-                     "polarity_textblob" : TextBlob(M).sentiment.polarity}
-            rule6_pairs.append(dict6)
+    
 
 
     ## SEVENTH RULE OF DEPENDANCY PARSE -
