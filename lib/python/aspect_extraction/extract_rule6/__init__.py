@@ -1,4 +1,4 @@
-def extract_rule6(doc, ner_heads):
+def extract_rule6(doc, ner_heads, prod_pronouns):
     ## SIXTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     ## Example - "It ok", "ok" is INTJ (interjections like bravo, great etc)

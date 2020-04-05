@@ -1,4 +1,4 @@
-def extract_rule2(doc, ner_heads):
+def extract_rule2(doc, ner_heads, prod_pronouns):
     ## SECOND RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     #Direct Object - A is a child of something with relationship of nsubj, while
