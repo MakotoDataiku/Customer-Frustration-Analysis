@@ -1,5 +1,11 @@
 def extract_rule3(doc, ner_heads):
-
+    ## THIRD RULE OF DEPENDANCY PARSE -
+    ## M - Sentiment modifier || A - Aspect
+    ## Adjectival Complement - A is a child of something with relationship of nsubj, while
+    ## M is a child of the same something with relationship of acomp
+    ## Assumption - A verb will have only one NSUBJ and DOBJ
+    ## "The sound of the speakers would be better. The sound of the speakers could be better" - handled using AUX dependency
+    
     for token in doc:
 
         children = token.children
