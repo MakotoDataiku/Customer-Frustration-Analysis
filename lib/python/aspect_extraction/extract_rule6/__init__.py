@@ -2,6 +2,7 @@ def extract_rule6(doc, ner_heads):
     ## SIXTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     ## Example - "It ok", "ok" is INTJ (interjections like bravo, great etc)
+    rule6_pairs = []
     
     for token in doc:
         children = token.children

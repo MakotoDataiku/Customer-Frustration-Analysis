@@ -5,6 +5,7 @@ def extract_rule4(doc, ner_heads):
     # M is a child of the same something with relationship of advmod
 
     #Assumption - A verb will have only one NSUBJ and DOBJ
+    rule4_pairs = []
     
     for token in doc:
         children = token.children

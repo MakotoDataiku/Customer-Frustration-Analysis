@@ -5,7 +5,7 @@ def extract_rule3(doc, ner_heads):
     ## M is a child of the same something with relationship of acomp
     ## Assumption - A verb will have only one NSUBJ and DOBJ
     ## "The sound of the speakers would be better. The sound of the speakers could be better" - handled using AUX dependency
-    
+    rule3_pairs = []
     for token in doc:
 
         children = token.children

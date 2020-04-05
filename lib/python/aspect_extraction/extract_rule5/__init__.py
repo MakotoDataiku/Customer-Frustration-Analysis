@@ -4,6 +4,7 @@ def extract_rule5(doc, ner_heads):
     #Complement of a copular verb - A is a child of M with relationship of nsubj, while
     # M has a child with relationship of cop
     #Assumption - A verb will have only one NSUBJ and DOBJ
+    rule5_pairs = []
     
     for token in doc:
         children = token.children
