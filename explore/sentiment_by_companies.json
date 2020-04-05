@@ -151,10 +151,10 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "company": true,
               "dist_lugg": true,
               "dist_punc": true,
               "dist_staf": true,
+              "company": true,
               "___dku_no_value___": true
             },
             "explicitExclude": false
@@ -333,10 +333,10 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "company": true,
               "dist_food": true,
               "dist_punc": true,
               "dist_staf": true,
+              "company": true,
               "___dku_no_value___": true
             },
             "explicitExclude": false
@@ -401,7 +401,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABeklEQVRoQ2NkGGGAkVr+/dOXuB9mFkvRfEdqmUttc0Y9TG6IjsYwuSFHY304k3TqoWXwPDn9zG64M3DlzyEfw6MehsbxiI5hUlMBjbMnUcZTlIdJ9fCfvsRNDAwMvCCX4aurkcqDdyxF84Ox+YTcMoPmHk47tHTPfwZGZpCjJ53b95P131/2UQ8zMDDgSC0oMZxyYNlsWGzPOLdbhZyW3aCJYWI8TGoWwpYVRj0MCxViQpMYNcTm4dEYhoQ8Sh4mJoAJ1U2jSXo0STMwMODqPBCTxEbzMI6Gx4AXWqCYgSXvaaf3IrqHxfNcYBxi1KQeWrqbkYEBXFZMPLvvF+u//2zglhaSOSA+DrO+shTP8yfFvtBVq8CtOhBYxbAa7m7GsNV/QRyqDfEQKh3pJU8om416mF4xQSt7RmMYGrKw7uhokqZVUhsIc7ENEgy7GEYO2FEPD8d6eDSGh3spPRrDozE8EBUknewcrZaGe7WELSEN65bWqIdHYpIGAFKvGkeI5HlcAAAAAElFTkSuQmCC",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABQklEQVRoQ+1YSw6CMBR8RIwxxkN5Bi8gCzkA8RwsWOjKuJIDGHf4SVga4h28gHsT/BGtQUO1NkULjOv20Zk3M6/WoIr9DFV4Y9das1qmM+moqqu6DgDLMlr4DvdD/yFRb7PsMSKag/Eui5RSAR5FwQMjz5+VAGyH/pwxMYyCVqFDKy1pXodF1shmQl77uCktAkZkTV4Hl637U8Cxa82IqJ0c9t2sTuXB3nQmXZUhmTtgO5wuzmTUkkN729Whfjo2AJiIOPZ46rAKC2nTYQC+GRcdZgEmchnKCjtImrEiEhAia0RTGh6Gh7mj6+0l5tXH8LDsHVWXfZ9yRdkTDwD/iQF0+E48+3cGSf9Jico+WzlJp5nLelgsnaQBuOyhhQ6jw8oGgn6FkNJEhLGknzDlT1Q5SX/1ainPq947S+1hdPjKwAVkDQRHxbwojAAAAABJRU5ErkJggg\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "INNER_TOP_RIGHT"
@@ -515,10 +515,10 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "company": true,
               "dist_food": true,
               "dist_lugg": true,
               "dist_staf": true,
+              "company": true,
               "___dku_no_value___": true
             },
             "explicitExclude": false
@@ -697,10 +697,10 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "company": true,
               "dist_food": true,
               "dist_lugg": true,
               "dist_punc": true,
+              "company": true,
               "___dku_no_value___": true
             },
             "explicitExclude": false
@@ -947,7 +947,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABMElEQVRoQ+1ZOw6CQBR8GzHeikQb74CVibYWxHNY2JhAIlZ6CGNMrI2NtRcxCAYBpViQz0J2YWh3SXbezJs3sIw69rAsvPPL/hyu+09bn4zbUBsATrIIhlugaUgakoZLq93I6GFeD/c9z13fTlqw9iJ/MTB393jfb3QR2boxlJ3/XAwDMBgOhSxK0u5qGmV4Is10hLaJlJIGYIFOCIZlGEuQNCRdvgLoYfQwEVWNlsm8vbkePzVlxB49czvjiVN508oDmLcnKIaSSQuAOZLOw7CIT9FGXFoUwwBcYhwry3Ds9kWNrXWA/8kegOtIWnWYVpqkG2XY0o1RmKLI599gEKUlraJjSQrA30N4dNCWjsX7lQvAUVXAcFSIZJYWUZRMly4x16V/BYClp6jiATvH8Bt3lhVWSSeKxwAAAABJRU5ErkJggg\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABOUlEQVRoQ+2ZMQ6CQBBFRTiXiTaeQAo7Cq0N1l6B2FGYSKUFHkETja2eyEg0JGhG4m5YdsAVvq2L4c3/83dntTot+1gy3sl5e3x9v+qN+02oDYCpilC4AZ7+uaWTwFvSOtp+NKuyrj8HvgfeOxhTUMePKg1HANcdWlAYluaNMPQwejirQFVnaYQWQguhpVWBSlJapS9V1mqRZg+zAdNRMrzuP94tfz5WWcsBSX8DwGX3YRXVVNZCYc0KGG3p6WmzeHStAedFIoBN6uHWK0y3u7JXQX9laRnwKI5t6s6d6ybf8q0xwHSrS0FF0x2ATQ4tmaWhsODPv8KWDi+HG1Xfma+HIjdwDQ/5balWhbkg0iIVPUsDmIydspGTJaWhcO6yrahN67K0qN+loaU5iRn5OICNlIXxpVqn8BP6Ri1HMVj1BgAAAABJRU5ErkJggg\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "INNER_TOP_RIGHT"
