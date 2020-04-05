@@ -28,5 +28,5 @@ def assign_groups(prod_id, df, nlp):
         max_key = max(dist_dic, key=dist_dic.get)
         asp_group.append(max_key)
     df_grouped['group'] = asp_group
-    df_grouped.loc[df_grouped.noun_lemmatized.lower() == prod_id.lower(), "group"] = "company"
+    df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == prod_id.lower(), "group"] = "company"
     return df_grouped
