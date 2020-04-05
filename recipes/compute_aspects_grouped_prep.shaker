@@ -2,7 +2,6 @@
   "columnsSelection": {
     "mode": "ALL"
   },
-  "analysisColumnData": {},
   "explorationSampling": {
     "_refreshTrigger": 0,
     "selection": {
@@ -25,20 +24,73 @@
     },
     "autoRefreshSample": false
   },
-  "explorationFilters": [],
-  "sorting": [],
-  "exploreUIParams": {},
-  "globalSearchQuery": "",
-  "coloring": {
-    "scheme": "MEANING_AND_STATUS",
-    "individualColumns": [],
-    "valueColoringMode": "HASH"
+  "explorationFilters": [
+    {
+      "validityFilter": {
+        "column": "group",
+        "type": "validity",
+        "params": {
+          "nok": true,
+          "type": "Text",
+          "ok": true,
+          "empty": true
+        }
+      },
+      "column": "group",
+      "active": true,
+      "alphanumFilter": {
+        "values": [],
+        "column": "group",
+        "type": "alphanum",
+        "params": {
+          "mode": "full_string",
+          "normalization": "exact"
+        }
+      },
+      "type": "columnFilter",
+      "$$hashKey": "object:15951",
+      "facet": {
+        "columnType": "ALPHANUM",
+        "selectedValues": {
+          "company": true
+        },
+        "column": "group",
+        "sort": "count",
+        "type": "facet",
+        "currentMode": "ALPHANUM"
+      },
+      "currentMode": "FACET"
+    }
+  ],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
   },
-  "steps": [],
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(toLowercase(noun_lemmatized)\u003d\u003dtoLowercase(product_id), \u0027company\u0027, group)",
+        "column": "group"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
     "_refreshTrigger": 0,
     "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
   }
 }
