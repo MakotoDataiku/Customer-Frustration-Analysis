@@ -1,4 +1,4 @@
-def extract_rule1(doc, ner_heads, prod_pronouns):
+def extract_rule1(doc, ner_heads, prod_pronouns, sid):
     ## FIRST RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     ## RULE = M is child of A with a relationshio of amod

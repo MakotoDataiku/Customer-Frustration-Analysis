@@ -1,4 +1,4 @@
-def extract_rule5(doc, ner_heads, prod_pronouns):
+def extract_rule5(doc, ner_heads, prod_pronouns, sid):
     ## FIFTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     #Complement of a copular verb - A is a child of M with relationship of nsubj, while

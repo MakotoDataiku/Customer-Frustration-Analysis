@@ -30,13 +30,13 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     doc=nlp(review_body)
     ner_heads = {ent.root.idx: ent for ent in doc.ents}
 
-    rule1_pairs = extract_rule1(doc, ner_heads, prod_pronouns)
-    rule2_pairs = extract_rule2(doc, ner_heads, prod_pronouns)
-    rule3_pairs = extract_rule3(doc, ner_heads, prod_pronouns)
-    rule4_pairs = extract_rule4(doc, ner_heads, prod_pronouns)
-    rule5_pairs = extract_rule5(doc, ner_heads, prod_pronouns)
-    rule6_pairs = extract_rule6(doc, ner_heads, prod_pronouns)
-    rule7_pairs = extract_rule7(doc, ner_heads, prod_pronouns)
+    rule1_pairs = extract_rule1(doc, ner_heads, prod_pronouns, sid)
+    rule2_pairs = extract_rule2(doc, ner_heads, prod_pronouns, sid)
+    rule3_pairs = extract_rule3(doc, ner_heads, prod_pronouns, sid)
+    rule4_pairs = extract_rule4(doc, ner_heads, prod_pronouns, sid)
+    rule5_pairs = extract_rule5(doc, ner_heads, prod_pronouns, sid)
+    rule6_pairs = extract_rule6(doc, ner_heads, prod_pronouns, sid)
+    rule7_pairs = extract_rule7(doc, ner_heads, prod_pronouns, sid)
 
     aspects = []
     aspects = rule1_pairs + rule2_pairs + rule3_pairs +rule4_pairs +rule5_pairs + rule6_pairs + rule7_pairs

@@ -1,4 +1,4 @@
-def extract_rule3(doc, ner_heads, prod_pronouns):
+def extract_rule3(doc, ner_heads, prod_pronouns, sid):
     ## THIRD RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     ## Adjectival Complement - A is a child of something with relationship of nsubj, while

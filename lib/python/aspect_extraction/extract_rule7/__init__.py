@@ -1,4 +1,4 @@
-def extract_rule7(doc, ner_heads, prod_pronouns):
+def extract_rule7(doc, ner_heads, prod_pronouns, sid):
     ## SEVENTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     ## ATTR - link between a verb like 'be/seem/appear' and its complement

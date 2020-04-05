@@ -1,4 +1,4 @@
-def extract_rule4(doc, ner_heads, prod_pronouns):
+def extract_rule4(doc, ner_heads, prod_pronouns, sid):
     ## FOURTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
     #Adverbial modifier to a passive verb - A is a child of something with relationship of nsubjpass, while
