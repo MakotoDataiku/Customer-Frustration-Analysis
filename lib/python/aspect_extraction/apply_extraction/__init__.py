@@ -34,7 +34,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         M = "999999"
         if token.dep_ == "amod" and not token.is_stop:
             M = token.text
-            A = token.head.text
+            if token.head.idx in ner_heads:
+                A = ner_heads[token.head.idx].text
+            else:
+                A = token.head.text
 
             # add adverbial modifier of adjective (e.g. 'most comfortable headphones')
             M_children = token.children
@@ -54,7 +57,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict1 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 1, 
@@ -76,7 +79,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         add_neg_pfx = False
         for child in children :
             if(child.dep_ == "nsubj" and not child.is_stop):
-                A = child.text
+                if child.idx in ner_heads:
+                    A = ner_heads[child.idx].text
+                else:
+                    A = child.text
                 # check_spelling(child.text)
 
             if((child.dep_ == "dobj" and child.pos_ == "ADJ") and not child.is_stop):
@@ -92,7 +98,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict2 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 2, 
@@ -120,7 +126,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         add_neg_pfx = False
         for child in children :
             if(child.dep_ == "nsubj" and not child.is_stop):
-                A = child.text
+                if child.idx in ner_heads:
+                    A = ner_heads[child.idx].text
+                else:
+                    A = child.text
                 # check_spelling(child.text)
 
             if(child.dep_ == "acomp" and not child.is_stop):
@@ -141,7 +150,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict3 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 3, 
@@ -167,7 +176,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         add_neg_pfx = False
         for child in children :
             if((child.dep_ == "nsubjpass" or child.dep_ == "nsubj") and not child.is_stop):
-                A = child.text
+                if child.idx in ner_heads:
+                    A = ner_heads[child.idx].text
+                else:
+                    A = child.text
                 # check_spelling(child.text)
 
             if(child.dep_ == "advmod" and not child.is_stop):
@@ -189,7 +201,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict4 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 4, 
@@ -213,7 +225,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         buf_var = "999999"
         for child in children :
             if(child.dep_ == "nsubj" and not child.is_stop):
-                A = child.text
+                if child.idx in ner_heads:
+                    A = ner_heads[child.idx].text
+                else:
+                    A = child.text
                 # check_spelling(child.text)
 
             if(child.dep_ == "cop" and not child.is_stop):
@@ -222,7 +237,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and buf_var != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict5 = {"noun" : A, 
                      "adj" : token.text, 
                      "rule" : 5, 
@@ -244,13 +259,16 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         if(token.pos_ == "INTJ" and not token.is_stop):
             for child in children :
                 if(child.dep_ == "nsubj" and not child.is_stop):
-                    A = child.text
+                    if child.idx in ner_heads:
+                        A = ner_heads[child.idx].text
+                    else:
+                        A = child.text
                     M = token.text
                     # check_spelling(child.text)
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict6 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 6, 
@@ -272,7 +290,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         add_neg_pfx = False
         for child in children :
             if(child.dep_ == "nsubj" and not child.is_stop):
-                A = child.text
+                if child.idx in ner_heads:
+                    A = ner_heads[child.idx].text
+                else:
+                    A = child.text
                 # check_spelling(child.text)
 
             if((child.dep_ == "attr") and not child.is_stop):
@@ -288,7 +309,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
         if(A != "999999" and M != "999999"):
             if A in prod_pronouns :
-                A = "product"
+                A = product_id
             dict7 = {"noun" : A, 
                      "adj" : M, 
                      "rule" : 7, 
