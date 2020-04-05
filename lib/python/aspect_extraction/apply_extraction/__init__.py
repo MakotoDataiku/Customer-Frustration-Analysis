@@ -23,7 +23,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
 
 
     doc=nlp(review_body)
-
+    ner_heads = {ent.root.idx: ent for ent in doc.ents}
 
     ## FIRST RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
