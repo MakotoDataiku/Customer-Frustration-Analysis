@@ -6,7 +6,7 @@ from dataiku import pandasutils as pdu
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-aspects_grouped = dataiku.Dataset("aspects_grouped")
+aspects_grouped = dataiku.Dataset("aspects_grouped_prep")
 df = aspects_grouped.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
