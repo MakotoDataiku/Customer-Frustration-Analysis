@@ -1,3 +1,6 @@
+from textblob import TextBlob
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 def extract_rule5(doc, ner_heads, prod_pronouns, sid):
     ## FIFTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect

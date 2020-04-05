@@ -1,3 +1,6 @@
+from textblob import TextBlob
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 def extract_rule7(doc, ner_heads, prod_pronouns, sid):
     ## SEVENTH RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect

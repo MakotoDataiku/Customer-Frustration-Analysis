@@ -1,3 +1,6 @@
+from textblob import TextBlob
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 def extract_rule2(doc, ner_heads, prod_pronouns, sid):
     ## SECOND RULE OF DEPENDANCY PARSE -
     ## M - Sentiment modifier || A - Aspect
