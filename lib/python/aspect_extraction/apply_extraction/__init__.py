@@ -1,6 +1,4 @@
 #import enchant
-import spacy
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import dataiku
 import ast
 from aspect_extraction.extract_rule1 import extract_rule1
