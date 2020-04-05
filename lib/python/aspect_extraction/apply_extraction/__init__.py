@@ -31,9 +31,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     
 
 
-    ## SIXTH RULE OF DEPENDANCY PARSE -
-    ## M - Sentiment modifier || A - Aspect
-    ## Example - "It ok", "ok" is INTJ (interjections like bravo, great etc)
+    
 
 
     rule6_pairs = []

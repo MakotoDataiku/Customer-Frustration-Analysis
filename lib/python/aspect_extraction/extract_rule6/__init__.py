@@ -1,4 +1,8 @@
 def extract_rule6(doc, ner_heads):
+    ## SIXTH RULE OF DEPENDANCY PARSE -
+    ## M - Sentiment modifier || A - Aspect
+    ## Example - "It ok", "ok" is INTJ (interjections like bravo, great etc)
+    
     for token in doc:
         children = token.children
         A = "999999"
@@ -22,4 +26,5 @@ def extract_rule6(doc, ner_heads):
                      "polarity_nltk" : sid.polarity_scores(M)['compound'],
                      "polarity_textblob" : TextBlob(M).sentiment.polarity}
             rule6_pairs.append(dict6)
+            
     return rule6_pairs
