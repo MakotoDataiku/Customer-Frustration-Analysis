@@ -20,10 +20,10 @@ def assign_groups(prod_id, df, nlp):
     for aspect in df_grouped.noun_lemmatized:
         dist_dic = {}
         token_vector = nlp(aspect).vector
-        dist_dic['dist_punc'] = vector_dist(token_vector, punctuality_vec)
-        dist_dic['dist_food'] = vector_dist(token_vector, food_vec)
-        dist_dic['dist_lugg'] = vector_dist(token_vector, luggage_vec)
-        dist_dic['dist_staf'] = vector_dist(token_vector, staff_vec)
+        dist_dic['punctuality'] = vector_dist(token_vector, punctuality_vec)
+        dist_dic['food'] = vector_dist(token_vector, food_vec)
+        dist_dic['luggage'] = vector_dist(token_vector, luggage_vec)
+        dist_dic['staff'] = vector_dist(token_vector, staff_vec)
         # group = min([dist_punc, dist_food, dist_lugg, dist_staf])
         max_key = max(dist_dic, key=dist_dic.get)
         asp_group.append(max_key)
