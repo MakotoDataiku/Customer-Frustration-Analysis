@@ -4,6 +4,13 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob import TextBlob
 import dataiku
 import ast
+from aspect_extraction.extract_rule1 import extract_rule1
+from aspect_extraction.extract_rule2 import extract_rule2
+from aspect_extraction.extract_rule3 import extract_rule3
+from aspect_extraction.extract_rule4 import extract_rule4
+from aspect_extraction.extract_rule5 import extract_rule5
+from aspect_extraction.extract_rule6 import extract_rule6
+from aspect_extraction.extract_rule7 import extract_rule7
 
 prod_pronouns = dataiku.get_custom_variables(typed=True)['prod_pronouns']
 
@@ -28,64 +35,11 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     rule3_pairs = extract_rule3(doc, ner_heads)
     rule4_pairs = extract_rule4(doc, ner_heads)
     rule5_pairs = extract_rule5(doc, ner_heads)
-    
-
-
-    
-
-
-    rule6_pairs = []
-    
-
-
-    ## SEVENTH RULE OF DEPENDANCY PARSE -
-    ## M - Sentiment modifier || A - Aspect
-    ## ATTR - link between a verb like 'be/seem/appear' and its complement
-    ## Example: 'this is garbage' -> (this, garbage)
-
-    rule7_pairs = []
-    for token in doc:
-        children = token.children
-        A = "999999"
-        M = "999999"
-        add_neg_pfx = False
-        for child in children :
-            if(child.dep_ == "nsubj" and not child.is_stop):
-                if child.idx in ner_heads:
-                    A = ner_heads[child.idx].text
-                else:
-                    A = child.text
-                # check_spelling(child.text)
-
-            if((child.dep_ == "attr") and not child.is_stop):
-                M = child.text
-                #check_spelling(child.text)
-
-            if(child.dep_ == "neg"):
-                neg_prefix = child.text
-                add_neg_pfx = True
-
-        if (add_neg_pfx and M != "999999"):
-            M = neg_prefix + " " + M
-
-        if(A != "999999" and M != "999999"):
-            if A in prod_pronouns :
-                A = product_id
-            dict7 = {"noun" : A, 
-                     "adj" : M, 
-                     "rule" : 7, 
-                     "polarity_nltk" : sid.polarity_scores(M)['compound'],
-                     "polarity_textblob" : TextBlob(M).sentiment.polarity}
-            rule7_pairs.append(dict7)
-
-
+    rule6_pairs = extract_rule6(doc, ner_heads)
+    rule7_pairs = extract_rule7(doc, ner_heads)
 
     aspects = []
-
     aspects = rule1_pairs + rule2_pairs + rule3_pairs +rule4_pairs +rule5_pairs + rule6_pairs + rule7_pairs
-
-    # replace all instances of "it", "this" and "they" with product_id
-    # aspects = [(A,M,P1,P2,r) if A not in prod_pronouns else (product_id,M,P1,P2,r) for A,M,P1,P2,r in aspects ]
     
     dic = {"review_id" : review_id , 
            "aspect_pairs" : aspects, 
