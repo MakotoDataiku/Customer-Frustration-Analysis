@@ -1,4 +1,9 @@
 def extract_rule2(doc, ner_heads):
+    ## SECOND RULE OF DEPENDANCY PARSE -
+    ## M - Sentiment modifier || A - Aspect
+    #Direct Object - A is a child of something with relationship of nsubj, while
+    # M is a child of the same something with relationship of dobj
+    #Assumption - A verb will have only one NSUBJ and DOBJ
     
     rule2_pairs = []
     for token in doc:
