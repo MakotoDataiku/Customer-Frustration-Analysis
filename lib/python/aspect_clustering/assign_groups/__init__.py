@@ -3,7 +3,7 @@ from aspect_clustering.vector_dist import vector_dist
 
 def assign_groups(prod_id, df, nlp):
     lemmatizer = WordNetLemmatizer() 
-    df['noun_lemmatized'] = df.noun.apply(lemmatizer.lemmatize)
+    df['noun_lemmatized'] = df.noun.str.lower().apply(lemmatizer.lemmatize)
     df_grouped = df.groupby(["product_id", 'noun_lemmatized']).agg({'product_id':'size',
                                                                     "polarity_nltk":'mean',
                                                                     "polarity_textblob":'mean'}).rename(columns={'product_id':'count',
