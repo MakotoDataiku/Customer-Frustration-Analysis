@@ -15,8 +15,8 @@ import pandas as pd
 from time import time
 import json
 import requests
-import nltk
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+# import nltk
+# from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 from aspect_extraction.aspect_extraction import aspect_extraction
