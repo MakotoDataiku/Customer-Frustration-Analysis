@@ -151,9 +151,9 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "dist_lugg": true,
-              "dist_punc": true,
-              "dist_staf": true,
+              "luggage": true,
+              "punctuality": true,
+              "staff": true,
               "company": true,
               "___dku_no_value___": true
             },
@@ -333,9 +333,9 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "dist_food": true,
-              "dist_punc": true,
-              "dist_staf": true,
+              "food": true,
+              "punctuality": true,
+              "staff": true,
               "company": true,
               "___dku_no_value___": true
             },
@@ -515,9 +515,9 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "dist_food": true,
-              "dist_lugg": true,
-              "dist_staf": true,
+              "food": true,
+              "luggage": true,
+              "punctuality": true,
               "company": true,
               "___dku_no_value___": true
             },
@@ -583,7 +583,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABOElEQVRoQ2NkGGGAkRj//ulL3A9Tx1I035EYPYNVzaiHscXMaAwP1vRKhLtGk/RokmZgYBjNw0TklcGqZDQPj+bh0Tw8TJuWqYeWwdvP08/shqf0YduWHvUwNI5HY3iwVrg43IWzHh5N0qNJeoilZahzqZakielgUEsNJUE96mFY6JFaaFEr9ogxZzSGSQiB0SRNSpJOPbR0OUz99DN7JLCNXafuW6YNV3Nh9xRsauL2LBSGic+7dGANLcfAKYphYvI5tdSQkGrxKh31MGlJmnAXcjSGsTRRiQmU0SRNZggMyTz8pStBgoOFEVxDMP5nOMlcPL+CWP+PeniwFlr1+/ezPGN+Dh5cE/317WPTpaP8hGIYWzN1yMQwsR4mVACOepjYzD9U1RE1tzRUPYfN3aMeHk6xic0vAPMD/zj3WK+qAAAAAElFTkSuQmCC",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAABU0lEQVRoQ2NkGGGAkVr+/dOXuB9mFkvRfEdqmUttc0Y9TG6IjsYwuSFHY32jSZrcAB5N0uSGHI31jSZpcgN4NEmTG3I01jeapMkN4NEkTW7IMTAwIAXeO5ai+cHYjCI3gAdlkh71MJYoHo1hIrMQziSdemgZvH872y6KYP+W3BAnkD/pl4dHPUwgyQz5GEb2HyWeSTu0dM9/BkZmkHmTzu37yfrvLzuIjT4MREyKIlXN9DO74d6A2UdUtTRUPYyt7KG5h+v/1zPBgrm2/9EGBgYGXnrF8IB4GC1rbBr1MJH1J7HKCOVzmidpYmOYWA8RUjfqYbQQGnYxTCgFjHqYmn1PdLP+9CXiLKUJxQy15EdjeDSGUYdcMNrApCS1/33JKjD1jEVz75Cil1pq6ZqkqeVoSswZ9TAt8zAlMUMtvUTFMLUsGwzmjHp4MMQCLd0w4mIYAMjaVzg3uYW1AAAAAElFTkSuQmCC",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "INNER_TOP_RIGHT"
@@ -697,9 +697,9 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "dist_food": true,
-              "dist_lugg": true,
-              "dist_punc": true,
+              "food": true,
+              "luggage": true,
+              "punctuality": true,
               "company": true,
               "___dku_no_value___": true
             },
@@ -879,10 +879,10 @@
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "dist_food": true,
-              "dist_lugg": true,
-              "dist_punc": true,
-              "dist_staf": true,
+              "food": true,
+              "luggage": true,
+              "punctuality": true,
+              "staff": true,
               "___dku_no_value___": true
             },
             "explicitExclude": false
