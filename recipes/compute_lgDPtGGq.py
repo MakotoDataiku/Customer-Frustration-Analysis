@@ -58,12 +58,16 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
     # print("Time for aspect extraction: {0:.2}s".format(time3-time2))
     print("Time for EVERYTHING: {0:.2}s".format(time4-time1))
     print("Running mapper")
+    
+    """
 
     file_in = folder_path + "/reviews_aspect_raw.json"
     file_out = folder_path + "/reviews_aspect_mapping.json"
     mapper.map(file_in, file_out)
+    """
 
     print("Godspeed!")
+    return aspect_list
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
@@ -73,10 +77,10 @@ aspect_sentiment_pairs = dataiku.Folder("aspect_sentiment_pairs")
 folder_path = aspect_sentiment_pairs.get_path()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-main(sys.argv[1], text_column = "text", review_id = 'tweet_id',
+aspect_list = main(sys.argv[1], text_column = "text", review_id = 'tweet_id',
      product_id = 'company', data = tweets_noURL_df, folder_path = folder_path)
 
-
+"""
 processed = []
 with open(folder_path + "/reviews_aspect_mapping.json") as f:
     for l in f:
@@ -107,6 +111,11 @@ for p in processed[0]:
 
 py_recipe_output = dataiku.Dataset("aspect_sentiment_pairs")
 py_recipe_output.write_with_schema(tweet_processed)
-
-
-
+"""
+tweet_processed = pd.DataFrame(columns=['product_id', 'review_id', 'noun', 'adj', 'rule', 'polarity_nltk', 'polarity_textblob'])
+for dic in aspect_list:
+    new_row = pd.DataFrame.from_dict(dic)
+    tweet_processed = tweet_processed.append(new_row, ignore_index = True)
+    
+py_recipe_output = dataiku.Dataset("aspect_sentiment_pairs")
+py_recipe_output.write_with_schema(tweet_processed)
