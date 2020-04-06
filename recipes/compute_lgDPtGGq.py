@@ -38,7 +38,7 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
     time2 = time()
     print("----------------***----------------")
     print("\nExtracting aspect pairs")
-    aspect_extraction(nlp, sid, arg, data,
+    aspect_list = aspect_extraction(nlp, sid, arg, data,
                                         text_column = text_column,
                                         review_id = review_id,
                                         product_id = product_id,
