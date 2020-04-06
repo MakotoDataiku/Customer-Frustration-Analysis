@@ -52,5 +52,19 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
                                 "polarity_nltk":[polarity_nltk], 
                                 "polarity_textblob":[polarity_textblob]})
         df = df.append(new_row, ignore_index = True)
+    
+    dic = {"review_id" : review_id , 
+           "aspect_pairs" : aspects, 
+           # "review_marketplace" : review_marketplace,
+           # "customer_id" : customer_id, 
+           "product_id" : product_id, 
+           # "product_parent" : product_parent,
+           # "product_title" : product_title, 
+           # "product_category" : product_category, 
+           # "date" : date, 
+           # "star_rating" : star_rating, 
+           # "url" : url
+          }
+
 
     return df
