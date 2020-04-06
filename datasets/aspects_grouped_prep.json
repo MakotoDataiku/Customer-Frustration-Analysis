@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586112884662
+    "lastModifiedOn": 1586183375647
   },
   "creationTag": {
     "versionNumber": 0,
@@ -105,6 +105,13 @@
       {
         "name": "mean_polarity_textblob",
         "type": "double"
+      },
+      {
+        "name": "review_id",
+        "type": "array",
+        "arrayContent": {
+          "type": "string"
+        }
       },
       {
         "name": "group",
