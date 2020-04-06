@@ -1,6 +1,7 @@
 #import enchant
 import dataiku
 import ast
+import pandas as pd
 from aspect_extraction.extract_rule1 import extract_rule1
 from aspect_extraction.extract_rule2 import extract_rule2
 from aspect_extraction.extract_rule3 import extract_rule3
@@ -38,17 +39,18 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     aspects = []
     aspects = rule1_pairs + rule2_pairs + rule3_pairs +rule4_pairs +rule5_pairs + rule6_pairs + rule7_pairs
     
-    dic = {"review_id" : review_id , 
-           "aspect_pairs" : aspects, 
-           # "review_marketplace" : review_marketplace,
-           # "customer_id" : customer_id, 
-           "product_id" : product_id, 
-           # "product_parent" : product_parent,
-           # "product_title" : product_title, 
-           # "product_category" : product_category, 
-           # "date" : date, 
-           # "star_rating" : star_rating, 
-           # "url" : url
-          }
+    df = pd.DataFrame(columns = ["product_id", "review_id", "noun", "adj", "rule", "polarity_nltk", "polarity_textblob"])
+    
+    for pair in aspects:
+        noun = pair["noun"]
+        adj = pair["adj"]
+        rule = pair["rule"]
+        polarity_nltk = pair["polarity_nltk"]
+        polarity_textblob = pair["polarity_textblob"]
+        new_row = pd.DataFrame({"product_id":product_id, "review_id":review_id, 
+                                "noun":noun, "adj":adj, "rule":rule, 
+                                "polarity_nltk":polarity_nltk, 
+                                "polarity_textblob":polarity_textblob})
+    df = df.append(new_row, ignore_index = True)
 
-    return dic
+    return df
