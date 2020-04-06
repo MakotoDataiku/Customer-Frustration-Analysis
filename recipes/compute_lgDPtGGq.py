@@ -114,7 +114,7 @@ py_recipe_output.write_with_schema(tweet_processed)
 """
 tweet_processed = pd.DataFrame(columns=['product_id', 'review_id', 'noun', 'adj', 'rule', 'polarity_nltk', 'polarity_textblob'])
 for dic in aspect_list:
-    new_row = pd.DataFrame({'product_id':dic["prod_id"], 
+    new_row = pd.DataFrame({'product_id':dic["product_id"], 
                             'review_id':dic["review_id"], 
                             'noun':dic["noun"], 
                             'adj':dic["adj"], 
