@@ -77,7 +77,7 @@ main(sys.argv[1], text_column = "text", review_id = 'tweet_id',
 
 
 processed = []
-with open(file_out) as f:
+with open(folder_path + "/reviews_aspect_mapping.json") as f:
     for l in f:
         processed.append(json.loads(l.strip()))
         
