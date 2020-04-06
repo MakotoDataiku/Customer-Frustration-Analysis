@@ -43,6 +43,7 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
                                         review_id = review_id,
                                         product_id = product_id,
                                        folder_path = folder_path)
+    print(aspect_list)
     print("Finished running aspect extraction!!\n")
 
     # json_data = json.dumps(reviews_data)
