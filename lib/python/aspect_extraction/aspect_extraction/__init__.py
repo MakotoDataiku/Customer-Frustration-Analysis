@@ -6,13 +6,7 @@ from aspect_extraction.extract_aspects import extract_aspects
 
 def aspect_extraction(nlp, sid, arg, data, text_column, review_id, product_id, folder_path):
     usecols =  ['review_id','review_body','product_id']
-    reviews = data
-    if reviews.shape[0]>1000000:
-        reviews = reviews.sample(n=1000, random_state=222)
-        print("Since review data frame was too big, sample has been taken")
-    else:
-        reviews = reviews
-    reviews = clean_data(reviews, text_column = text_column)
+    reviews = clean_data(data, text_column = text_column)
     aspect_list = extract_aspects(reviews,nlp,sid, text_column, review_id, product_id)
     aspect_list = list(aspect_list)
     json_path = folder_path + "/reviews_aspect_raw.json"
