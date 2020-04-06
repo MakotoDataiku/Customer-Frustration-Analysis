@@ -51,6 +51,6 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
                                 "noun":noun, "adj":adj, "rule":rule, 
                                 "polarity_nltk":polarity_nltk, 
                                 "polarity_textblob":polarity_textblob})
-    df = df.append(new_row, ignore_index = True)
+        df = df.append(new_row, ignore_index = True)
 
     return df
