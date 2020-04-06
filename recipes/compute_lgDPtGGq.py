@@ -74,3 +74,38 @@ folder_path = aspect_sentiment_pairs.get_path()
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 main(sys.argv[1], text_column = "text", review_id = 'tweet_id',
      product_id = 'company', data = tweets_noURL_df, folder_path = folder_path)
+
+
+processed = []
+with open(file_out) as f:
+    for l in f:
+        processed.append(json.loads(l.strip()))
+        
+tweet_processed = pd.DataFrame(columns=['product_id', 'review_id', 'noun', 'adj', 'rule', 'polarity_nltk', 'polarity_textblob'])
+
+for p in processed[0]:
+    prod_id = [i for i in iter(p.keys())][0]
+    print(prod_id)
+    reviews = p[prod_id]
+    # print(reviews)
+    for review in reviews:
+        review_id = review['review_id']
+        for asp in review['aspect_pairs']:
+            noun = asp['noun']
+            adj = asp['adj']
+            rule = asp['rule']
+            polarity_nltk = asp['polarity_nltk']
+            polarity_textblob = asp['polarity_textblob']
+            new_row = pd.DataFrame({'product_id':[prod_id], 'review_id':[review_id], 
+                                    'noun':[noun], 'adj':[adj], 'rule':[rule], 
+                                    'polarity_nltk':[polarity_nltk], 
+                                    'polarity_textblob':[polarity_textblob]})
+            tweet_processed = tweet_processed.append(new_row, ignore_index=True)
+
+
+
+py_recipe_output = dataiku.Dataset("aspect_sentiment_pairs")
+py_recipe_output.write_with_schema(tweet_processed)
+
+
+

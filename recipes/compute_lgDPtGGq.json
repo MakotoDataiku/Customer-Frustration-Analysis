@@ -32,16 +32,20 @@
         {
           "ref": "lgDPtGGq",
           "appendMode": false
+        },
+        {
+          "ref": "aspect_sentiment_pairs",
+          "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586128380643
+    "lastModifiedOn": 1586176528668
   },
   "creationTag": {
     "versionNumber": 0,
