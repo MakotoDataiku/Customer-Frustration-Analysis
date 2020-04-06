@@ -41,6 +41,7 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
     
     df = pd.DataFrame(columns = ["product_id", "review_id", "noun", "adj", "rule", "polarity_nltk", "polarity_textblob"])
     
+    dic_list = []
     for pair in aspects:
         noun = pair["noun"]
         adj = pair["adj"]
@@ -52,6 +53,12 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
                                 "polarity_nltk":[polarity_nltk], 
                                 "polarity_textblob":[polarity_textblob]})
         df = df.append(new_row, ignore_index = True)
+        dic_small = {"product_id":product_id, "review_id":review_id, 
+                      "noun":noun, "adj":adj, "rule":rule,
+                      "polarity_nltk":polarity_nltk, 
+                      "polarity_textblob":polarity_textblob}
+        dic_list = dic_list.append(dic_small)
+     
     
     dic = {"review_id" : review_id , 
            "aspect_pairs" : aspects, 
@@ -67,4 +74,5 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
           }
 
     # return dic
-    return df
+    return dic_list
+    # return df
