@@ -18,4 +18,4 @@ def aspect_extraction(nlp, sid, arg, data, text_column, review_id, product_id, f
 
 
 
-    return 1
+    return aspect_list

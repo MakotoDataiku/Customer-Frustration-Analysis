@@ -7,5 +7,5 @@ def extract_aspects(reviews,nlp,sid, text_column, review_id, product_id):
                                                              text_column, 
                                                              review_id, 
                                                              product_id), axis=1) #going through all the rows in the dataframe
-
+        
     return aspect_list
