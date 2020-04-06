@@ -43,7 +43,7 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
                                         review_id = review_id,
                                         product_id = product_id,
                                        folder_path = folder_path)
-    print(aspect_list)
+    # print(aspect_list)
     print("Finished running aspect extraction!!\n")
 
     # json_data = json.dumps(reviews_data)
@@ -114,7 +114,14 @@ py_recipe_output.write_with_schema(tweet_processed)
 """
 tweet_processed = pd.DataFrame(columns=['product_id', 'review_id', 'noun', 'adj', 'rule', 'polarity_nltk', 'polarity_textblob'])
 for dic in aspect_list:
-    new_row = pd.DataFrame.from_dict(dic)
+    new_row = pd.DataFrame({'product_id':dic["prod_id"], 
+                            'review_id':dic["review_id"], 
+                            'noun':dic["noun"], 
+                            'adj':dic["adj"], 
+                            'rule':dic["rule"], 
+                            'polarity_nltk':dic["polarity_nltk"], 
+                            'polarity_textblob':dic["polarity_textblob"]})
+    # new_row = pd.DataFrame.from_dict(dic)
     tweet_processed = tweet_processed.append(new_row, ignore_index = True)
     
 py_recipe_output = dataiku.Dataset("aspect_sentiment_pairs")
