@@ -66,5 +66,5 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
            # "url" : url
           }
 
-
+    # return dic
     return df
