@@ -47,10 +47,10 @@ def apply_extraction(row, nlp, sid, text_column, review_id, product_id):
         rule = pair["rule"]
         polarity_nltk = pair["polarity_nltk"]
         polarity_textblob = pair["polarity_textblob"]
-        new_row = pd.DataFrame({"product_id":product_id, "review_id":review_id, 
-                                "noun":noun, "adj":adj, "rule":rule, 
-                                "polarity_nltk":polarity_nltk, 
-                                "polarity_textblob":polarity_textblob})
+        new_row = pd.DataFrame({"product_id":[product_id], "review_id":[review_id], 
+                                "noun":[noun], "adj":[adj], "rule":[rule], 
+                                "polarity_nltk":[polarity_nltk], 
+                                "polarity_textblob":[polarity_textblob]})
         df = df.append(new_row, ignore_index = True)
 
     return df
