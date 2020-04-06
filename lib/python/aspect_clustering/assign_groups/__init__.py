@@ -6,9 +6,10 @@ def assign_groups(prod_id, df, nlp):
     df['noun_lemmatized'] = df.noun.str.lower().apply(lemmatizer.lemmatize)
     df_grouped = df.groupby(["product_id", 'noun_lemmatized']).agg({'product_id':'size',
                                                                     "polarity_nltk":'mean',
-                                                                    "polarity_textblob":'mean'}).rename(columns={'product_id':'count',
-                                                                                                                 'polarity_nltk':'mean_polarity_nltk',
-                                                                                                                 'polarity_textblob':'mean_polarity_textblob'}).reset_index()
+                                                                    "polarity_textblob":'mean',
+                                                                    "review_id":"unique"}).rename(columns={'product_id':'count',
+                                                                                                           'polarity_nltk':'mean_polarity_nltk',
+                                                                                                           'polarity_textblob':'mean_polarity_textblob'}).reset_index()
     print("There are %d nouns extracted" %(df_grouped.shape[0]))
     
     punctuality_vec = nlp('punctuality').vector
