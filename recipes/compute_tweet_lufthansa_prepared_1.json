@@ -14,6 +14,9 @@
             },
             "tweets": {
               "repartition": 10
+            },
+            "tweets_stacked": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585861377887
+    "lastModifiedOn": 1586245924827
   },
   "creationTag": {
     "versionNumber": 0,
