@@ -5,6 +5,7 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 from nltk.stem import WordNetLemmatizer
 from aspect_clustering.vector_dist import vector_dist
+from run_extraction.init_spacy import init_spacy
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
