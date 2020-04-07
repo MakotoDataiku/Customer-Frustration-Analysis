@@ -61,19 +61,13 @@
   },
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "tweets",
+      "preFilter": {},
+      "originLabel": "tweets_copy",
       "index": 0
     },
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "tweets_new",
+      "preFilter": {},
+      "originLabel": "tweets_new_copy",
       "index": 1
     }
   ],
