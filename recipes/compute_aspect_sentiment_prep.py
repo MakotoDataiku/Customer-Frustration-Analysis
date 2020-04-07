@@ -51,7 +51,7 @@ for aspect in df_grouped.noun_lemmatized:
     max_key = max(dist_dic, key=dist_dic.get)
     asp_group.append(max_key)
 df_grouped['group'] = asp_group
-df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == prod_id.lower(), "group"] = "company"
+df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.lower(), "group"] = "company"
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
