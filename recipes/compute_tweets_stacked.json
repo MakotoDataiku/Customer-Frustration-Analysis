@@ -11,11 +11,11 @@
     "main": {
       "items": [
         {
-          "ref": "tweets_copy",
+          "ref": "tweets",
           "deps": []
         },
         {
-          "ref": "tweets_new_copy",
+          "ref": "tweets_new",
           "deps": []
         }
       ]
@@ -32,11 +32,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586245913142
+    "lastModifiedOn": 1586246367285
   },
   "creationTag": {
     "versionNumber": 0,
