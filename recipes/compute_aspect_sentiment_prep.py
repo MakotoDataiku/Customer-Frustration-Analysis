@@ -32,7 +32,7 @@ df_grouped
 print("There are %d nouns extracted" %(df_grouped.shape[0]))
 
 model_path= dataiku.get_custom_variables()['model_path']
-nlp = init.spacy(model_path)
+nlp = init_spacy(model_path)
 
 punctuality_vec = nlp('punctuality').vector
 food_vec = nlp('food').vector
