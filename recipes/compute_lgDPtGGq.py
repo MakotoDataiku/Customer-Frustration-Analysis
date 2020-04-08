@@ -69,13 +69,13 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
     print("Godspeed!")
     return aspect_list
 
-"""
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 aspect_sentiment_pairs = dataiku.Folder("aspect_sentiment_pairs")
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 folder_path = aspect_sentiment_pairs.get_path()
-"""
+
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 aspect_list = main(sys.argv[1], text_column = "text", review_id = 'tweet_id',
