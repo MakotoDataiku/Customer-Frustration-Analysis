@@ -6,7 +6,7 @@ from dataiku import pandasutils as pdu
 from nltk.stem import WordNetLemmatizer
 from aspect_clustering.vector_dist import vector_dist
 from run_extraction.init_spacy import init_spacy
-from aspect_clustering.add_clusters_to_reviews import add_clusters_to_reviews
+# from aspect_clustering.add_clusters_to_reviews import add_clusters_to_reviews
 from sklearn import cluster
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
