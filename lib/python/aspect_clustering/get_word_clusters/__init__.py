@@ -4,6 +4,7 @@ from sklearn import cluster
 import ast
 
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
+print(n_clusters)
 n_clusters = ast.literal_eval(n_clusters)
 
 
