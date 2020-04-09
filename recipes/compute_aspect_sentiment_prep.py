@@ -6,6 +6,8 @@ from dataiku import pandasutils as pdu
 from nltk.stem import WordNetLemmatizer
 from aspect_clustering.vector_dist import vector_dist
 from run_extraction.init_spacy import init_spacy
+from aspect_clustering.add_clusters_to_reviews import add_clusters_to_reviews
+from sklearn import cluster
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
@@ -26,7 +28,6 @@ df_grouped = df.groupby(["product_id", 'noun_lemmatized']).agg({'product_id':'si
                                                                 "review_id":"unique"}).rename(columns={'product_id':'count',
                                                                                                              'polarity_nltk':'mean_polarity_nltk',
                                                                                                              'polarity_textblob':'mean_polarity_textblob'}).reset_index()
-df_grouped
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 print("There are %d nouns extracted" %(df_grouped.shape[0]))
@@ -39,10 +40,14 @@ food_vec = nlp('food').vector
 luggage_vec = nlp('luggage').vector
 staff_vec = nlp('staff').vector
 
+# df_grouped['noun_vector'] = np.nan
 asp_group = []
+asp_vectors = []
 for aspect in df_grouped.noun_lemmatized:
     dist_dic = {}
     token_vector = nlp(aspect).vector
+    asp_vectors.append(token_vector)
+    # df_grouped[df_grouped.noun_lemmatized==aspect, 'noun_vector'] = token_vector
     dist_dic['punctuality'] = vector_dist(token_vector, punctuality_vec)
     dist_dic['food'] = vector_dist(token_vector, food_vec)
     dist_dic['luggage'] = vector_dist(token_vector, luggage_vec)
@@ -52,6 +57,15 @@ for aspect in df_grouped.noun_lemmatized:
     asp_group.append(max_key)
 df_grouped['group'] = asp_group
 df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.str.lower(), "group"] = "company"
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
+kmeans = cluster.KMeans(n_clusters=n_clusters)
+kmeans.fit(asp_vectors)
+labels = kmeans.labels_
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df_grouped["k_means_clusters"] = labels
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
