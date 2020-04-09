@@ -5,7 +5,7 @@ import ast
 
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
 # print(n_clusters)
-# n_clusters = ast.literal_eval(n_clusters)
+n_clusters = ast.literal_eval(n_clusters)
 
 
 def get_word_clusters(unique_aspects, nlp):
