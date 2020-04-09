@@ -60,6 +60,7 @@ df_grouped['group'] = asp_group
 df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.str.lower(), "group"] = "company"
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+# you have to cluster for each company
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
 n_clusters = ast.literal_eval(n_clusters)
 kmeans = cluster.KMeans(n_clusters=n_clusters)
