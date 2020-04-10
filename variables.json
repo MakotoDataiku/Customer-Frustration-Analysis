@@ -1,6 +1,7 @@
 {
   "company": [
-    "Air France"
+    "Air France",
+    "Lufthansa"
   ],
   "NUM_CLUSTERS": 4,
   "n_days": 1,
