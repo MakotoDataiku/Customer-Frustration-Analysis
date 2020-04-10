@@ -30,18 +30,18 @@
     "main": {
       "items": [
         {
-          "ref": "aspect_sentiment_prep",
+          "ref": "aspect_sentiment_categorised",
           "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 19,
+    "versionNumber": 20,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586473360435
+    "lastModifiedOn": 1586503897231
   },
   "creationTag": {
     "versionNumber": 0,

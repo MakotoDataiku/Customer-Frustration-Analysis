@@ -75,9 +75,9 @@ df_grouped["k_means_clusters"] = labels
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
 # NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
 
-aspect_sentiment_prep_df = df_grouped # For this sample code, simply copy input to output
+aspect_sentiment_categorised_df = df_grouped # For this sample code, simply copy input to output
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-aspect_sentiment_prep = dataiku.Dataset("aspect_sentiment_prep")
-aspect_sentiment_prep.write_with_schema(aspect_sentiment_prep_df)
+aspect_sentiment_categorised = dataiku.Dataset("aspect_sentiment_categorised")
+aspect_sentiment_categorised.write_with_schema(aspect_sentiment_categorised_df)
