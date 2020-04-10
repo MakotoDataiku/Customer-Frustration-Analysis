@@ -73,6 +73,7 @@ for company in companies:
     labels = kmeans.labels_
     df_grouped.loc[df_grouped.product_id == company, "k_means_clusters"] = labels
 
+df_grouped['k_means_clusters'] = df_grouped.k_means_clusters.astype(int)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
