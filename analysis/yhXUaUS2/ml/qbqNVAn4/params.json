@@ -696,7 +696,7 @@
         "quantile_bin_nb_bins": 4,
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -1977,7 +1977,7 @@
         "quantile_bin_nb_bins": 4,
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -6455,7 +6455,7 @@
     },
     "kmeans_clustering": {
       "k": [
-        5
+        4
       ],
       "enabled": true,
       "seed": 1337,
@@ -6546,13 +6546,21 @@
         "distinct": false,
         "enabled": false
       },
-      "partitionSelectionMethod": "ALL",
+      "partitionSelectionMethod": "SELECTED",
+      "selectedPartitions": [
+        "United Airlines",
+        "Ryanair",
+        "Lufthansa",
+        "Emirates",
+        "Delta Air Lines",
+        "Air France"
+      ],
       "latestPartitionsN": 1,
       "ordering": {
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.02,
       "withinFirstN": -1,
@@ -6567,7 +6575,7 @@
   "backendType": "PY_MEMORY",
   "maxConcurrentModelTraining": 2,
   "envSelection": {
-    "envMode": "USE_BUILTIN_MODE"
+    "envMode": "INHERIT"
   },
   "containerSelection": {
     "containerMode": "INHERIT"
