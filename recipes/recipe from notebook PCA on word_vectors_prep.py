@@ -34,7 +34,7 @@
 # First of all, let's load the libraries that we'll use
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-%pylab inline
+# %pylab inline
 import dataiku                               # Access to Dataiku datasets
 import pandas as pd, numpy as np             # Data manipulation
 from sklearn.decomposition import PCA        # The main algorithm
