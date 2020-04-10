@@ -5,10 +5,10 @@
         "mode": "SQL",
         "id": "2mkvGaNyem8U",
         "runOn": 1586528772040,
-        "runIn": -1,
+        "runIn": 34,
         "runBy": "admin",
         "connection": "PostgreSQL",
-        "state": "RUNNING",
+        "state": "DONE",
         "futureId": "ZPLi3KVl",
         "hash": "eea5df49643922cf081baea10a172ba2",
         "querySettings": {
