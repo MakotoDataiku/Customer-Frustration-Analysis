@@ -25,26 +25,14 @@
   "partitioning": {
     "ignoreNonMatchingFile": false,
     "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": [
-      {
-        "name": "company",
-        "type": "value"
-      },
-      {
-        "name": "timestamp",
-        "params": {
-          "period": "DAY"
-        },
-        "type": "time"
-      }
-    ]
+    "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586529802448
+    "lastModifiedOn": 1586530154468
   },
   "creationTag": {
     "versionNumber": 0,
