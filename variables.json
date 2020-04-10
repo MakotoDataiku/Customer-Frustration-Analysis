@@ -6,11 +6,10 @@
     "Ryanair",
     "easyJet",
     "United Airlines",
-    "Delta Air Lines",
-    ""
+    "Delta Air Lines"
   ],
   "NUM_CLUSTERS": 4,
-  "n_days": 1,
+  "n_days": 3,
   "exclude_stopwords": [
     "it",
     "this",
