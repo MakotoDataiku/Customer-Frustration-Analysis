@@ -41,34 +41,37 @@ food_vec = nlp('food').vector
 luggage_vec = nlp('luggage').vector
 staff_vec = nlp('staff').vector
 
-# df_grouped['noun_vector'] = np.nan
-asp_group = []
-asp_vectors = []
-for aspect in df_grouped.noun_lemmatized:
-    dist_dic = {}
-    token_vector = nlp(aspect).vector
-    asp_vectors.append(token_vector)
-    # df_grouped[df_grouped.noun_lemmatized==aspect, 'noun_vector'] = token_vector
-    dist_dic['punctuality'] = vector_dist(token_vector, punctuality_vec)
-    dist_dic['food'] = vector_dist(token_vector, food_vec)
-    dist_dic['luggage'] = vector_dist(token_vector, luggage_vec)
-    dist_dic['staff'] = vector_dist(token_vector, staff_vec)
-    # group = min([dist_punc, dist_food, dist_lugg, dist_staf])
-    max_key = max(dist_dic, key=dist_dic.get)
-    asp_group.append(max_key)
-df_grouped['group'] = asp_group
-df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.str.lower(), "group"] = "company"
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# you have to cluster for each company
+companies = df.product_id.unique()
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
 n_clusters = ast.literal_eval(n_clusters)
-kmeans = cluster.KMeans(n_clusters=n_clusters)
-kmeans.fit(asp_vectors)
-labels = kmeans.labels_
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df_grouped["k_means_clusters"] = labels
+df_grouped['k_means_clusters'] = np.nan
+df_grouped['group'] = np.nan
+for company in companies:
+    df_sub = df_grouped[df_grouped.product_id == company]
+    asp_group = []
+    asp_vectors = []
+    for aspect in df_sub.noun_lemmatized:
+        dist_dic = {}
+        token_vector = nlp(aspect).vector
+        asp_vectors.append(token_vector)
+        # df_grouped[df_grouped.noun_lemmatized==aspect, 'noun_vector'] = token_vector
+        dist_dic['punctuality'] = vector_dist(token_vector, punctuality_vec)
+        dist_dic['food'] = vector_dist(token_vector, food_vec)
+        dist_dic['luggage'] = vector_dist(token_vector, luggage_vec)
+        dist_dic['staff'] = vector_dist(token_vector, staff_vec)
+        # group = min([dist_punc, dist_food, dist_lugg, dist_staf])
+        max_key = max(dist_dic, key=dist_dic.get)
+        asp_group.append(max_key)
+    df_grouped.loc[df_grouped.product_id == company, "group"] = asp_group
+    df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.str.lower(), "group"] = "company"
+
+    # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+    # you have to cluster for each company
+    kmeans = cluster.KMeans(n_clusters=n_clusters)
+    kmeans.fit(asp_vectors)
+    labels = kmeans.labels_
+    df_grouped.loc[df_grouped.product_id == company, "k_means_clusters"] = labels
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
