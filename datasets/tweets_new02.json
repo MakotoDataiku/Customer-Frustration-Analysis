@@ -33,11 +33,11 @@
     ]
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586532645206
+    "lastModifiedOn": 1586532853884
   },
   "creationTag": {
     "versionNumber": 0,
@@ -152,7 +152,7 @@
         "type": "string"
       }
     ],
-    "userModified": true
+    "userModified": false
   },
   "metrics": {
     "probes": [
