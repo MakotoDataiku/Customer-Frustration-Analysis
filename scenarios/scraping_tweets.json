@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586558157131
+    "lastModifiedOn": 1586558654327
   },
   "checklists": {
     "checklists": []
@@ -65,126 +65,6 @@
   "params": {
     "steps": [
       {
-        "id": "build_0_true_d_tweets_new",
-        "type": "build_flowitem",
-        "name": "scrape tweets_new",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "tweets_new",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "RECURSIVE_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_0_true",
-        "type": "build_flowitem",
-        "name": "tweets_stacked",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "tweets_stacked",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "NON_RECURSIVE_FORCED_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_1_true_d_tweets_prep",
-        "type": "build_flowitem",
-        "name": "tweets_prep",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "tweets_prep",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "NON_RECURSIVE_FORCED_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_1_true_d_tweets_noURL",
-        "type": "build_flowitem",
-        "name": "tweets_noURL",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "tweets_noURL",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "NON_RECURSIVE_FORCED_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_0_true_d_aspect_sentiment_pairs",
-        "type": "build_flowitem",
-        "name": "aspect_sentiment_pairs",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "aspect_sentiment_pairs",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "RECURSIVE_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
         "id": "build_0_true_d_Cat_analysis_by_companies",
         "type": "build_flowitem",
         "name": "Cat_analysis_by_companies",
@@ -220,25 +100,13 @@
         "runConditionExpression": "",
         "resetScenarioStatus": false,
         "params": {
-          "builds": [],
-          "jobType": "RECURSIVE_BUILD",
-          "refreshHiveMetastore": true,
-          "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_0_true_2",
-        "type": "build_flowitem",
-        "name": "Step #8",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "params": {
-          "builds": [],
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "word_vectors_PCA",
+              "partitionsSpec": ""
+            }
+          ],
           "jobType": "RECURSIVE_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
