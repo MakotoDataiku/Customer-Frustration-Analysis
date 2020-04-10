@@ -13,6 +13,10 @@
         {
           "ref": "tweets_new_prepared",
           "deps": []
+        },
+        {
+          "ref": "tweets_new02_prepared",
+          "deps": []
         }
       ]
     }
@@ -28,11 +32,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586530797657
+    "lastModifiedOn": 1586530826464
   },
   "creationTag": {
     "versionNumber": 0,

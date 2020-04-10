@@ -68,6 +68,11 @@
       },
       "originLabel": "tweets_new_prepared",
       "index": 0
+    },
+    {
+      "preFilter": {},
+      "originLabel": "tweets_new02_prepared",
+      "index": 1
     }
   ],
   "postFilter": {
@@ -167,7 +172,7 @@
             "type": "string"
           }
         ],
-        "userModified": true
+        "userModified": false
       }
     },
     "distinct": false,
