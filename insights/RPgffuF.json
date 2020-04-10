@@ -1,0 +1,203 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "word_vectors_PCA",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "def": {
+      "type": "scatter",
+      "variant": "normal",
+      "name": "Clusters of nouns",
+      "userEditedName": true,
+      "genericDimension0": [],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [
+        {
+          "column": "PC_1",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaYDimension": [
+        {
+          "column": "PC_2",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaSize": [
+        {
+          "column": "count",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "uaShape": [
+        {
+          "column": "k_means_clusters",
+          "type": "ALPHANUM",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "uaColor": [
+        {
+          "column": "k_means_clusters",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [
+        {
+          "filterType": "ALPHANUM_FACET",
+          "column": "product_id",
+          "columnType": "ALPHANUM",
+          "isA": "filter",
+          "excludedValues": {
+            "Delta Air Lines": true,
+            "United Airlines": true,
+            "Emirates": true,
+            "Ryanair": true,
+            "Lufthansa": true,
+            "___dku_no_value___": true
+          },
+          "explicitExclude": false
+        }
+      ],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#F03334",
+        "transparency": 1.0,
+        "colorPalette": "ryg1",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.5,
+        "gridLatDeg": 0.5
+      },
+      "thumbnailData": "data:image/png;base64,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",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT"
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Clusters of nouns on word_vectors_PCA",
+  "dashboardCreationId": "O2kuPnx",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1586521749538
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1586521749538
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
