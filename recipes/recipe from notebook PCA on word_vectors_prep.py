@@ -105,6 +105,7 @@ df_PCA.head()
 py_recipe_output = dataiku.Dataset("word_vectors_PCA")
 py_recipe_output.write_with_schema(df_PCA)
 
+"""
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 pyplot.scatter(result[:, 0], result[:, 1])
 
