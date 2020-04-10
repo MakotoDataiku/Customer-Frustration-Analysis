@@ -245,11 +245,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586522135329
+    "lastModifiedOn": 1586522135947
   },
   "creationTag": {
     "versionNumber": 0,
