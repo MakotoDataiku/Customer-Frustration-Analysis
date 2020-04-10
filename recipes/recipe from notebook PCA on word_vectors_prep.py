@@ -1,40 +1,3 @@
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# # Principal Component Analysis (PCA) on word_vectors_prep
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# The goal of Principal Component Analysis (PCA) is to reduce the **number of dimensions** of a d-dimensional dataset by projecting it onto a k-dimensional subspace (with k < d) in order to increase the **computational efficiency** while retaining most of the information.
-# 
-# The k dimensions that we keep (eigenvectors) are called "**principal components**".
-# 
-# The PCA approach requires to:
-# 
-# * Standardize the data.
-# * Obtain the Eigenvectors and Eigenvalues from a Singular Vector Decomposition (SVD).
-# * Choose the number k of principal components to keep.
-# * Construct a projection matrix with the selected k eigenvectors.
-# * Project original dataset to a k-dimensional feature subspace.
-# 
-# Choosing the number k can be done systematically by selecting the components that best describe the variance in our data. The amount of information (variance) contained by each eigenvector can be measured by the **explained variance**.
-# 
-# This notebook will display the explained variance for your dataset and help you choose the right amount of eigenvectors ("principal components").
-# 
-# * [Setup and loading the data](#setup)
-# * [Preprocessing of the data](#preprocessing)
-# * [Computation of the PCA](#pca)
-# * [Display of the explained variance](#explained-variance)
-# * [Retaining of the most significant components](#final-pca)
-# * [Visualizing the vectors in the original space](#original-space)
-# * [Applying the projection](#apply)
-# 
-# <center><strong>Select Cell > Run All to execute the whole analysis</strong></center>
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# ## Setup and dataset loading <a id="setup" />
-# 
-# First of all, let's load the libraries that we'll use
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# %pylab inline
 import dataiku                               # Access to Dataiku datasets
 import pandas as pd, numpy as np             # Data manipulation
 from sklearn.decomposition import PCA        # The main algorithm
@@ -46,38 +9,10 @@ import warnings                              # Disable some warnings
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 from sklearn.preprocessing import StandardScaler
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# The first thing we do is now to load the dataset and put aside the three main types of columns:
-# 
-# * Numerics
-# * Categorical
-# * Dates
-# 
-# Since analyzing PCA requires to have the data in memory, we are only going to load a sample of the data. Modify the following cell to change the size of the sample.
-# 
-# Also, by default, date features are not kept. Modify the following cell to change that.
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# Load a DSS dataset as a Pandas dataframe
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Take a handle on the dataset
 mydataset = dataiku.Dataset("word_vectors_prep")
-
-# Load the first lines.
-# You can also load random samples, limit yourself to some columns, or only load
-# data matching some filters.
-#
-# Please refer to the Dataiku Python API documentation for more information
 df = mydataset.get_dataframe()
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# ## Preprocessing of the data <a id="preprocessing" />
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# Keep the dates as features if requested by the user
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 companies = df.product_id.unique()
 df_PCA = pd.DataFrame()
 for company in companies:
