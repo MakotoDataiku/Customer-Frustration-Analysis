@@ -6575,7 +6575,7 @@
   "backendType": "PY_MEMORY",
   "maxConcurrentModelTraining": 2,
   "envSelection": {
-    "envMode": "INHERIT"
+    "envMode": "USE_BUILTIN_MODE"
   },
   "containerSelection": {
     "containerMode": "INHERIT"
