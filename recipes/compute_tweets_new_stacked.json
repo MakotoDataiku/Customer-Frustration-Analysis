@@ -16,7 +16,18 @@
         },
         {
           "ref": "tweets_new02_prep",
-          "deps": []
+          "deps": [
+            {
+              "idim": "company",
+              "func": "all_available",
+              "params": {}
+            },
+            {
+              "idim": "timestamp",
+              "func": "all_available",
+              "params": {}
+            }
+          ]
         }
       ]
     }
@@ -32,11 +43,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586529183291
+    "lastModifiedOn": 1586529235890
   },
   "creationTag": {
     "versionNumber": 0,
