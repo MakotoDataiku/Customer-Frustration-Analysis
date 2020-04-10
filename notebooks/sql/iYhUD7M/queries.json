@@ -1,0 +1,28 @@
+{
+  "queries": {
+    "unqoytqi77s": [
+      {
+        "mode": "SQL",
+        "id": "2mkvGaNyem8U",
+        "runOn": 1586528772040,
+        "runIn": -1,
+        "runBy": "admin",
+        "connection": "PostgreSQL",
+        "state": "RUNNING",
+        "futureId": "ZPLi3KVl",
+        "hash": "eea5df49643922cf081baea10a172ba2",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "SELECT * FROM \"ANALYSISOFCUSTOMERFRUSTRATIONSINAIRLINEINDUSTRIES_tweets_new02\"",
+        "expandedSql": "SELECT * FROM \"ANALYSISOFCUSTOMERFRUSTRATIONSINAIRLINEINDUSTRIES_tweets_new02\""
+      }
+    ]
+  }
+}
