@@ -12,7 +12,18 @@
       "items": [
         {
           "ref": "tweets_new_copy_prep",
-          "deps": []
+          "deps": [
+            {
+              "idim": "company",
+              "func": "all_available",
+              "params": {}
+            },
+            {
+              "idim": "timestamp",
+              "func": "all_available",
+              "params": {}
+            }
+          ]
         },
         {
           "ref": "tweets_new02_prep",
@@ -43,11 +54,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586529235890
+    "lastModifiedOn": 1586529281237
   },
   "creationTag": {
     "versionNumber": 0,
