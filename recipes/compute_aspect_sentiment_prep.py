@@ -74,6 +74,7 @@ for company in companies:
     df_vectors_sub = pd.DataFrame(asp_vectors)
     df_vectors_sub['product_id'] = company
     df_vectors_sub['noun_lemmatized'] = df_sub['noun_lemmatized']
+    df_vectors_sub['count'] = df_sub['count']
 
     # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
     # you have to cluster for each company
