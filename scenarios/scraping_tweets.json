@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586556337675
+    "lastModifiedOn": 1586558157131
   },
   "checklists": {
     "checklists": []
@@ -179,6 +179,66 @@
               "partitionsSpec": ""
             }
           ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_Cat_analysis_by_companies",
+        "type": "build_flowitem",
+        "name": "Cat_analysis_by_companies",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Cat_analysis_by_companies",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_1",
+        "type": "build_flowitem",
+        "name": "word_vectors_prep_clustered",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "builds": [],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_2",
+        "type": "build_flowitem",
+        "name": "Step #8",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "builds": [],
           "jobType": "RECURSIVE_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
