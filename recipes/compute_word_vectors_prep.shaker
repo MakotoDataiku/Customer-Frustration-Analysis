@@ -1240,6 +1240,23 @@
         ]
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "component_278",
+        "columns": [
+          "product_id",
+          "noun_lemmatized",
+          "k_means_clusters"
+        ],
+        "reorderAction": "AT_START",
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
