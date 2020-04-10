@@ -8,7 +8,11 @@
         "readParams": {
           "mode": "AUTO",
           "autoModeRepartitionInto": 10,
-          "map": {}
+          "map": {
+            "tweets_new_copy": {
+              "repartition": 10
+            }
+          }
         },
         "useGlobalMetastore": false,
         "useNativeProcessors": true,
@@ -58,18 +62,18 @@
     "main": {
       "items": [
         {
-          "ref": "tweets_new_copy_prep",
+          "ref": "tweets_new_copied",
           "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586530200273
+    "lastModifiedOn": 1586530261994
   },
   "creationTag": {
     "versionNumber": 0,
