@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586555632083
+    "lastModifiedOn": 1586555679896
   },
   "checklists": {
     "checklists": []
@@ -91,7 +91,7 @@
       {
         "id": "build_0_true",
         "type": "build_flowitem",
-        "name": "tweets_new_stack",
+        "name": "tweets_stacked",
         "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
           "SUCCESS",
@@ -100,8 +100,14 @@
         "runConditionExpression": "",
         "resetScenarioStatus": false,
         "params": {
-          "builds": [],
-          "jobType": "RECURSIVE_BUILD",
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweets_stacked",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
         }
