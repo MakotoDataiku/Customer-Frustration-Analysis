@@ -25,14 +25,26 @@
   "partitioning": {
     "ignoreNonMatchingFile": false,
     "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": []
+    "dimensions": [
+      {
+        "name": "company",
+        "type": "value"
+      },
+      {
+        "name": "timestamp",
+        "params": {
+          "period": "DAY"
+        },
+        "type": "time"
+      }
+    ]
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586528222912
+    "lastModifiedOn": 1586528469896
   },
   "creationTag": {
     "versionNumber": 0,
@@ -147,7 +159,7 @@
         "type": "string"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
   "metrics": {
     "probes": [
@@ -168,6 +180,16 @@
         "meta": {
           "name": "Record count",
           "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "partitioning",
+        "enabled": true,
+        "computeOnBuildMode": "WHOLE_DATASET",
+        "meta": {
+          "name": "Partitioning statistics",
+          "level": 1
         },
         "configuration": {}
       }
