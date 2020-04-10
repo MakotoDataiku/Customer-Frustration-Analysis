@@ -1,0 +1,85 @@
+{
+  "mode": "UNION",
+  "selectedColumns": [
+    "company",
+    "has_media",
+    "hashtags",
+    "img_urls",
+    "is_replied",
+    "is_reply_to",
+    "likes",
+    "links",
+    "parent_tweet_id",
+    "replies",
+    "reply_to_users",
+    "retweets",
+    "screen_name",
+    "text",
+    "text_html",
+    "timestamp",
+    "timestamp_epochs",
+    "tweet_id",
+    "tweet_url",
+    "user_id",
+    "username",
+    "video_url"
+  ],
+  "originColumnName": "original_dataset",
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "tweets_new_copy_prep",
+      "index": 0
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "tweets_new02_prep",
+      "index": 1
+    }
+  ],
+  "postFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "addOriginColumn": false
+}
