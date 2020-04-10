@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586521428504
+    "lastModifiedOn": 1586557605266
   },
   "creationTag": {
     "versionNumber": 0,
@@ -101,6 +101,10 @@
       {
         "name": "count",
         "type": "bigint"
+      },
+      {
+        "name": "cluster_labels",
+        "type": "string"
       },
       {
         "name": "PC_1",
