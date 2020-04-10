@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586505128409
+    "lastModifiedOn": 1586505147222
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,25 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "product_id",
+        "type": "string"
+      },
+      {
+        "name": "k_means_clusters",
+        "type": "bigint"
+      },
+      {
+        "name": "weighted_ave_nltk",
+        "type": "double"
+      },
+      {
+        "name": "weighted_ave_tb",
+        "type": "double"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
