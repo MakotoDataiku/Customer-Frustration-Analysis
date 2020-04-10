@@ -32,16 +32,19 @@
       },
       {
         "name": "timestamp",
-        "type": "value"
+        "params": {
+          "period": "DAY"
+        },
+        "type": "time"
       }
     ]
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586529647097
+    "lastModifiedOn": 1586529671122
   },
   "creationTag": {
     "versionNumber": 0,
