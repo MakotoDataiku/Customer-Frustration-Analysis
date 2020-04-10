@@ -1,0 +1,24 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "77WxmYq",
+    "id": "Lr4DhQQ8MefNqLB9",
+    "key": "f1muBqhEZVq4ERbhwOUwl6CaG1C8olrR",
+    "label": "Key for Web app Analysis of customer frustrations(77WxmYq)",
+    "createdOn": 1586526532285
+  }
+]
