@@ -6,7 +6,7 @@ from dataiku import pandasutils as pdu
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-aspects_grouped = dataiku.Dataset("aspects_grouped_prep")
+aspects_grouped = dataiku.Dataset("aspect_sentiment_categorised")
 df = aspects_grouped.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -28,5 +28,5 @@ sentiment_by_companies_df = df_grouped # For this sample code, simply copy input
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-sentiment_by_companies = dataiku.Dataset("sentiment_by_companies")
+sentiment_by_companies = dataiku.Dataset("analysis_by_companies")
 sentiment_by_companies.write_with_schema(sentiment_by_companies_df)
