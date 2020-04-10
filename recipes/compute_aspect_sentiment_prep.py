@@ -98,7 +98,7 @@ df_grouped['k_means_clusters'] = df_grouped.k_means_clusters.astype(int)
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 aspect_sentiment_categorised = dataiku.Dataset("aspect_sentiment_categorised")
-aspect_sentiment_categorised.write_with_schema(word_vectors)
+aspect_sentiment_categorised.write_with_schema(df_grouped)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
