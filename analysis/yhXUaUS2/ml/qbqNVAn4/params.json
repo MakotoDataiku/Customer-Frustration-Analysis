@@ -6549,11 +6549,8 @@
       "partitionSelectionMethod": "SELECTED",
       "selectedPartitions": [
         "United Airlines",
-        "Ryanair",
         "Lufthansa",
-        "Emirates",
-        "Delta Air Lines",
-        "Air France"
+        "Delta Air Lines"
       ],
       "latestPartitionsN": 1,
       "ordering": {
