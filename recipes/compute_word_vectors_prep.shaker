@@ -1251,7 +1251,8 @@
         "columns": [
           "product_id",
           "noun_lemmatized",
-          "k_means_clusters"
+          "k_means_clusters",
+          "count"
         ],
         "reorderAction": "AT_START",
         "appliesTo": "COLUMNS"
