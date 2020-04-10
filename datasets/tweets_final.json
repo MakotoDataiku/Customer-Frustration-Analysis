@@ -39,13 +39,13 @@
       "\u0007",
       "\b"
     ],
-    "skipRowsBeforeHeader": 1,
-    "parseHeaderRow": false,
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": true,
     "skipRowsAfterHeader": 0,
     "probableNumberOfRecords": 23,
     "normalizeBooleans": false,
     "normalizeDoubles": true,
-    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readAdditionalColumnsBehavior": "DISCARD_SILENT",
     "readMissingColumnsBehavior": "DISCARD_SILENT",
     "readDataTypeMismatchBehavior": "DISCARD_WARNING",
     "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
@@ -58,11 +58,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586555824782
+    "lastModifiedOn": 1586556936663
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,95 +85,91 @@
   "schema": {
     "columns": [
       {
-        "name": "col_0",
+        "name": "company",
         "type": "string"
       },
       {
-        "name": "col_1",
+        "name": "has_media",
         "type": "string"
       },
       {
-        "name": "col_2",
+        "name": "hashtags",
         "type": "string"
       },
       {
-        "name": "col_3",
+        "name": "img_urls",
         "type": "string"
       },
       {
-        "name": "col_4",
+        "name": "is_replied",
         "type": "string"
       },
       {
-        "name": "col_5",
+        "name": "is_reply_to",
         "type": "string"
       },
       {
-        "name": "col_6",
+        "name": "likes",
         "type": "string"
       },
       {
-        "name": "col_7",
+        "name": "links",
         "type": "string"
       },
       {
-        "name": "col_8",
+        "name": "parent_tweet_id",
         "type": "string"
       },
       {
-        "name": "col_9",
+        "name": "replies",
         "type": "string"
       },
       {
-        "name": "col_10",
+        "name": "reply_to_users",
         "type": "string"
       },
       {
-        "name": "col_11",
+        "name": "retweets",
         "type": "string"
       },
       {
-        "name": "col_12",
+        "name": "screen_name",
         "type": "string"
       },
       {
-        "name": "col_13",
+        "name": "text",
         "type": "string"
       },
       {
-        "name": "col_14",
+        "name": "text_html",
         "type": "string"
       },
       {
-        "name": "col_15",
+        "name": "timestamp",
         "type": "string"
       },
       {
-        "name": "col_16",
+        "name": "timestamp_epochs",
         "type": "string"
       },
       {
-        "name": "col_17",
+        "name": "tweet_id",
         "type": "string"
       },
       {
-        "name": "col_18",
+        "name": "tweet_url",
         "type": "string"
       },
       {
-        "name": "col_19",
+        "name": "user_id",
         "type": "string"
       },
       {
-        "name": "col_20",
+        "name": "username",
         "type": "string"
       },
       {
-        "name": "col_21",
-        "type": "string"
-      },
-      {
-        "name": "col_22",
+        "name": "video_url",
         "type": "string"
       }
     ],
