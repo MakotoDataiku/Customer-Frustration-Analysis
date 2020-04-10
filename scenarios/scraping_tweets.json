@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1583515313705
+    "lastModifiedOn": 1586555595901
   },
   "checklists": {
     "checklists": []
@@ -63,7 +63,32 @@
     }
   ],
   "params": {
-    "steps": []
+    "steps": [
+      {
+        "id": "build_0_true_d_tweets_new",
+        "type": "build_flowitem",
+        "name": "scrape tweets_new",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweets_new",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      }
+    ]
   },
   "automationLocal": false,
   "customFields": {}
