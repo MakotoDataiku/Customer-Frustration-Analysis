@@ -36,17 +36,21 @@ print("There are %d nouns extracted" %(df_grouped.shape[0]))
 model_path= dataiku.get_custom_variables()['model_path']
 nlp = init_spacy(model_path)
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 punctuality_vec = nlp('punctuality').vector
 food_vec = nlp('food').vector
 luggage_vec = nlp('luggage').vector
 staff_vec = nlp('staff').vector
 
-companies = df.product_id.unique()
+companies = df_grouped.product_id.unique()
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
-n_clusters = ast.literal_eval(n_clusters)
+# n_clusters = ast.literal_eval(n_clusters)
+df_vectors = pd.DataFrame()
 
 df_grouped['k_means_clusters'] = np.nan
 df_grouped['group'] = np.nan
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for company in companies:
     df_sub = df_grouped[df_grouped.product_id == company]
     asp_group = []
@@ -63,8 +67,13 @@ for company in companies:
         # group = min([dist_punc, dist_food, dist_lugg, dist_staf])
         max_key = max(dist_dic, key=dist_dic.get)
         asp_group.append(max_key)
+
     df_grouped.loc[df_grouped.product_id == company, "group"] = asp_group
     df_grouped.loc[df_grouped.noun_lemmatized.str.lower() == df_grouped.product_id.str.lower(), "group"] = "company"
+
+    df_vectors_sub = pd.DataFrame(asp_vectors)
+    df_vectors_sub['product_id'] = company
+    df_vectors_sub['noun_lemmatized'] = df_sub['noun_lemmatized']
 
     # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
     # you have to cluster for each company
@@ -72,16 +81,26 @@ for company in companies:
     kmeans.fit(asp_vectors)
     labels = kmeans.labels_
     df_grouped.loc[df_grouped.product_id == company, "k_means_clusters"] = labels
+    df_vectors_sub['k_means_clusters'] = labels
 
+    df_vectors = pd.concat([df_vectors, df_vectors_sub])
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_grouped['k_means_clusters'] = df_grouped.k_means_clusters.astype(int)
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
 # NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
 
-aspect_sentiment_categorised_df = df_grouped # For this sample code, simply copy input to output
+# aspect_sentiment_categorised_df = df_grouped # For this sample code, simply copy input to output
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 aspect_sentiment_categorised = dataiku.Dataset("aspect_sentiment_categorised")
-aspect_sentiment_categorised.write_with_schema(aspect_sentiment_categorised_df)
+aspect_sentiment_categorised.write_with_schema(word_vectors)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+# Write recipe outputs
+word_vectors = dataiku.Dataset("word_vectors")
+word_vectors.write_with_schema(df_vectors)
