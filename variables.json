@@ -1,7 +1,13 @@
 {
   "company": [
     "Air France",
-    "Lufthansa"
+    "Lufthansa",
+    "Emirates",
+    "Ryanair",
+    "easyJet",
+    "United Airlines",
+    "Delta Air Lines",
+    ""
   ],
   "NUM_CLUSTERS": 4,
   "n_days": 1,
