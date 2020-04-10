@@ -32,16 +32,20 @@
         {
           "ref": "aspect_sentiment_categorised",
           "appendMode": false
+        },
+        {
+          "ref": "word_vectors",
+          "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 26,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586512465252
+    "lastModifiedOn": 1586512482410
   },
   "creationTag": {
     "versionNumber": 0,
