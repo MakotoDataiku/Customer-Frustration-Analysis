@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586515837059
+    "lastModifiedOn": 1586515926724
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,29 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "product_id",
+        "type": "string"
+      },
+      {
+        "name": "noun_lemmatized",
+        "type": "string"
+      },
+      {
+        "name": "k_means_clusters",
+        "type": "bigint"
+      },
+      {
+        "name": "PC_1",
+        "type": "double"
+      },
+      {
+        "name": "PC_2",
+        "type": "double"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
