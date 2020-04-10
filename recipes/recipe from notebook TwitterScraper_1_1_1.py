@@ -71,5 +71,5 @@ for company in companies_list:
     df_big = pd.concat([df_big, df], ignore_index=True)
 
 # Recipe outputs
-tweets = dataiku.Dataset("tweets_new")
+tweets = dataiku.Dataset("tweets_new02")
 tweets.write_with_schema(df_big)
