@@ -277,3 +277,4 @@ for date_col_idx in range(len(date_columns)):
 # Recipe outputs
 word_vectors_pca = dataiku.Dataset("word_vectors_PCA")
 word_vectors_pca.write_with_schema(pandas_dataframe)
+"""
