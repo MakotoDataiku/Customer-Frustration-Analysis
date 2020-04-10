@@ -73,8 +73,8 @@ for company in companies:
 
     df_vectors_sub = pd.DataFrame(asp_vectors)
     df_vectors_sub['product_id'] = company
-    df_vectors_sub['noun_lemmatized'] = df_sub['noun_lemmatized']
-    df_vectors_sub['count'] = df_sub['count']
+    df_vectors_sub['noun_lemmatized'] = df_sub['noun_lemmatized'].values
+    df_vectors_sub['count'] = df_sub['count'].values
 
     # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
     # you have to cluster for each company
@@ -83,7 +83,6 @@ for company in companies:
     labels = kmeans.labels_
     df_grouped.loc[df_grouped.product_id == company, "k_means_clusters"] = labels
     df_vectors_sub['k_means_clusters'] = labels
-
     df_vectors = pd.concat([df_vectors, df_vectors_sub])
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
