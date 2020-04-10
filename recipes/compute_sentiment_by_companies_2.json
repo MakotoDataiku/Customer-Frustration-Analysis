@@ -30,18 +30,22 @@
     "main": {
       "items": [
         {
-          "ref": "analysis_by_companies",
+          "ref": "Cat_analysis_by_companies",
+          "appendMode": false
+        },
+        {
+          "ref": "KM_analysis_by_companies",
           "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586504935158
+    "lastModifiedOn": 1586505131421
   },
   "creationTag": {
     "versionNumber": 0,

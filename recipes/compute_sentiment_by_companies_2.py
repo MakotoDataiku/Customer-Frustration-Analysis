@@ -18,6 +18,7 @@ def weighted_ave(x):
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_grouped = df.groupby(["product_id", "group"]).apply(weighted_ave).reset_index()
+df_clustered = df.groupby(["product_id", "k_means_clusters"]).apply(weighted_ave).reset_index()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
@@ -28,5 +29,8 @@ sentiment_by_companies_df = df_grouped # For this sample code, simply copy input
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-sentiment_by_companies = dataiku.Dataset("analysis_by_companies")
-sentiment_by_companies.write_with_schema(sentiment_by_companies_df)
+sentiment_by_companies = dataiku.Dataset("Cat_analysis_by_companies")
+sentiment_by_companies.write_with_schema(df_grouped)
+
+KM_analysis_by_companies = dataiku.Dataset("KM_analysis_by_companies")
+KM_analysis_by_companies.write_with_schema(df_clustered)
