@@ -14,8 +14,10 @@
           "ref": "tweets_new_prepared",
           "deps": [
             {
+              "out": "tweets_new_stacked",
               "idim": "company",
-              "func": "all_available",
+              "odim": "company",
+              "func": "equals",
               "params": {}
             }
           ]
@@ -24,8 +26,10 @@
           "ref": "tweets_new02_prepared",
           "deps": [
             {
+              "out": "tweets_new_stacked",
               "idim": "company",
-              "func": "all_available",
+              "odim": "company",
+              "func": "equals",
               "params": {}
             }
           ]
@@ -44,11 +48,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586530922373
+    "lastModifiedOn": 1586530950202
   },
   "creationTag": {
     "versionNumber": 0,
