@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586504600161
+    "lastModifiedOn": 1586504825360
   },
   "creationTag": {
     "versionNumber": 0,
@@ -112,7 +112,7 @@
       },
       {
         "name": "k_means_clusters",
-        "type": "double"
+        "type": "bigint"
       },
       {
         "name": "group",
