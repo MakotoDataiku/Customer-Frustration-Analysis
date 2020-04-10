@@ -36,7 +36,7 @@
       "disabled": false,
       "type": "DateParser",
       "params": {
-        "outCol": "timestamp",
+        "outCol": "timestamp_parsed",
         "formats": [
           "yyyy-dd-MM HH:mm:ss"
         ],
