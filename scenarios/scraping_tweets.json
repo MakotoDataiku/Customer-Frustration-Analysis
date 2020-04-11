@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586594904365
+    "lastModifiedOn": 1586595026713
   },
   "checklists": {
     "checklists": []
@@ -59,7 +59,7 @@
       "id": "gCSoab4v",
       "name": "scraping twitter notification",
       "runConditionEnabled": true,
-      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "runCondition": "",
       "phase": "END"
     }
   ],
