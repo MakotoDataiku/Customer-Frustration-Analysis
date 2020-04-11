@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586595963898
+    "lastModifiedOn": 1586596129786
   },
   "checklists": {
     "checklists": []
@@ -45,9 +45,9 @@
       "messaging": {
         "type": "mail-scenario",
         "configuration": {
-          "channelId": "makoto.miyazaki@dataiku.com",
+          "channelId": "dss makoto",
           "subject": "DSS scenario ${scenarioName}: ${outcome}",
-          "sender": "makoto.miyazaki@dataiku.com",
+          "sender": "makoto",
           "recipient": "makoto.miyazaki@dataiku.com",
           "sendAsHTML": false,
           "attachments": [],
@@ -58,7 +58,7 @@
       },
       "id": "gCSoab4v",
       "name": "scraping twitter notification",
-      "runConditionEnabled": true,
+      "runConditionEnabled": false,
       "runCondition": "",
       "phase": "END"
     }
