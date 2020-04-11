@@ -2,7 +2,7 @@
   "type": "STANDARD",
   "hasLegacyBackendURL": false,
   "params": {
-    "backendEnabled": false,
+    "backendEnabled": true,
     "enableJavascriptModules": false,
     "autoStartBackend": false,
     "envSelection": {
@@ -27,11 +27,11 @@
   "name": "Analysis of customer frustrations",
   "apiKey": "f1muBqhEZVq4ERbhwOUwl6CaG1C8olrR",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586526532354
+    "lastModifiedOn": 1586608512052
   },
   "creationTag": {
     "versionNumber": 0,
