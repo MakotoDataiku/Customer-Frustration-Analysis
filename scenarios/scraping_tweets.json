@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586596663518
+    "lastModifiedOn": 1586596676694
   },
   "checklists": {
     "checklists": []
@@ -45,7 +45,7 @@
       "messaging": {
         "type": "mail-scenario",
         "configuration": {
-          "channelId": "makoto.miyazaki@dataiku.com",
+          "channelId": "dss makoto",
           "subject": "DSS scenario ${scenarioName}: ${outcome}",
           "sender": "makoto",
           "recipient": "makoto.miyazaki@dataiku.com",
