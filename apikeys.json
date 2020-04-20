@@ -20,5 +20,27 @@
     "key": "QDXcvrKFAW28CbarrrbvQAntkNxuY714",
     "label": "Key for Web app test(HnCNebe)",
     "createdOn": 1587410091159
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "JnN3Vcx",
+    "id": "rQflLhjsZme7K5sx",
+    "key": "J50M1GyrtFL1J7JGqCYdf3lK5N3z4qF1",
+    "label": "Key for Web app Airline Analysis(JnN3Vcx)",
+    "createdOn": 1587410169583
   }
 ]
