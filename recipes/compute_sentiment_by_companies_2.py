@@ -9,6 +9,7 @@ import plotly
 import plotly.express as px
 import plotly.offline as py
 import plotly.graph_objs as go
+import os
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
@@ -51,10 +52,9 @@ for name in df_grouped.product_id.unique():
         go.Bar(name='TextBlob', x=groups, y=df_sub.weighted_ave_tb)])
     # Change the bar mode
     fig.update_layout(barmode='group', title_text=name)
-    fig.show()
 
     insights_name = name.replace(" ", "_") + "_grouped"
     folder_path = dataiku.Folder("plots").get_path()
     fig_path = os.path.join(folder_path, insights_name)
-    plt.savefig(fig_path)
+    fig.write_html(fig_path+".html")
     insights.save_plotly(insights_name, fig)
