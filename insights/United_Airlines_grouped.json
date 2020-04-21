@@ -1,0 +1,29 @@
+{
+  "type": "static_file",
+  "params": {
+    "contentType": "text/html",
+    "filetype": "html"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "United_Airlines_grouped",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1587485754955
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1587485754955
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
