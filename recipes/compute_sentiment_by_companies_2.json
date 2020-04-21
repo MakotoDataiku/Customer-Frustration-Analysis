@@ -36,16 +36,20 @@
         {
           "ref": "KM_analysis_by_companies",
           "appendMode": false
+        },
+        {
+          "ref": "FVP1xyRh",
+          "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1587485902585
+    "lastModifiedOn": 1587485913680
   },
   "creationTag": {
     "versionNumber": 0,
