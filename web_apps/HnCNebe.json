@@ -2,12 +2,14 @@
   "type": "STANDARD",
   "hasLegacyBackendURL": false,
   "params": {
-    "backendEnabled": false,
+    "backendEnabled": true,
     "enableJavascriptModules": false,
     "autoStartBackend": false,
+    "hideJSSecurityPanel": false,
     "envSelection": {
       "envMode": "INHERIT"
     },
+    "nbProcesses": 1,
     "libraries": [
       "jquery",
       "dataiku"
@@ -16,22 +18,29 @@
       "containerSelection": {
         "containerMode": "INHERIT"
       },
+      "overrideGlobalK8sExposition": false,
       "exposition": {
         "type": "local_process",
         "params": {}
       },
-      "nbReplicas": 1
+      "scaling": {
+        "initialReplicas": 1,
+        "hpa": false,
+        "hpaTargetCPUPercent": 0,
+        "hpaMinPods": 0,
+        "hpaMaxPods": 0
+      }
     }
   },
   "config": {},
   "name": "test",
   "apiKey": "QDXcvrKFAW28CbarrrbvQAntkNxuY714",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1587410091192
+    "lastModifiedOn": 1587487820277
   },
   "creationTag": {
     "versionNumber": 0,
