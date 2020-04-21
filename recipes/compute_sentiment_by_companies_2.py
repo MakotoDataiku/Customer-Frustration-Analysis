@@ -5,6 +5,12 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+import plotly
+import plotly.express as px
+import plotly.offline as py
+import plotly.graph_objs as go
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
 aspects_grouped = dataiku.Dataset("aspect_sentiment_categorised")
 df = aspects_grouped.get_dataframe()
@@ -34,3 +40,21 @@ sentiment_by_companies.write_with_schema(df_grouped)
 
 KM_analysis_by_companies = dataiku.Dataset("KM_analysis_by_companies")
 KM_analysis_by_companies.write_with_schema(df_clustered)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+from dataiku import insights
+for name in df_grouped.product_id.unique():
+    df_sub = df_grouped[df_grouped.product_id == name]
+    groups = df_sub.group.unique()
+    fig = go.Figure(data=[
+        go.Bar(name='NLTK', x=groups, y=df_sub.weighted_ave_nltk),
+        go.Bar(name='TextBlob', x=groups, y=df_sub.weighted_ave_tb)])
+    # Change the bar mode
+    fig.update_layout(barmode='group', title_text=name)
+    fig.show()
+
+    insights_name = name.replace(" ", "_") + "_grouped"
+    folder_path = dataiku.Folder("plots").get_path()
+    fig_path = os.path.join(folder_path, insights_name)
+    plt.savefig(fig_path)
+    insights.save_plotly(insights_name, fig)
