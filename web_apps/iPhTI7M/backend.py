@@ -7,8 +7,8 @@ from flask import send_file
 from dataiku.scenario import Scenario
 
 # To Edit:
-OUTPUT_DATASET = "YOUR_DATASET"
-SCENARIO_ID = 'YOUR_SCENARIO'
+OUTPUT_DATASET = "Cat_analysis_by_companies"
+SCENARIO_ID = 'scraping_tweets'
 
 PROJECT_KEY = dataiku.get_custom_variables()["projectKey"]
 client = dataiku.api_client()
