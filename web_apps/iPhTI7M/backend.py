@@ -127,7 +127,7 @@ def clear_var_impacted(var_name):
                     for o in data["outputs"]["main"]["items"]:
                         outputs.append(o["ref"])
                 except KeyError:
-                    print "ignore:", line
+                    print("ignore:", line)
 
     retval = p.wait()
 
@@ -137,4 +137,4 @@ def clear_var_impacted(var_name):
     for o in list(set(outputs)):
         d = p.get_dataset(o)
         d.clear()
-        print o, " cleared"
+        print (o, " cleared")
