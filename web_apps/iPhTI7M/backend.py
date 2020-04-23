@@ -18,6 +18,9 @@ p = client.get_project(PROJECT_KEY)
 @app.route('/init')
 def init():
     data = p.get_variables()["standard"]
+    keys_to_extract = ["company", "NUM_CLUSTERS", "n_days"]
+    data = {key: data[key] for key in keys_to_extract}
+    
     if len(data) == 0:
         error = "<a id='link_var' target='_blank' href='../../variables/'> \
                  <i class='icon-exclamation-sign'></i> \
