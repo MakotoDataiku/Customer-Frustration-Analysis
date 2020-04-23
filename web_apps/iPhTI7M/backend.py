@@ -118,7 +118,7 @@ def clear_var_impacted(var_name):
                         )
     for line in p.stdout.readlines():
         if not line.endswith("json\n"):
-            print line
+            print(line)
             with open(
                     dip + "/" + line.split("/")[-1:][0].split(".")[0]+".json"
                     ) as data_file:
