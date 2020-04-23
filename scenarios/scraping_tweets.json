@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": true,
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 26,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1587679357676
+    "lastModifiedOn": 1587679616686
   },
   "checklists": {
     "checklists": []
@@ -69,7 +69,7 @@
         "id": "build_0_true_d_Cat_analysis_by_companies",
         "type": "build_flowitem",
         "name": "Cat_analysis_by_companies",
-        "runConditionType": "DISABLED",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
@@ -80,6 +80,11 @@
         "maxRetriesOnFail": 0,
         "params": {
           "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "Cat_analysis_by_companies",
+              "partitionsSpec": ""
+            },
             {
               "type": "DATASET",
               "itemId": "Cat_analysis_by_companies",
@@ -121,7 +126,7 @@
         "id": "comp_metrics_d_tweets_stacked",
         "type": "compute_metrics",
         "name": "Step #3",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionType": "DISABLED",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
