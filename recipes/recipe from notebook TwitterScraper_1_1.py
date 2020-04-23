@@ -23,13 +23,11 @@ df_big = pd.DataFrame(columns=cols)
 df = pd.DataFrame(columns=cols)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-companies = dataiku.get_custom_variables(typed=True)['company']
+companies_list = dataiku.get_custom_variables(typed=True)['company']
 # companies_list = ast.literal_eval(companies)
 n_days = dataiku.get_custom_variables(typed=True)['n_days']
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-for company in companies_list:
-    print(company)
+
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 for company in companies_list:
