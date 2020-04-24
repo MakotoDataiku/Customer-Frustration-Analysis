@@ -26,7 +26,8 @@ df = pd.DataFrame(columns=cols)
 companies_list = dataiku.get_custom_variables(typed=True)['company']
 # companies_list = ast.literal_eval(companies)
 n_days = dataiku.get_custom_variables(typed=True)['n_days']
-
+if type(n_days) == str:
+    n_days = int(n_days)
 
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
