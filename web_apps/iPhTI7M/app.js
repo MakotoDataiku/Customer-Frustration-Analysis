@@ -2,7 +2,7 @@
 function init() {
     var init_var = $.getJSON(getWebAppBackendUrl('init'), function(data){
         console.log("received from backend : ", data);
-        d3.select("#init").text(" init text updated here");
+        d3.select("#init").text("init text updated here");
         var variables = data["data"];
         
         if (data["error"] != "") {
