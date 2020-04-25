@@ -45,7 +45,160 @@
   },
   {
     "execSQLLike": false,
-    "localDatasets": [],
+    "localDatasets": [
+      {
+        "datasets": [
+          "Cat_analysis_by_companies"
+        ],
+        "privileges": [
+          "READ_DATA"
+        ]
+      },
+      {
+        "datasets": [
+          "KM_analysis_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "analysis_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_categorised"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_pairs"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_clustered"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_grouped"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_grouped_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "grouped_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "sentiment_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_final"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new02"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new02_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new02_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_noURL"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_PCA"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_prep_clustered"
+        ],
+        "privileges": []
+      }
+    ],
     "projectPrivileges": {
       "admin": false,
       "readProjectContent": false,
