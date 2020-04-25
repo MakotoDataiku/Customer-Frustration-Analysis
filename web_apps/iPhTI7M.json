@@ -39,11 +39,11 @@
   "name": "Scrape tweets",
   "apiKey": "rwKHQ6qg3tTvzXCVtd4VTr4Q6PEAQojf",
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1587814882306
+    "lastModifiedOn": 1587814943465
   },
   "creationTag": {
     "versionNumber": 0,
