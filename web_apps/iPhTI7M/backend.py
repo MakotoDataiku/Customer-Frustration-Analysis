@@ -44,6 +44,7 @@ def init():
 
 @app.route('/run_scenario/<path:params>')
 def run_scenario(params):
+    print("Entered run_scenario")
     params = json.loads(params)
     # 1/ updates variables in project variables.
     variables = p.get_variables()
