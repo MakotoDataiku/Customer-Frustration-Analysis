@@ -64,8 +64,9 @@ function init() {
 
 function run_scenario() {
     
-    var $this = $(this); //  = document.getElementById(this)
-    $this.button('loading');
+    // "this" refers to a global object.
+    var $this = $(this); //  = points to the current element in HTML
+    $this.button('loading'); // initializes a button with id='loading'
 
     /* Getting all the input into an object that we will pass to the backend as a parameter of the call*/
     variables = {};
@@ -82,7 +83,7 @@ function run_scenario() {
         
         d3.select("#job_details").html(data["job_details"]);
         
-        $this.button('reset');
+        $this.button('reset'); // initializes a button with id='reset'
         d3.selectAll(".btn").attr("class", function(d) {
             if (data["status"] == "SUCCESS") {return "btn btn-success"}
             else { return "btn btn-danger" }});
