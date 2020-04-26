@@ -11,6 +11,8 @@ function init() {
         }
         else {
         
+        // add a box to enter a parameter
+        // iterates for each project parameter    
         Object.keys(variables).forEach(function(key,index) {
         
         box = d3.select("#variables").append("div")
@@ -27,6 +29,7 @@ function init() {
            .attr("value", variables[key]);
         });
         
+        // add Run scenario button
         d3.select("#variables").append("button")
                                .attr("class","btn btn-primary")
                                .style("margin-top", "10px")
@@ -36,6 +39,7 @@ function init() {
                                .attr("data-loading-text", "<i class='fa fa-circle-o-notch fa-spin'></i> Scenario running")
                                .on("click", run_scenario);
         
+        // add download button
         d3.select("#variables").append("a")
                        .attr("id", "download_link")
                        .attr("download", data["output"] + ".csv")
@@ -57,7 +61,7 @@ function init() {
 
 function run_scenario() {
     
-    var $this = $(this);
+    var $this = $(this); //  = document.getElementById(this)
     $this.button('loading');
 
     /* Getting all the input into an object that we will pass to the backend as a parameter of the call*/
