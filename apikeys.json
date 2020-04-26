@@ -51,7 +51,9 @@
           "Cat_analysis_by_companies"
         ],
         "privileges": [
-          "READ_DATA"
+          "READ_DATA",
+          "READ_METADATA",
+          "READ_SCHEMA"
         ]
       },
       {
