@@ -64,6 +64,7 @@ def run_scenario(params):
         print("job not succeed....")
     # 4/ Return the job status.
     last_run = scenar.get_last_runs()[0]
+    print("last_run is", last_run)
     details = last_run.get_details()
     status = details['scenarioRun']['result']['outcome']
     print("status is", status)
@@ -71,6 +72,7 @@ def run_scenario(params):
     print("job_details is", job_details)
     if jobSucceed:
         df = dataiku.Dataset(OUTPUT_DATASET).get_dataframe(limit=200)
+        print("df.shape:", df.shape)
         sample = df.to_html(classes=['table'], border=0, index_names=0,
                             max_rows=20, max_cols=8, na_rep="", index=False)
         link = '../../datasets/'+OUTPUT_DATASET+'/explore/'
