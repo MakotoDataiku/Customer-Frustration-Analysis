@@ -66,7 +66,9 @@ def run_scenario(params):
     last_run = scenar.get_last_runs()[0]
     details = last_run.get_details()
     status = details['scenarioRun']['result']['outcome']
+    print("status is", status)
     job_details = get_jobs_details(last_run)
+    print("job_details is", job_details)
     if jobSucceed:
         df = dataiku.Dataset(OUTPUT_DATASET).get_dataframe(limit=200)
         sample = df.to_html(classes=['table'], border=0, index_names=0,
@@ -79,11 +81,11 @@ def run_scenario(params):
         jobId = jobId0["additionalReportItems"][-1:][0]['jobId']
         link = '../../jobs/'+jobId+"/"
         output = "job error"
-    print("status is", status)
+    
     print("output is", output)
     print("sample is", sample)
     print("link is", link)
-    print("job_details is", job_details)
+    
     return json.dumps({"status": status, "output": output,
                        "sample": sample, "link": link,
                        "job_details": job_details})
