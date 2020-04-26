@@ -58,8 +58,10 @@ def run_scenario(params):
     try:
         scenar.run_and_wait()
         jobSucceed = True
+        print("Yes! jobSucceed!")
     except:
         jobSucceed = False
+        print("job not succeed....")
     # 4/ Return the job status.
     last_run = scenar.get_last_runs()[0]
     details = last_run.get_details()
