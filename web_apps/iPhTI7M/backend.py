@@ -64,6 +64,7 @@ def run_scenario(params):
         print("job not succeed....")
     # 4/ Return the job status.
     print("returning the job status...")
+    print(scenar.get_last_runs()[0])
     last_run = scenar.get_last_runs()[0]
     print("last_run is", last_run[0])
     details = last_run.get_details()
