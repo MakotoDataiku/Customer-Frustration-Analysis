@@ -105,7 +105,7 @@ function download() {
         var init_var = $.getJSON(getWebAppBackendUrl('download'),function(data){
                 console.log("received from backend : ", data)
      })
- } 
+ }
 
 
 init();
