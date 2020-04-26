@@ -76,6 +76,11 @@ def run_scenario(params):
         jobId = jobId0["additionalReportItems"][-1:][0]['jobId']
         link = '../../jobs/'+jobId+"/"
         output = "job error"
+    print("status is", status)
+    print("output is", output)
+    print("sample is", sample)
+    print("link is", link)
+    print("job_details is", job_details)
     return json.dumps({"status": status, "output": output,
                        "sample": sample, "link": link,
                        "job_details": job_details})
