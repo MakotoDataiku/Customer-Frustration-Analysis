@@ -1,6 +1,9 @@
 
 function init() {
-    var init_var = $.getJSON(getWebAppBackendUrl('init'), function(data){
+    var init_var = $.getJSON(getWebAppBackendUrl('init'), function(data){ 
+        // here the "data" refers to the parameters. 
+        // (in Python, data = p.get_variables()["standard"])
+        console.log("Retrieving parameters...")
         console.log("received from backend : ", data);
         d3.select("#init").text("Enter the parameters");
         var variables = data["data"];
