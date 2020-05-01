@@ -29,6 +29,6 @@ def get_stats(params):
     params_dict = json.loads(params)
     company = params_dict.get('company')
     df = get_dataset_selection(company)
-    bar_chart = df.to_dict(orient='records')
-    bar_chart_JS = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
-    return json.dumps({'chart':bar_chart, 'barChartJS':bar_chart_JS})
+    # bar_chart = df.to_dict(orient='records')
+    bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
+    return json.dumps({'chart':bar_chart})
