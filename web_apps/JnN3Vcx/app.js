@@ -68,7 +68,7 @@ function addBarChart(data){
     let margin = {
                 top: 15,
                 right: 55,
-                bottom: 40,
+                bottom: 70,
                 left: 60
             };
     
