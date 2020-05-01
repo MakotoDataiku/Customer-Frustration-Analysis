@@ -9,6 +9,7 @@ $(function()
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
     let company = getSelectedOption('companies');
+    console.log("selected companies are", company)
     let headers = new Headers()
     let init = {
         method : 'GET',
