@@ -1,0 +1,29 @@
+{
+  "type": "static_file",
+  "params": {
+    "contentType": "text/html",
+    "filetype": "html"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "easyJet_grouped",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1588336414673
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1588336414673
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
