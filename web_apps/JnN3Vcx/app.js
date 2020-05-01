@@ -1,10 +1,9 @@
 let default_colors = ['#FC427B','#16a085','#3498db','#9b59b6','#7ed6df','#3B3EAC','#0099C6','#DD4477','#66AA00','#B82E2E','#316395','#994499','#22AA99','#AAAA11','#6633CC','#E67300','#8B0707','#329262','#5574A6','#3B3EAC']
 setFilterOptions();
 
-$(function()
-{
-  $("#companies").select2();
-});
+console.log($(document).ready(function() { 
+ $("#companies").select2();
+}))
 
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
@@ -39,7 +38,7 @@ function getSelectedOption(id){
     let select2 = $(document).ready(function() {
     $('.js-example-basic-multiple').select2();
     });
-    console.log("select2", select2.options)
+    console.log("select2", select2)
     
     return value
 }
