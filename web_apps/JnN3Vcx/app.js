@@ -69,13 +69,14 @@ function addBarChartJS(data, labels) {
         data: {
           labels: labels,
           datasets: [{
+            label: "Sentiment by category",
             data: data,
             backgroundColor: default_colors
           }]
         },
         options: {
           title: {
-            display: true,
+            display: false,
             text: "Sentiment by category"
           }
         }
