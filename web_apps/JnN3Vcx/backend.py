@@ -9,11 +9,11 @@ from dataiku.core.sql import SQLExecutor2
 table_name = "Cat_analysis_by_companies"
 
 
-
 # function to get the dataframe based on the choice from the dropdown
+# columns included: 'group', 'weighted_ave_tb'
 def get_dataset_selection(company):
     df = dataiku.Dataset(table_name).get_dataframe()
-    df = df[df.product_id == company]
+    df = df[df.product_id == company][['group', 'weighted_ave_tb']]
     return df
 
 @app.route('/get_filter_values')
@@ -23,3 +23,12 @@ def get_filter_values():
     companies_list = df['product_id'].unique().tolist()
     print(companies_list)
     return json.dumps({'companies': companies_list})
+
+@app.route('/get_stats/<path:params>')
+def get_stats(params):
+    params_dict = json.loads(params)
+    company = params_dict.get('company')
+    df = get_dataset_selection(company)
+    bar_chart = df.to_dict(orient='records')
+    
+    return json.dumps({'chart':bar_chart})

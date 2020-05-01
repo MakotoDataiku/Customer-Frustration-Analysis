@@ -24,6 +24,7 @@ document.getElementById('button').onclick = function(){
 }
 
 function getSelectedOption(id){
+/* function to get the selected value from the dropdowns */
     let select = document.getElementById(id);
     let value = select.options[select.selectedIndex].value;
     console.log("selected comapny is ", value)
