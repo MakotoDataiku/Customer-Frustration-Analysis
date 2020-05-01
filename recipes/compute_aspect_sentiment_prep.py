@@ -44,7 +44,8 @@ staff_vec = nlp('staff').vector
 
 companies = df_grouped.product_id.unique()
 n_clusters = dataiku.get_custom_variables(typed=True)['NUM_CLUSTERS']
-n_clusters = ast.literal_eval(n_clusters)
+if type(n_clusters) != int:
+    n_clusters = ast.literal_eval(n_clusters)
 df_vectors = pd.DataFrame()
 
 df_grouped['k_means_clusters'] = np.nan
