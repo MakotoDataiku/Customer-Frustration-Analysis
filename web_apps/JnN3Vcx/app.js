@@ -74,6 +74,8 @@ function addBarChart(data){
     
     let ymin = d3.min(data, function (d) {
                     return d.weighted_ave_tb});
+    console.log("ymin is", ymin)
+    
     let ymax = d3.max(data, function (d) {
                     return d.weighted_ave_tb});
     
