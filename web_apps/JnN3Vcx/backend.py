@@ -8,6 +8,8 @@ from dataiku.core.sql import SQLExecutor2
 
 table_name = "Cat_analysis_by_companies"
 
+
+
 # function to get the dataframe based on the choice from the dropdown
 def get_dataset_selection(company):
     df = dataiku.Dataset(table_name).get_dataframe()
