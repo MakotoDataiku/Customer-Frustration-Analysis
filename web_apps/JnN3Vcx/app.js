@@ -35,6 +35,12 @@ function getSelectedOption(id){
     console.log("select is", select)
     let value = select.options[select.selectedIndex].value;
     console.log("selected comapnies are", value)
+    
+    let select2 = $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    });
+    console.log("select2", select2)
+    
     return value
 }
 
