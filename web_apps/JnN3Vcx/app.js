@@ -122,7 +122,7 @@ function addBarChart(data){
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Value ($)");
+      .text("Sentiment score");
 
     let bar = g.selectAll("rect")
             .data(data)
