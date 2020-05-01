@@ -9,7 +9,6 @@ $(function()
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
     let company = getSelectedOption('companies');
-    console.log("selected companies are", company)
     let headers = new Headers()
     let init = {
         method : 'GET',
@@ -34,7 +33,7 @@ function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
     let select = document.getElementById(id);
     let value = select.options[select.selectedIndex].value;
-    console.log("selected comapny is ", value)
+    console.log("selected comapnies are", value)
     return value
 }
 
