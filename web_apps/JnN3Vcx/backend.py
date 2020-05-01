@@ -30,5 +30,4 @@ def get_stats(params):
     company = params_dict.get('company')
     df = get_dataset_selection(company)
     bar_chart = df.to_dict(orient='records')
-    
     return json.dumps({'chart':bar_chart})
