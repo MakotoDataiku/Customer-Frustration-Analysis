@@ -1,22 +1,23 @@
 import dataiku
 import pandas as pd
-from flask import request
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+import time
+from dataiku.core.sql import SQLExecutor2
 
+table_name = "Cat_analysis_by_companies"
 
-# Example:
-# As the Python webapp backend is a Flask app, refer to the Flask
-# documentation for more information about how to adapt this
-# example to your needs.
-# From JavaScript, you can access the defined endpoints using
-# getWebAppBackendUrl('first_api_call')
+# function to get the dataframe based on the choice from the dropdown
+def get_dataset_selection(company):
+    df = dataiku.Dataset(table_name).get_dataframe()
+    df = df[df.product_id == company]
+    return df
 
-@app.route('/first_api_call')
-def first_call():
-    max_rows = request.args.get('max_rows') if 'max_rows' in request.args else 500
-
-    mydataset = dataiku.Dataset("REPLACE_WITH_YOUR_DATASET_NAME")
-    mydataset_df = mydataset.get_dataframe(sampling='head', limit=max_rows)
-
-    # Pandas dataFrames are not directly JSON serializable, use to_json()
-    data = mydataset_df.to_json()
-    return json.dumps({"status": "ok", "data": data})
+@app.route('/get_filter_values')
+# function to get unique values for airline companies to show in drop down
+def get_filter_values(): 
+    df = dataiku.Dataset(table_name).get_dataframe()    
+    companies_list = df['product_id'].unique().tolist()
+    print(companies_list)
+    return json.dumps({'companies': companies_list})
