@@ -22,3 +22,9 @@
 	  stroke: #000;
 	  shape-rendering: crispEdges;
 	}
+
+.select2-choices {
+  min-height: 150px;
+  max-height: 150px;
+  overflow-y: auto;
+}
