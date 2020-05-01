@@ -1,7 +1,7 @@
 setFilterOptions();
 
 function setFilterOptions(){
-    /* function to get distinct values of store id and product category and insert them in the dropdowns*/
+    /* function to get distinct values of companies and insert them in the dropdowns */
     let headers = new Headers()
     let init = {
         method : 'GET',
@@ -18,4 +18,13 @@ function setFilterOptions(){
                                 })
                    });
                        
+}
+
+function addOptions(id, itemList){
+    /* function to add company choice to the dropdowns */
+    itemList.forEach(function(value, index){
+        let option = document.createElement('option');
+        option.text = value;
+        document.getElementById(id).appendChild(option)
+    })
 }
