@@ -39,7 +39,7 @@ function getSelectedOption(id){
     let select2 = $(document).ready(function() {
     $('.js-example-basic-multiple').select2();
     });
-    console.log("select2", select2.document)
+    console.log("select2", select2.context)
     
     return value
 }
