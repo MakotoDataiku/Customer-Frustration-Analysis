@@ -3,7 +3,7 @@ setFilterOptions();
 
 $(function()
 {
-  $(".form-control").select2();
+  $("#companies").select2();
 });
 
 /* returns the company value chosen from the dropdowns */
