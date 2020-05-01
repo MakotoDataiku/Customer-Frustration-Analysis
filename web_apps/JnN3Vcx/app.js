@@ -142,6 +142,6 @@ function addBarChart(data){
         .attr("y", 0 - margin.top / 3)
         .attr("text-anchor", "middle")  
         .style("font-size", "12px") 
-        .text("Total sales by product code");
+        .text("Sentiment by category");
 
 }
