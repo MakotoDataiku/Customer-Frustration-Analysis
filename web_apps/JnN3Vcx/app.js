@@ -18,7 +18,7 @@ document.getElementById('button').onclick = function(){
                    .then(function(response){ 
                        response.json()
                                .then(function(data){
-                                addBarChart(data.barChartJS.data, data.barChartJS.labels);
+                                addBarChart(data.chart.data, data.chart.labels);
                                 })
                    });
     
