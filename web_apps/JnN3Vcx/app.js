@@ -71,14 +71,15 @@ function addBarChart(data){
                 bottom: 40,
                 left: 60
             };
+    
     let ymin = d3.min(data, function (d) {
-                    return d.Item_Outlet_Sales});
+                    return d.weighted_ave_tb});
     let ymax = d3.max(data, function (d) {
-                    return d.Item_Outlet_Sales});
+                    return d.weighted_ave_tb});
     
     let xScale = d3.scale.ordinal()
           .domain(data.map(function(d){
-              return d.Item_Identifier})
+              return d.group})
                  )
           .rangeBands([0, width],.1);
 
@@ -128,12 +129,12 @@ function addBarChart(data){
             .enter()
             .append("rect")
             .attr("x", function (d) {
-                return xScale(d.Item_Identifier);
+                return xScale(d.group);
             })        
             .attr("width", xScale.rangeBand())
-            .attr("y", function(d) { return yScale(d.Item_Outlet_Sales); })
+            .attr("y", function(d) { return yScale(d.weighted_ave_tb); })
             .attr("height", function(d) { 
-                return height - yScale(d.Item_Outlet_Sales); })
+                return height - yScale(d.weighted_ave_tb); })
             .attr("fill","#01a3a4");
     
     let title = g.append("text")

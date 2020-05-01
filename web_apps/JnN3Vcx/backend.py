@@ -18,7 +18,7 @@ def get_dataset_selection(company):
 
 @app.route('/get_filter_values')
 # function to get unique values for airline companies to show in drop down
-def get_filter_values(): 
+def get_filter_values():
     df = dataiku.Dataset(table_name).get_dataframe()    
     companies_list = df['product_id'].unique().tolist()
     print(companies_list)
