@@ -1,3 +1,4 @@
+let default_colors = ['#FC427B','#16a085','#3498db','#9b59b6','#7ed6df','#3B3EAC','#0099C6','#DD4477','#66AA00','#B82E2E','#316395','#994499','#22AA99','#AAAA11','#6633CC','#E67300','#8B0707','#329262','#5574A6','#3B3EAC']
 setFilterOptions();
 
 /* returns the company value chosen from the dropdowns */
@@ -17,6 +18,7 @@ document.getElementById('button').onclick = function(){
                    .then(function(response){ 
                        response.json()
                                .then(function(data){
+                                addBarChartJS(data.pie.data, data.pie.labels);
                                 addBarChart(data.chart);
                                 })
                    });
@@ -58,6 +60,27 @@ function addOptions(id, itemList){
         option.text = value;
         document.getElementById(id).appendChild(option)
     })
+}
+
+function addBarChartJS(data, labels) {
+    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
+    new Chart(document.getElementById("bar-chart"), {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Sentiment by category",
+            data: data,
+            backgroundColor: default_colors
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "Sentiment by category"
+          }
+        }
+    });
 }
 
 function addBarChart(data){
