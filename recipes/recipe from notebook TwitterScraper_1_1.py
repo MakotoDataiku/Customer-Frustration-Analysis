@@ -14,9 +14,9 @@ import ast
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 cols = ['screen_name', 'username', 'user_id', 'tweet_id', 'tweet_url', 'timestamp',
-           'timestamp_epochs', 'text', 'text_html', 'links', 'hashtags', 'has_media',
-           'img_urls', 'video_url', 'likes', 'retweets', 'replies', 'is_replied', 'is_reply_to',
-           'parent_tweet_id', 'reply_to_users']
+            'text',  'links', 'hashtags', 
+        # 'has_media', 'parent_tweet_id', 'text_html', 'timestamp_epochs', 'video_url',  'reply_to_users',
+           'img_urls', 'likes', 'retweets', 'replies', 'is_replied', 'is_reply_to']
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_big = pd.DataFrame(columns=cols)
@@ -50,21 +50,21 @@ for company in companies_list:
             df.loc[row,'tweet_id'] = tweet.tweet_id
             df.loc[row,'tweet_url'] = tweet.tweet_url
             df.loc[row,'timestamp'] = tweet.timestamp
-            df.loc[row,'timestamp_epochs'] = tweet.timestamp_epochs
+            # df.loc[row,'timestamp_epochs'] = tweet.timestamp_epochs
             df.loc[row,'text'] = tweet.text
-            df.loc[row,'text_html'] = tweet.text_html
+            # df.loc[row,'text_html'] = tweet.text_html
             df.loc[row,'links'] = tweet.links
             df.loc[row,'hashtags'] = tweet.hashtags
-            df.loc[row,'has_media'] = tweet.has_media
+            # df.loc[row,'has_media'] = tweet.has_media
             df.loc[row,'img_urls'] = tweet.img_urls
-            df.loc[row,'video_url'] = tweet.video_url
+            # df.loc[row,'video_url'] = tweet.video_url
             df.loc[row,'likes'] = tweet.likes
             df.loc[row,'retweets'] = tweet.retweets
             df.loc[row,'replies'] = tweet.replies
             df.loc[row,'is_replied'] = tweet.is_replied
             df.loc[row,'is_reply_to'] = tweet.is_reply_to
-            df.loc[row,'parent_tweet_id'] = tweet.parent_tweet_id
-            df.loc[row,'reply_to_users'] = tweet.reply_to_users
+            # df.loc[row,'parent_tweet_id'] = tweet.parent_tweet_id
+            # df.loc[row,'reply_to_users'] = tweet.reply_to_users
 
     df["company"] = company
     df_big = pd.concat([df_big, df], ignore_index=True)
