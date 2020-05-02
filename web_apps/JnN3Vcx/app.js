@@ -25,6 +25,8 @@ document.getElementById('button').onclick = function(){
                        response.json()
                                .then(function(data){
                                 // addBarChart(data.chart.data, data.chart.labels);
+                           console.log("data.barChartGroup.company", data.barChartGroup.company)
+                           console.log("data.barChartGroup.labels", data.barChartGroup.labels)
                                 addGroupBarChart(data = data.barChartGroup.company, labels = data.barChartGroup.labels);
                                 })
                    });
