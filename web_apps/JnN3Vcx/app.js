@@ -27,7 +27,8 @@ document.getElementById('button').onclick = function(){
                                 // addBarChart(data.chart.data, data.chart.labels);
                            console.log("data.barChartGroup.company", data.barChartGroup.company)
                            console.log("data.barChartGroup.labels", data.barChartGroup.labels)
-                                addGroupBarChart(data = data.barChartGroup.company, labels = data.barChartGroup.labels);
+                                addGroupBarChart(data = data.barChartGroup.company, 
+                                                 labels = data.barChartGroup.labels);
                                 })
                    });
     
@@ -81,6 +82,7 @@ function addOptions(id, itemList){
 
 function addBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
+    console.log("labels in addBarChart is", labels)
     new Chart(document.getElementById("bar-chart"), {
         type: "bar",
         data: {
