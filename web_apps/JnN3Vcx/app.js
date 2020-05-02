@@ -38,7 +38,8 @@ function getSelectedOption(id){
     // let value = select.options[select.selectedIndex].value;
     // console.log("selected comapnies are", value)
     // return value
-    return $("#" + id).val()
+    let ID = "#" + id
+    return $(ID).val()
 }
 
 
