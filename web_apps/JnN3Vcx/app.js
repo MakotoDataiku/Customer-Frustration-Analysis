@@ -79,6 +79,26 @@ function addOptions(id, itemList){
 
 function addBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
+    let data_grouped = {
+        labels: labels,
+        datasets: [
+            {
+                label: "Blue",
+                fillColor: "blue",
+                data: [3,7,4]
+            },
+            {
+                label: "Red",
+                fillColor: "red",
+                data: [4,3,5]
+            },
+            {
+                label: "Green",
+                fillColor: "green",
+                data: [7,2,6]
+            }
+        ]
+              };
     new Chart(document.getElementById("bar-chart"), {
         type: "bar",
         data: {
@@ -100,11 +120,11 @@ function addBarChart(data, labels) {
 
 function addGroupBarChart(data, labels) {
     document.getElementById('table_stats').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
-
     new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
         
-        data: data,
+              
+        data: data_grouped,
         options: {
           title: {
             display: false,
