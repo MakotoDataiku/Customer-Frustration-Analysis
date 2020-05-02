@@ -40,8 +40,9 @@ def get_stats(params):
     l = []
     for company in df.product_id.unique():
         sub_df = df[df.product_id == company]
-        l.append(company:{"labels":sub_df["group"].tolist(), 
-                          "data":sub_df["weighted_ave_tb"].tolist()})
+        d = {company:{"labels":sub_df["group"].tolist(), 
+                          "data":sub_df["weighted_ave_tb"].tolist()}}
+        l.append(d)
     bar_chart_group = {"company":l}
     print("bar_chart_group company", bar_chart_group["company"])
     # return json.dumps({'chart':bar_chart})
