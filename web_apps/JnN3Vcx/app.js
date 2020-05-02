@@ -76,39 +76,31 @@ function addOptions(id, itemList){
 }
 
 
-
+// addBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels)
 function addBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
+    
+    i = 1
+    arr = []
+    data.forEach(function(d){
+        company = Object.keys(d);
+        values = d[company]['data'];
+        dataset_company = {
+            label:company,
+            fillColor:default_colors[i],
+            data:values};
+        console.log("dataset_company", dataset_company);
+        arr.push(dataset_company);
+        i+=1;
+    })
+    
     let data_grouped = {
         labels: labels,
-        datasets: [
-            {
-                label: "Blue",
-                fillColor: "blue",
-                data: [3,7,4]
-            },
-            {
-                label: "Red",
-                fillColor: "red",
-                data: [4,3,5]
-            },
-            {
-                label: "Green",
-                fillColor: "green",
-                data: [7,2,6]
-            }
-        ]
+        datasets: arr
               };
     new Chart(document.getElementById("bar-chart"), {
         type: "bar",
-        data: {
-          labels: labels,
-          datasets: [{
-            label: "Sentiment by category",
-            data: data,
-            backgroundColor: default_colors
-          }]
-        },
+        data: data_grouped,
         options: {
           title: {
             display: false,
