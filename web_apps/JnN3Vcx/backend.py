@@ -16,7 +16,7 @@ def get_dataset_selection(company):
     df = df[df.product_id == company][['group', 'weighted_ave_tb']]
     df = df["product_id"].isin([company])[['group', 'weighted_ave_tb']]
     print("df.columns", df.columns)
-    print("df.product_id.unique()", df..product_id.unique())
+    print("df.product_id.unique()", df.product_id.unique())
     return df
 
 @app.route('/get_filter_values')
