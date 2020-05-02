@@ -8,6 +8,7 @@ console.log("it's heer", $(document).ready(function() {
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
     let company = getSelectedOption('companies');
+    console.log(company)
     let headers = new Headers()
     let init = {
         method : 'GET',
@@ -30,18 +31,19 @@ document.getElementById('button').onclick = function(){
 
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
-    let select = document.getElementById(id);
-    console.log("select is", select)
-    let value = select.options[select.selectedIndex].value;
-    console.log("selected comapnies are", value)
-    
-    let select2 = $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-    });
-    console.log("select2", select2)
-    
-    return value
+    // let select = document.getElementById(id);
+    // console.log("select is", select)
+    // let value = select.options[select.selectedIndex].value;
+    // console.log("selected comapnies are", value)
+    // return value
+    return $('#' + id).val();
 }
+
+
+function getSelectedOption(id){
+    
+}
+
 
 function setFilterOptions(){
     /* function to get distinct values of companies and insert them in the dropdowns */
@@ -71,6 +73,8 @@ function addOptions(id, itemList){
         document.getElementById(id).appendChild(option)
     })
 }
+
+
 
 function addBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';

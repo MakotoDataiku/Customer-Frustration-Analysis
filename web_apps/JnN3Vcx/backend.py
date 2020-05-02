@@ -32,3 +32,4 @@ def get_stats(params):
     # bar_chart = df.to_dict(orient='records')
     bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
     return json.dumps({'chart':bar_chart})
+
