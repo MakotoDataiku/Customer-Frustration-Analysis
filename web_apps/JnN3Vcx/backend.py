@@ -14,6 +14,9 @@ table_name = "Cat_analysis_by_companies"
 def get_dataset_selection(company):
     df = dataiku.Dataset(table_name).get_dataframe()
     df = df[df.product_id == company][['group', 'weighted_ave_tb']]
+    df = df["product_id"].isin([company])[['group', 'weighted_ave_tb']]
+    print("df.columns", df.columns)
+    print("df.product_id.unique()", df..product_id.unique())
     return df
 
 @app.route('/get_filter_values')
@@ -28,8 +31,8 @@ def get_filter_values():
 def get_stats(params):
     params_dict = json.loads(params)
     print("params_dict is", params_dict)
-    company = params_dict.get('company')
-    df = get_dataset_selection(company)
+    list_companies = params_dict.get('companies')
+    df = get_dataset_selection(list_companies)
     # bar_chart = df.to_dict(orient='records')
     bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
     return json.dumps({'chart':bar_chart})
