@@ -35,10 +35,9 @@ def get_stats(params):
     selected_companies = params_dict.get('companies')
     print("selected_companies is", selected_companies)
     df = get_dataset_selection(selected_companies)
-    bar_chart = df.to_dict(orient='records')
-    return json.dumps({'chart':bar_chart})
-    """
-    bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
+    # bar_chart = df.to_dict(orient='records')
+    # bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
+    # return json.dumps({'chart':bar_chart})
     l = []
     for company in df.product_id.unique():
         sub_df = df[df.product_id == company]
@@ -49,5 +48,5 @@ def get_stats(params):
     print("bar_chart_group company", bar_chart_group["company"])
     
     return json.dumps({'barChartGroup':bar_chart_group})
-    """
+    
 
