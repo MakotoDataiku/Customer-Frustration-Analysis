@@ -98,8 +98,49 @@ function addBarChart(data, labels) {
     });
 }
 
+function addGroupBarChart(data, labels) {
+    document.getElementById('table_stats').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
+    let data = {
+        labels: labels,
+        datasets: [
+            {
+                label: "Blue",
+                backgroundColor: "blue",
+                data: [3,7,4]
+            },
+            {
+                label: "Red",
+                backgroundColor: "red",
+                data: [4,3,5]
+            },
+            {
+                label: "Green",
+                backgroundColor: "green",
+                data: [7,2,6]
+            }
+        ]
+    };
+    new Chart(document.getElementById("bar-chart-group"), {
+        type: "bar",
+        
+        data: data,
+        options: {
+          title: {
+            display: false,
+            text: "Sentiment by category"
+          },
+          scales: {
+          yAxes: [{
+              ticks: {
+                  min: 0,
+              }
+          }]
+      }
+        }
+    });
+}
 
-let ctx = document.getElementById("table_stats");
+
 
 let data = {
     labels: ["company", "food", "luggage", "punctuality", "staff"],
@@ -122,7 +163,7 @@ let data = {
     ]
 };
 
-var myBarChart = new Chart(ctx, {
+var myBarChart = new Chart(document.getElementById("bar-chart-group"), {
     type: 'bar',
     data: data,
     options: {
