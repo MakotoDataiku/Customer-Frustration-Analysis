@@ -7,17 +7,16 @@ console.log($(document).ready(function() {
 
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
-    let company = getSelectedOption('companies');
-    console.log("company is", company)
-    console.log("company is", $("#companies").val())
-    console.log("#" + "company")
+    // let company = getSelectedOption('companies');
+    let companies = $("#companies").val();
+    console.log("company is", companies)
     let headers = new Headers()
     let init = {
         method : 'GET',
         headers : headers
     }
     let params = {
-        'company':company
+        'companies':companies
     }
 
     let url = getWebAppBackendUrl('/get_stats')+'/'+JSON.stringify(params)
@@ -38,8 +37,7 @@ function getSelectedOption(id){
     // let value = select.options[select.selectedIndex].value;
     // console.log("selected comapnies are", value)
     // return value
-    let ID = "#" + id
-    return $(ID).val()
+    return $("#" + id).val();
 }
 
 
