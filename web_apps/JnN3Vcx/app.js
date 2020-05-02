@@ -113,7 +113,7 @@ function addGroupBarChart(data, labels) {
         dataset_company = {
             label:company,
             // hoverBackgroundColor:default_colors[i],
-            backgroundColor: Chart.defaults.global.defaultColor[0],
+            backgroundColor: Chart.defaults.global.defaultColor[1],
             data:values};
         console.log("dataset_company", dataset_company);
         arr.push(dataset_company);
