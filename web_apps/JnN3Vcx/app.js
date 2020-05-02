@@ -60,7 +60,6 @@ function setFilterOptions(){
                        response.json()
                                .then(function(data){
                                 let companiesList = data.companies;
-                           cosole.log("companiesList is", companiesList)
                                 addOptions('companies', companiesList);                                
                                 })
                    });
@@ -140,41 +139,3 @@ function addGroupBarChart(data, labels) {
         }
     });
 }
-
-
-
-let data = {
-    labels: ["company", "food", "luggage", "punctuality", "staff"],
-    datasets: [
-        {
-            label: "Blue",
-            backgroundColor: "blue",
-            data: [3,7,4]
-        },
-        {
-            label: "Red",
-            backgroundColor: "red",
-            data: [4,3,5]
-        },
-        {
-            label: "Green",
-            backgroundColor: "green",
-            data: [7,2,6]
-        }
-    ]
-};
-
-var myBarChart = new Chart(document.getElementById("bar-chart-group"), {
-    type: 'bar',
-    data: data,
-    options: {
-        barValueSpacing: 20,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 0,
-                }
-            }]
-        }
-    }
-});
