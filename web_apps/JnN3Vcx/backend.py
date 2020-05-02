@@ -27,6 +27,7 @@ def get_filter_values():
 @app.route('/get_stats/<path:params>')
 def get_stats(params):
     params_dict = json.loads(params)
+    print("params_dict is", params_dict)
     company = params_dict.get('company')
     df = get_dataset_selection(company)
     # bar_chart = df.to_dict(orient='records')
