@@ -79,7 +79,7 @@ function addOptions(id, itemList){
     })
 }
 
-
+/*
 function addBarChart(data, labels) {
     console.log("labels in addBarChart is", labels)
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
@@ -101,8 +101,8 @@ function addBarChart(data, labels) {
         }
     });
 }
+*/
 
-// addGroupBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels)
 function addGroupBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
     i = 1
