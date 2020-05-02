@@ -30,8 +30,9 @@ def get_filter_values():
 @app.route('/get_stats/<path:params>')
 def get_stats(params):
     params_dict = json.loads(params)
-    print("params_dict is", params_dict)
+    
     list_companies = params_dict.get('companies')
+    print("list_companies is", list_companies)
     df = get_dataset_selection(list_companies)
     # bar_chart = df.to_dict(orient='records')
     bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
