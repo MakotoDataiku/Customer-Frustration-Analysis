@@ -112,7 +112,7 @@ function addGroupBarChart(data, labels) {
         values = d[company]['data'];
         dataset_company = {
             label:company,
-            fillColor:"blue",
+            backgroundColor:default_colors[i],
             data:values};
         console.log("dataset_company", dataset_company);
         arr.push(dataset_company);
