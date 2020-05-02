@@ -21,7 +21,7 @@ document.getElementById('button').onclick = function(){
 
     let url = getWebAppBackendUrl('/get_stats')+'/'+JSON.stringify(params)
     let promise = fetch(url, init) 
-                   .then(function(response){ 
+                   .then(function(response){
                        response.json()
                                .then(function(data){
                                 addBarChart(data.chart.data, data.chart.labels);
@@ -60,6 +60,7 @@ function setFilterOptions(){
                        response.json()
                                .then(function(data){
                                 let companiesList = data.companies;
+                           cosole.log("companiesList is", companiesList)
                                 addOptions('companies', companiesList);                                
                                 })
                    });
