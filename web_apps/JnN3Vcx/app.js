@@ -99,7 +99,7 @@ function addBarChart(data, labels) {
 }
 
 
-let ctx = document.getElementById("table_stats").getContext("2d");
+let ctx = document.getElementById("table_stats");
 
 let data = {
     labels: ["company", "food", "luggage", "punctuality", "staff"],
