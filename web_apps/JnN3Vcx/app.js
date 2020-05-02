@@ -131,14 +131,7 @@ function addGroupBarChart(data, labels) {
           title: {
             display: false,
             text: "Sentiment by category"
-          },
-          scales: {
-          yAxes: [{
-              ticks: {
-                  min: 0,
-              }
-          }]
-      }
+          }
         }
     });
 }
