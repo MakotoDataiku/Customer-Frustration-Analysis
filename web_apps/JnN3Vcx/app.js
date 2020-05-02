@@ -9,6 +9,7 @@ console.log($(document).ready(function() {
 document.getElementById('button').onclick = function(){
     let company = getSelectedOption('companies');
     console.log("company is", company)
+    console.log("company is", $("#companies").val())
     let headers = new Headers()
     let init = {
         method : 'GET',
