@@ -104,7 +104,7 @@ function addBarChart(data, labels) {
 
 // addGroupBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels)
 function addGroupBarChart(data, labels) {
-    document.getElementById('table_stats').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
+    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
     i = 1
     arr = []
     data.forEach(function(d){
