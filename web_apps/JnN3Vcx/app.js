@@ -31,12 +31,12 @@ document.getElementById('button').onclick = function(){
 
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
-    let select = document.getElementById(id);
-    console.log("select is", select)
-    let value = select.options[select.selectedIndex].value;
-    console.log("selected comapnies are", value)
-    return value
-    // return $('#' + id).val();
+    // let select = document.getElementById(id);
+    // console.log("select is", select)
+    // let value = select.options[select.selectedIndex].value;
+    // console.log("selected comapnies are", value)
+    // return value
+    return $('#' + id).val();
 }
 
 
