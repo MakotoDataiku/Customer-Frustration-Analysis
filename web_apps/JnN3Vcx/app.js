@@ -24,7 +24,8 @@ document.getElementById('button').onclick = function(){
                    .then(function(response){
                        response.json()
                                .then(function(data){
-                                addBarChart(data.chart.data, data.chart.labels);
+                                // addBarChart(data.chart.data, data.chart.labels);
+                                addGroupBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels);
                                 })
                    });
     
@@ -76,10 +77,30 @@ function addOptions(id, itemList){
 }
 
 
-// addBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels)
 function addBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
-    
+    new Chart(document.getElementById("bar-chart"), {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Sentiment by category",
+            data: data,
+            backgroundColor: default_colors  
+          }]
+        },
+        options: {
+          title: {
+            display: false,
+            text: "Sentiment by category"
+          }
+        }
+    });
+}
+
+// addGroupBarChart(data = data["barChartGroup"].company, labels = data["barChartGroup"].labels)
+function addGroupBarChart(data, labels) {
+    document.getElementById('table_stats').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
     i = 1
     arr = []
     data.forEach(function(d){
@@ -98,24 +119,9 @@ function addBarChart(data, labels) {
         labels: labels,
         datasets: arr
               };
-    new Chart(document.getElementById("bar-chart"), {
-        type: "bar",
-        data: data_grouped,
-        options: {
-          title: {
-            display: false,
-            text: "Sentiment by category"
-          }
-        }
-    });
-}
-
-function addGroupBarChart(data, labels) {
-    document.getElementById('table_stats').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
+    
     new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
-        
-              
         data: data_grouped,
         options: {
           title: {
