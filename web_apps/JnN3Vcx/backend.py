@@ -38,13 +38,24 @@ def get_stats(params):
     # bar_chart = df.to_dict(orient='records')
     # bar_chart = {"data":df["weighted_ave_tb"].tolist(), "labels":df["group"].tolist()}
     # return json.dumps({'chart':bar_chart})
+    global_label = df["group"].unique().tolist()
     l = []
     for company in df.product_id.unique():
+        sentiment_score_list = []
         sub_df = df[df.product_id == company]
-        d = {company:{"labels":sub_df["group"].tolist(), 
-                          "data":sub_df["weighted_ave_tb"].tolist()}}
+        
+        for g in global_label: # for example, Emirates doesn't have "company" score
+            if g in sub_df.group.unique():
+                value = sub_df[sub_df.group==g].weighted_ave_tb.values[0]
+            else:
+                value = 0
+            sentiment_score_list.append(value)
+        
+        d = {company:{
+            # "labels":sub_df["group"].tolist(), 
+                          "data":sentiment_score_list}}
         l.append(d)
-    bar_chart_group = {"company":l, "labels":df["group"].unique().tolist()}
+    bar_chart_group = {"company":l, "labels":global_label}
     print("bar_chart_group", bar_chart_group)
     
     return json.dumps({'barChartGroup':bar_chart_group})
