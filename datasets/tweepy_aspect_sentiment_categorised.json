@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588625843448
+    "lastModifiedOn": 1588625958634
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,41 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "product_id",
+        "type": "string"
+      },
+      {
+        "name": "noun_lemmatized",
+        "type": "string"
+      },
+      {
+        "name": "count",
+        "type": "bigint"
+      },
+      {
+        "name": "mean_polarity_nltk",
+        "type": "double"
+      },
+      {
+        "name": "mean_polarity_textblob",
+        "type": "double"
+      },
+      {
+        "name": "review_id",
+        "type": "string"
+      },
+      {
+        "name": "k_means_clusters",
+        "type": "bigint"
+      },
+      {
+        "name": "group",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
