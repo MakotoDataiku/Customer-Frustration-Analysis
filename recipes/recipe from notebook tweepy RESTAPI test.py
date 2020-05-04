@@ -81,8 +81,3 @@ with open(fName, 'w') as f:
             break
 
 print ("Downloaded {0} tweets, Saved to {1}".format(tweetCount, fName))
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Recipe outputs
-2o8awzsk = dataiku.Folder("2o8aWzsk")
-2o8awzsk_info = 2o8awzsk.get_info()
