@@ -2,7 +2,6 @@
 import dataiku
 from dataiku import pandasutils as pdu
 import pandas as pd
-
 import tweepy
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -27,7 +26,8 @@ import sys
 import jsonpickle
 import os
 
-searchQuery = 'Air France'  # this is what we're searching for
+company = 'Lufthansa'
+searchQuery = company + " -RT"# this is what we're searching for
 maxTweets = 1000 # Some arbitrary large number
 tweetsPerQry = 100  # this is the max the API permits
 tweepy_REST_API = dataiku.Folder("tweepy_REST_API")
@@ -44,6 +44,9 @@ sinceId = None
 max_id = -1
 
 tweetCount = 0
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df = pd.DataFrame()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 print("Downloading max {0} tweets".format(maxTweets))
@@ -68,8 +71,43 @@ with open(fName, 'w') as f:
                 print("No more tweets found")
                 break
             for tweet in new_tweets:
-                f.write(jsonpickle.encode(tweet._json, unpicklable=False) +
-                        '\n')
+                f.write(jsonpickle.encode(tweet._json, unpicklable=False) + '\n')
+
+                """new_row = pd.DataFrame({
+                                        'created_at':tweet._json['created_at'],
+                                        'id':[tweet._json["id"]],
+                                        'text':tweet._json["text"],
+                                        'hashtags':[tweet._json["entities"]["hashtags"]],
+                                        # 'user_mentions':tweet._json["entities"]["user_mentions"][0]["screen_name"],
+                                        # 'user_mentions_id':tweet._json["entities"]["user_mentions"][0]["id"],
+                                        # 'user_mentions_indices':[tweet._json["entities"]["user_mentions"][0]["indices"]],
+                                        'in_reply_to_status_id':tweet._json["in_reply_to_status_id"],
+                                        'in_reply_to_user_id':tweet._json["in_reply_to_user_id"],
+                                        'in_reply_to_screen_name':tweet._json["in_reply_to_screen_name"],
+                                        'user_id':tweet._json["user"]["id"],
+                                        'user_name':tweet._json["user"]["name"],
+                                        'user_screen_name':tweet._json["user"]["screen_name"],
+                                        'user_location':tweet._json["user"]["location"],
+                                        'followers_count':tweet._json["user"]["followers_count"],
+                                        'friends_count':tweet._json["user"]["friends_count"],
+                                        'user_creation':tweet._json["user"]["created_at"],
+                                        'favourites_count':tweet._json["user"]["favourites_count"],
+                                        'coordinates':tweet._json["coordinates"],
+                                        'geo':tweet._json["geo"],
+                                        'place':tweet._json["place"],
+                                        'retweet_count':tweet._json["retweet_count"],
+                                        'retweeted':tweet._json["retweeted"],
+                                        'lang':tweet._json["lang"]
+                                    })"""
+                new_row = json_normalize(tweet._json)[['contributors', "coordinates", "created_at",
+                                                       'entities.hashtags', 'entities.urls', 'geo', 'id',
+                                                       "in_reply_to_screen_name", "in_reply_to_status_id", "in_reply_to_user_id",
+                                                       "lang",
+                                                       # 'place.country', 'place.country_code', 'place.full_name', 'place.id','place.name', 'place.place_type', 'place.url',
+                                                       'retweet_count', 'retweeted','text','user.created_at',
+                                                       'user.followers_count', 'user.following','user.id', 'user.screen_name',
+                                                       'user.time_zone']]
+                df = df.append(new_row, ignore_index = True)
             tweetCount += len(new_tweets)
             print("Downloaded {0} tweets".format(tweetCount))
             max_id = new_tweets[-1].id
@@ -79,3 +117,7 @@ with open(fName, 'w') as f:
             break
 
 print ("Downloaded {0} tweets, Saved to {1}".format(tweetCount, fName))
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+py_recipe_output = dataiku.Dataset("__FIRST_OUTPUT__")
+py_recipe_output.write_with_schema(df)
