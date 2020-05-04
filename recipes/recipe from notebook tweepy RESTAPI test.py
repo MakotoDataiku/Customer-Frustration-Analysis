@@ -1,6 +1,4 @@
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-%pylab inline
-
 import dataiku
 from dataiku import pandasutils as pdu
 import pandas as pd
