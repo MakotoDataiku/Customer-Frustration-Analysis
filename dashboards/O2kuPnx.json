@@ -278,11 +278,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 29,
+    "versionNumber": 30,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588630588813
+    "lastModifiedOn": 1588630590135
   },
   "creationTag": {
     "versionNumber": 0,
