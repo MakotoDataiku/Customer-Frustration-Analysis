@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588615635582
+    "lastModifiedOn": 1588622915960
   },
   "creationTag": {
     "versionNumber": 0,
@@ -100,7 +100,7 @@
       },
       {
         "name": "retweets",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "screen_name",
@@ -131,14 +131,6 @@
         "type": "string"
       },
       {
-        "name": "user_name",
-        "type": "string"
-      },
-      {
-        "name": "user_screen_name",
-        "type": "string"
-      },
-      {
         "name": "user_location",
         "type": "string"
       },
@@ -161,10 +153,6 @@
       {
         "name": "country",
         "type": "string"
-      },
-      {
-        "name": "retweet_count",
-        "type": "bigint"
       },
       {
         "name": "retweeted",
