@@ -114,7 +114,7 @@ for company in companies:
                                             'coordinates':coordinates,
                                             # 'geo':tweet._json["geo"],
                                             'country':country,
-                                            'retweet_count':tweet._json["retweet_count"],
+                                            'retweets':tweet._json["retweet_count"],
                                             'retweeted':tweet._json["retweeted"],
                                             'lang':tweet._json["lang"]
                                         })
