@@ -32,6 +32,7 @@ companies = dataiku.get_custom_variables(typed=True)["company"]
 df = pd.DataFrame()
 
 for company in companies:
+    print(company)
     searchQuery = company + " -RT"# this is what we're searching for
     maxTweets = 1000 # Some arbitrary large number
     tweetsPerQry = 100  # this is the max the API permits
