@@ -3,6 +3,7 @@ import dataiku
 from dataiku import pandasutils as pdu
 import pandas as pd
 import tweepy
+from pandas.io.json import json_normalize
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 atoken = "1211674579879391233-VwxwWZO0nnio8wwBVzncqhjfCTmz8S"
