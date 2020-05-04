@@ -12,15 +12,12 @@
     "tweet_url",
     "user_id",
     "username",
-    "user_name",
-    "user_screen_name",
     "user_location",
     "followers_count",
     "friends_count",
     "user_creation",
     "coordinates",
     "country",
-    "retweet_count",
     "retweeted",
     "lang"
   ],
@@ -95,7 +92,7 @@
           },
           {
             "name": "retweets",
-            "type": "string"
+            "type": "bigint"
           },
           {
             "name": "screen_name",
@@ -126,14 +123,6 @@
             "type": "string"
           },
           {
-            "name": "user_name",
-            "type": "string"
-          },
-          {
-            "name": "user_screen_name",
-            "type": "string"
-          },
-          {
             "name": "user_location",
             "type": "string"
           },
@@ -156,10 +145,6 @@
           {
             "name": "country",
             "type": "string"
-          },
-          {
-            "name": "retweet_count",
-            "type": "bigint"
           },
           {
             "name": "retweeted",
