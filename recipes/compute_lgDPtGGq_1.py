@@ -26,7 +26,7 @@ from run_extraction.init_nltk import init_nltk
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-tweets_noURL = dataiku.Dataset("tweets_noURL")
+tweets_noURL = dataiku.Dataset("tweepy_noURL")
 tweets_noURL_df = tweets_noURL.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -72,7 +72,7 @@ def main(arg, text_column, review_id, product_id, data, folder_path):
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-aspect_sentiment_pairs = dataiku.Folder("aspect_sentiment_pairs")
+aspect_sentiment_pairs = dataiku.Folder("tweepy_aspect_sentiment_pairs")
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 folder_path = aspect_sentiment_pairs.get_path()
 
@@ -125,5 +125,5 @@ for dic in aspect_list:
     # new_row = pd.DataFrame.from_dict(dic)
     tweet_processed = tweet_processed.append(new_row, ignore_index = True)
     
-py_recipe_output = dataiku.Dataset("aspect_sentiment_pairs")
+py_recipe_output = dataiku.Dataset("tweepy_aspect_sentiment_pairs")
 py_recipe_output.write_with_schema(tweet_processed)
