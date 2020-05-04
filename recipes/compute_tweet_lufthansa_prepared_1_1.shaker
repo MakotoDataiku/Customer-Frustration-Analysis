@@ -1,0 +1,118 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "links",
+        "mapping": [
+          {
+            "from": "[",
+            "to": ""
+          },
+          {
+            "from": "]",
+            "to": ""
+          },
+          {
+            "from": "\u0027",
+            "to": ""
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "links"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "TextSimplifierProcessor",
+      "params": {
+        "inCol": "text",
+        "sortAlphabetically": false,
+        "normalize": true,
+        "language": "english",
+        "clearStopWords": false,
+        "stem": false
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "hashtags": 197,
+    "tweet_id": 148,
+    "has_media": 100,
+    "parent_tweet_id": 155,
+    "is_replied": 100,
+    "tweet_url": 300,
+    "is_reply_to": 100,
+    "video_url": 100,
+    "replies": 100,
+    "screen_name": 127,
+    "user_id": 148,
+    "img_urls": 197,
+    "company": 100,
+    "links": 225,
+    "reply_to_users": 300,
+    "text": 300,
+    "timestamp_epochs": 162,
+    "retweets": 100,
+    "likes": 100,
+    "text_html": 300,
+    "timestamp": 148,
+    "username": 211
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}
