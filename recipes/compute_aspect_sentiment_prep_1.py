@@ -12,7 +12,7 @@ import ast
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-aspect_sentiment_pairs = dataiku.Dataset("aspect_sentiment_pairs")
+aspect_sentiment_pairs = dataiku.Dataset("tweepy_aspect_sentiment_pairs")
 df = aspect_sentiment_pairs.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -98,10 +98,10 @@ df_grouped['k_means_clusters'] = df_grouped.k_means_clusters.astype(int)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-aspect_sentiment_categorised = dataiku.Dataset("aspect_sentiment_categorised")
+aspect_sentiment_categorised = dataiku.Dataset("tweepy_aspect_sentiment_categorised")
 aspect_sentiment_categorised.write_with_schema(df_grouped)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-word_vectors = dataiku.Dataset("word_vectors")
+word_vectors = dataiku.Dataset("tweepy_word_vectors")
 word_vectors.write_with_schema(df_vectors)
