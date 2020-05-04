@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588615599334
+    "lastModifiedOn": 1588615635582
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,43 +91,11 @@
         "type": "string"
       },
       {
-        "name": "has_media",
-        "type": "string"
-      },
-      {
         "name": "hashtags",
         "type": "string"
       },
       {
-        "name": "img_urls",
-        "type": "string"
-      },
-      {
-        "name": "is_replied",
-        "type": "string"
-      },
-      {
-        "name": "is_reply_to",
-        "type": "string"
-      },
-      {
-        "name": "likes",
-        "type": "string"
-      },
-      {
         "name": "links",
-        "type": "string"
-      },
-      {
-        "name": "parent_tweet_id",
-        "type": "string"
-      },
-      {
-        "name": "replies",
-        "type": "string"
-      },
-      {
-        "name": "reply_to_users",
         "type": "string"
       },
       {
@@ -143,15 +111,7 @@
         "type": "string"
       },
       {
-        "name": "text_html",
-        "type": "string"
-      },
-      {
         "name": "timestamp",
-        "type": "string"
-      },
-      {
-        "name": "timestamp_epochs",
         "type": "string"
       },
       {
@@ -168,10 +128,6 @@
       },
       {
         "name": "username",
-        "type": "string"
-      },
-      {
-        "name": "video_url",
         "type": "string"
       },
       {
@@ -197,10 +153,6 @@
       {
         "name": "user_creation",
         "type": "string"
-      },
-      {
-        "name": "favourites_count",
-        "type": "bigint"
       },
       {
         "name": "coordinates",
