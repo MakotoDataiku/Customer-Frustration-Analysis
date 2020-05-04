@@ -4,6 +4,9 @@ from dataiku import pandasutils as pdu
 import pandas as pd
 import tweepy
 from pandas.io.json import json_normalize
+import sys
+import jsonpickle
+import os
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 atoken = "1211674579879391233-VwxwWZO0nnio8wwBVzncqhjfCTmz8S"
@@ -15,17 +18,13 @@ csecret = "s9XGj7t3XMvsmX2EHWeUHex2VvthapZFmmpFAj40VsQV2SvnVg"
 # Replace the API_KEY and API_SECRET with your application's key and secret.
 auth = tweepy.AppAuthHandler(ckey, csecret)
 
-api = tweepy.API(auth, wait_on_rate_limit=True,
-				   wait_on_rate_limit_notify=True)
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 if (not api):
     print ("Can't Authenticate")
     sys.exit(-1)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-import sys
-import jsonpickle
-import os
 companies = dataiku.get_custom_variables(typed=True)["company"]
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
@@ -35,7 +34,7 @@ for company in companies:
     print(company)
     searchQuery = company + " -RT"# this is what we're searching for
     print("search query :", searchQuery)
-    maxTweets = 100000 # Some arbitrary large number
+    maxTweets = 10 # Some arbitrary large number
     tweetsPerQry = 100  # this is the max the API permits
     tweepy_REST_API = dataiku.Folder("tweepy_REST_API")
     folder_path = tweepy_REST_API.get_path()
@@ -132,3 +131,6 @@ for company in companies:
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 py_recipe_output = dataiku.Dataset("tweepy_REST_API")
 py_recipe_output.write_with_schema(df)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df
