@@ -30,6 +30,7 @@ import os
 
 import dataiku
 companies = dataiku.get_custom_variables()["companies"]
+
 df = pd.DataFrame()
 
 for company in companies:
