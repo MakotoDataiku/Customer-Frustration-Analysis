@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588611429655
+    "lastModifiedOn": 1588614408802
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,23 +87,23 @@
   "schema": {
     "columns": [
       {
-        "name": "created_at",
+        "name": "timestamp",
         "type": "string"
       },
       {
-        "name": "entities.hashtags",
-        "type": "string"
-      },
-      {
-        "name": "entities.urls",
-        "type": "string"
-      },
-      {
-        "name": "id",
+        "name": "tweet_id",
         "type": "bigint"
       },
       {
-        "name": "in_reply_to_screen_name",
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
+        "name": "links",
         "type": "string"
       },
       {
@@ -115,7 +115,47 @@
         "type": "string"
       },
       {
-        "name": "lang",
+        "name": "in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user_id",
+        "type": "bigint"
+      },
+      {
+        "name": "user_name",
+        "type": "string"
+      },
+      {
+        "name": "user_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user_location",
+        "type": "string"
+      },
+      {
+        "name": "followers_count",
+        "type": "bigint"
+      },
+      {
+        "name": "friends_count",
+        "type": "bigint"
+      },
+      {
+        "name": "user_creation",
+        "type": "string"
+      },
+      {
+        "name": "favourites_count",
+        "type": "bigint"
+      },
+      {
+        "name": "coordinates",
+        "type": "string"
+      },
+      {
+        "name": "country",
         "type": "string"
       },
       {
@@ -127,31 +167,7 @@
         "type": "boolean"
       },
       {
-        "name": "text",
-        "type": "string"
-      },
-      {
-        "name": "user.created_at",
-        "type": "string"
-      },
-      {
-        "name": "user.followers_count",
-        "type": "bigint"
-      },
-      {
-        "name": "user.following",
-        "type": "string"
-      },
-      {
-        "name": "user.id",
-        "type": "bigint"
-      },
-      {
-        "name": "user.screen_name",
-        "type": "string"
-      },
-      {
-        "name": "user.time_zone",
+        "name": "lang",
         "type": "string"
       },
       {
