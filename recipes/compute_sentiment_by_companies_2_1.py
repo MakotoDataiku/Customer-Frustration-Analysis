@@ -36,10 +36,10 @@ sentiment_by_companies_df = df_grouped # For this sample code, simply copy input
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-sentiment_by_companies = dataiku.Dataset("Cat_analysis_by_companies")
+sentiment_by_companies = dataiku.Dataset("tweepy_analysis_by_companies")
 sentiment_by_companies.write_with_schema(df_grouped)
 
-KM_analysis_by_companies = dataiku.Dataset("KM_analysis_by_companies")
+KM_analysis_by_companies = dataiku.Dataset("tweepy_KM")
 KM_analysis_by_companies.write_with_schema(df_clustered)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
