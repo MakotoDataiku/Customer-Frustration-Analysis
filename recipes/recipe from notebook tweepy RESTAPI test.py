@@ -118,18 +118,6 @@ for company in companies:
                                             'retweeted':tweet._json["retweeted"],
                                             'lang':tweet._json["lang"]
                                         })
-                    """new_row = json_normalize(tweet._json)[[ # 'contributors',
-                                                           # "coordinates",
-                                                           "created_at",
-                                                           'entities.hashtags', 'entities.urls',
-                                                           # 'geo',
-                                                           'id',
-                                                           "in_reply_to_screen_name", "in_reply_to_status_id", "in_reply_to_user_id",
-                                                           "lang",
-                                                           # 'place.country', 'place.country_code', 'place.full_name', 'place.id','place.name', 'place.place_type', 'place.url',
-                                                           'retweet_count', 'retweeted','text','user.created_at',
-                                                           'user.followers_count', 'user.following','user.id', 'user.screen_name',
-                                                           'user.time_zone']]"""
                     new_row["company"] = company
                     df = df.append(new_row, ignore_index = True)
 
