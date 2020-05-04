@@ -1,5 +1,5 @@
 {
-  "mode": "UNION",
+  "mode": "CUSTOM",
   "selectedColumns": [
     "company",
     "has_media",
@@ -23,9 +23,6 @@
     "user_id",
     "username",
     "video_url",
-    "in_reply_to_status_id",
-    "in_reply_to_user_id",
-    "in_reply_to_screen_name",
     "user_name",
     "user_screen_name",
     "user_location",
@@ -93,6 +90,149 @@
     }
   ],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "company",
+            "type": "string"
+          },
+          {
+            "name": "has_media",
+            "type": "string"
+          },
+          {
+            "name": "hashtags",
+            "type": "string"
+          },
+          {
+            "name": "img_urls",
+            "type": "string"
+          },
+          {
+            "name": "is_replied",
+            "type": "string"
+          },
+          {
+            "name": "is_reply_to",
+            "type": "string"
+          },
+          {
+            "name": "likes",
+            "type": "string"
+          },
+          {
+            "name": "links",
+            "type": "string"
+          },
+          {
+            "name": "parent_tweet_id",
+            "type": "string"
+          },
+          {
+            "name": "replies",
+            "type": "string"
+          },
+          {
+            "name": "reply_to_users",
+            "type": "string"
+          },
+          {
+            "name": "retweets",
+            "type": "string"
+          },
+          {
+            "name": "screen_name",
+            "type": "string"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "text_html",
+            "type": "string"
+          },
+          {
+            "name": "timestamp",
+            "type": "string"
+          },
+          {
+            "name": "timestamp_epochs",
+            "type": "string"
+          },
+          {
+            "name": "tweet_id",
+            "type": "bigint"
+          },
+          {
+            "name": "tweet_url",
+            "type": "string"
+          },
+          {
+            "name": "user_id",
+            "type": "bigint"
+          },
+          {
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "name": "video_url",
+            "type": "string"
+          },
+          {
+            "name": "user_name",
+            "type": "string"
+          },
+          {
+            "name": "user_screen_name",
+            "type": "string"
+          },
+          {
+            "name": "user_location",
+            "type": "string"
+          },
+          {
+            "name": "followers_count",
+            "type": "bigint"
+          },
+          {
+            "name": "friends_count",
+            "type": "bigint"
+          },
+          {
+            "name": "user_creation",
+            "type": "string"
+          },
+          {
+            "name": "favourites_count",
+            "type": "bigint"
+          },
+          {
+            "name": "coordinates",
+            "type": "string"
+          },
+          {
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "name": "retweet_count",
+            "type": "bigint"
+          },
+          {
+            "name": "retweeted",
+            "type": "boolean"
+          },
+          {
+            "name": "lang",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
