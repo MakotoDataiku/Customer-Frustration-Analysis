@@ -13,7 +13,7 @@ import os
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-aspects_grouped = dataiku.Dataset("aspect_sentiment_categorised")
+aspects_grouped = dataiku.Dataset("tweepy_aspect_sentiment_categorised")
 df = aspects_grouped.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
