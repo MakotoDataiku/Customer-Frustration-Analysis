@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588623601842
+    "lastModifiedOn": 1588623631494
   },
   "creationTag": {
     "versionNumber": 0,
@@ -91,10 +91,6 @@
         "type": "string"
       },
       {
-        "name": "has_media",
-        "type": "boolean"
-      },
-      {
         "name": "hashtags",
         "type": "array",
         "arrayContent": {
@@ -102,42 +98,8 @@
         }
       },
       {
-        "name": "img_urls",
-        "type": "array",
-        "arrayContent": {
-          "type": "string"
-        }
-      },
-      {
-        "name": "is_replied",
-        "type": "boolean"
-      },
-      {
-        "name": "is_reply_to",
-        "type": "boolean"
-      },
-      {
-        "name": "likes",
-        "type": "bigint"
-      },
-      {
         "name": "links",
         "type": "string"
-      },
-      {
-        "name": "parent_tweet_id",
-        "type": "bigint"
-      },
-      {
-        "name": "replies",
-        "type": "bigint"
-      },
-      {
-        "name": "reply_to_users",
-        "type": "array",
-        "arrayContent": {
-          "type": "string"
-        }
       },
       {
         "name": "retweets",
@@ -152,16 +114,8 @@
         "type": "string"
       },
       {
-        "name": "text_html",
-        "type": "string"
-      },
-      {
         "name": "timestamp",
         "type": "string"
-      },
-      {
-        "name": "timestamp_epochs",
-        "type": "bigint"
       },
       {
         "name": "tweet_id",
@@ -180,7 +134,35 @@
         "type": "string"
       },
       {
-        "name": "video_url",
+        "name": "user_location",
+        "type": "string"
+      },
+      {
+        "name": "followers_count",
+        "type": "string"
+      },
+      {
+        "name": "friends_count",
+        "type": "string"
+      },
+      {
+        "name": "user_creation",
+        "type": "string"
+      },
+      {
+        "name": "coordinates",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "retweeted",
+        "type": "string"
+      },
+      {
+        "name": "lang",
         "type": "string"
       }
     ],
