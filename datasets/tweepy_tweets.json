@@ -1,0 +1,1437 @@
+{
+  "type": "Filesystem",
+  "managed": false,
+  "formatType": "json",
+  "checklists": {
+    "checklists": []
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "nestedArraysHandling": "PRESERVE",
+    "extractFromSingleElement": false,
+    "nestedArraysMaxElements": 100,
+    "nestedArraysMaxContentSize": 300000,
+    "headerRow": false
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1588585089464
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1588585089464
+  },
+  "tags": [],
+  "params": {
+    "connection": "filesystem_folders",
+    "path": "/ANALYSISOFCUSTOMERFRUSTRATIONSINAIRLINEINDUSTRIES/2o8aWzsk/tweets.txt",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "created_at",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "id_str",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "truncated",
+        "type": "string"
+      },
+      {
+        "name": "entities.hashtags",
+        "type": "string"
+      },
+      {
+        "name": "entities.symbols",
+        "type": "string"
+      },
+      {
+        "name": "entities.user_mentions",
+        "type": "string"
+      },
+      {
+        "name": "entities.urls",
+        "type": "string"
+      },
+      {
+        "name": "metadata.iso_language_code",
+        "type": "string"
+      },
+      {
+        "name": "metadata.result_type",
+        "type": "string"
+      },
+      {
+        "name": "source",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_status_id",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_user_id",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_user_id_str",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user.id",
+        "type": "string"
+      },
+      {
+        "name": "user.id_str",
+        "type": "string"
+      },
+      {
+        "name": "user.name",
+        "type": "string"
+      },
+      {
+        "name": "user.screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user.location",
+        "type": "string"
+      },
+      {
+        "name": "user.description",
+        "type": "string"
+      },
+      {
+        "name": "user.url",
+        "type": "string"
+      },
+      {
+        "name": "user.entities.description.urls",
+        "type": "string"
+      },
+      {
+        "name": "user.protected",
+        "type": "string"
+      },
+      {
+        "name": "user.followers_count",
+        "type": "string"
+      },
+      {
+        "name": "user.friends_count",
+        "type": "string"
+      },
+      {
+        "name": "user.listed_count",
+        "type": "string"
+      },
+      {
+        "name": "user.created_at",
+        "type": "string"
+      },
+      {
+        "name": "user.favourites_count",
+        "type": "string"
+      },
+      {
+        "name": "user.utc_offset",
+        "type": "string"
+      },
+      {
+        "name": "user.time_zone",
+        "type": "string"
+      },
+      {
+        "name": "user.geo_enabled",
+        "type": "string"
+      },
+      {
+        "name": "user.verified",
+        "type": "string"
+      },
+      {
+        "name": "user.statuses_count",
+        "type": "string"
+      },
+      {
+        "name": "user.lang",
+        "type": "string"
+      },
+      {
+        "name": "user.contributors_enabled",
+        "type": "string"
+      },
+      {
+        "name": "user.is_translator",
+        "type": "string"
+      },
+      {
+        "name": "user.is_translation_enabled",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_background_color",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_background_image_url",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_background_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_background_tile",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_image_url",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_banner_url",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_link_color",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_sidebar_border_color",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_sidebar_fill_color",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_text_color",
+        "type": "string"
+      },
+      {
+        "name": "user.profile_use_background_image",
+        "type": "string"
+      },
+      {
+        "name": "user.has_extended_profile",
+        "type": "string"
+      },
+      {
+        "name": "user.default_profile",
+        "type": "string"
+      },
+      {
+        "name": "user.default_profile_image",
+        "type": "string"
+      },
+      {
+        "name": "user.following",
+        "type": "string"
+      },
+      {
+        "name": "user.follow_request_sent",
+        "type": "string"
+      },
+      {
+        "name": "user.notifications",
+        "type": "string"
+      },
+      {
+        "name": "user.translator_type",
+        "type": "string"
+      },
+      {
+        "name": "geo",
+        "type": "string"
+      },
+      {
+        "name": "coordinates",
+        "type": "string"
+      },
+      {
+        "name": "place",
+        "type": "string"
+      },
+      {
+        "name": "contributors",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.created_at",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.text",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.truncated",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.entities.hashtags",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.entities.symbols",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.entities.user_mentions",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.entities.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.metadata.iso_language_code",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.metadata.result_type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.source",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.in_reply_to_status_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.in_reply_to_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.in_reply_to_user_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.in_reply_to_user_id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.screen_name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.location",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.description",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.entities.url.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.entities.description.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.protected",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.followers_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.friends_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.listed_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.created_at",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.favourites_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.utc_offset",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.time_zone",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.geo_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.verified",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.statuses_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.lang",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.contributors_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.is_translator",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.is_translation_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_background_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_background_image_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_background_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_background_tile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_image_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_link_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_sidebar_border_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_sidebar_fill_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_text_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_use_background_image",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.has_extended_profile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.default_profile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.default_profile_image",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.following",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.follow_request_sent",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.notifications",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.translator_type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.geo",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.contributors",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.is_quote_status",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.retweet_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.favorite_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.favorited",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.retweeted",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.possibly_sensitive",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.lang",
+        "type": "string"
+      },
+      {
+        "name": "is_quote_status",
+        "type": "string"
+      },
+      {
+        "name": "retweet_count",
+        "type": "string"
+      },
+      {
+        "name": "favorite_count",
+        "type": "string"
+      },
+      {
+        "name": "favorited",
+        "type": "string"
+      },
+      {
+        "name": "retweeted",
+        "type": "string"
+      },
+      {
+        "name": "lang",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.user.profile_banner_url",
+        "type": "string"
+      },
+      {
+        "name": "user.entities.url.urls",
+        "type": "string"
+      },
+      {
+        "name": "possibly_sensitive",
+        "type": "string"
+      },
+      {
+        "name": "entities.media",
+        "type": "string"
+      },
+      {
+        "name": "extended_entities.media",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.entities.media",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.extended_entities.media",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status_id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.created_at",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.text",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.truncated",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.entities.hashtags",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.entities.symbols",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.entities.user_mentions",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.entities.urls",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.metadata.iso_language_code",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.metadata.result_type",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.source",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.in_reply_to_status_id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.in_reply_to_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.in_reply_to_user_id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.in_reply_to_user_id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.name",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.screen_name",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.location",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.description",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.url",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.entities.url.urls",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.entities.description.urls",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.protected",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.followers_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.friends_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.listed_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.created_at",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.favourites_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.utc_offset",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.time_zone",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.geo_enabled",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.verified",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.statuses_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.lang",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.contributors_enabled",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.is_translator",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.is_translation_enabled",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_background_color",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_background_image_url",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_background_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_background_tile",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_image_url",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_link_color",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_sidebar_border_color",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_sidebar_fill_color",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_text_color",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_use_background_image",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.has_extended_profile",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.default_profile",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.default_profile_image",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.following",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.follow_request_sent",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.notifications",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.translator_type",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.geo",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.place",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.contributors",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.is_quote_status",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.quoted_status_id",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.quoted_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.retweet_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.favorite_count",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.favorited",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.retweeted",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.possibly_sensitive",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.lang",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.created_at",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.text",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.truncated",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.entities.hashtags",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.entities.symbols",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.entities.user_mentions",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.entities.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.metadata.iso_language_code",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.metadata.result_type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.source",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.in_reply_to_status_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.in_reply_to_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.in_reply_to_user_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.in_reply_to_user_id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.id_str",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.screen_name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.location",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.description",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.entities.url.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.entities.description.urls",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.protected",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.followers_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.friends_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.listed_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.created_at",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.favourites_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.utc_offset",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.time_zone",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.geo_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.verified",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.statuses_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.lang",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.contributors_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.is_translator",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.is_translation_enabled",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_background_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_background_image_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_background_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_background_tile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_image_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_image_url_https",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_banner_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_link_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_sidebar_border_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_sidebar_fill_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_text_color",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.profile_use_background_image",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.has_extended_profile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.default_profile",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.default_profile_image",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.following",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.follow_request_sent",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.notifications",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.user.translator_type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.geo",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.place",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.contributors",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.is_quote_status",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.retweet_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.favorite_count",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.favorited",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.retweeted",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.possibly_sensitive",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.lang",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.user.profile_banner_url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.quoted_status_id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.quoted_status.quoted_status_id_str",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.entities.media",
+        "type": "string"
+      },
+      {
+        "name": "quoted_status.extended_entities.media",
+        "type": "string"
+      },
+      {
+        "name": "place.id",
+        "type": "string"
+      },
+      {
+        "name": "place.url",
+        "type": "string"
+      },
+      {
+        "name": "place.place_type",
+        "type": "string"
+      },
+      {
+        "name": "place.name",
+        "type": "string"
+      },
+      {
+        "name": "place.full_name",
+        "type": "string"
+      },
+      {
+        "name": "place.country_code",
+        "type": "string"
+      },
+      {
+        "name": "place.country",
+        "type": "string"
+      },
+      {
+        "name": "place.contained_within",
+        "type": "string"
+      },
+      {
+        "name": "place.bounding_box.type",
+        "type": "string"
+      },
+      {
+        "name": "place.bounding_box.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.id",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.url",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.place_type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.full_name",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.country_code",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.country",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.contained_within",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.bounding_box.type",
+        "type": "string"
+      },
+      {
+        "name": "retweeted_status.place.bounding_box.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "geo.type",
+        "type": "string"
+      },
+      {
+        "name": "geo.coordinates",
+        "type": "string"
+      },
+      {
+        "name": "coordinates.type",
+        "type": "string"
+      },
+      {
+        "name": "coordinates.coordinates",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "basic:COUNT_FILES",
+        "basic:SIZE",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}
