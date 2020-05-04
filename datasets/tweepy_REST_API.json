@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588594500128
+    "lastModifiedOn": 1588603553568
   },
   "creationTag": {
     "versionNumber": 0,
@@ -86,10 +86,6 @@
   },
   "schema": {
     "columns": [
-      {
-        "name": "company",
-        "type": "string"
-      },
       {
         "name": "contributors",
         "type": "string"
@@ -160,6 +156,10 @@
       },
       {
         "name": "user.time_zone",
+        "type": "string"
+      },
+      {
+        "name": "company",
         "type": "string"
       }
     ],
