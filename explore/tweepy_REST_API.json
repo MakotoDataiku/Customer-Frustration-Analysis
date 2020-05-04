@@ -73,7 +73,21 @@
       "user.following": 120,
       "user.id": 148,
       "user.screen_name": 162,
-      "user.time_zone": 120
+      "user.time_zone": 120,
+      "timestamp": 225,
+      "tweet_id": 148,
+      "hashtags": 211,
+      "links": 300,
+      "user_id": 148,
+      "user_name": 218,
+      "user_screen_name": 246,
+      "user_location": 211,
+      "followers_count": 128,
+      "friends_count": 113,
+      "user_creation": 225,
+      "favourites_count": 135,
+      "coordinates": 106,
+      "country": 113
     },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
