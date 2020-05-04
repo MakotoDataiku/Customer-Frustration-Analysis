@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588615249449
+    "lastModifiedOn": 1588615599334
   },
   "creationTag": {
     "versionNumber": 0,
@@ -156,7 +156,7 @@
       },
       {
         "name": "tweet_id",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "tweet_url",
@@ -164,7 +164,7 @@
       },
       {
         "name": "user_id",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "username",
@@ -172,18 +172,6 @@
       },
       {
         "name": "video_url",
-        "type": "string"
-      },
-      {
-        "name": "in_reply_to_status_id",
-        "type": "string"
-      },
-      {
-        "name": "in_reply_to_user_id",
-        "type": "string"
-      },
-      {
-        "name": "in_reply_to_screen_name",
         "type": "string"
       },
       {
