@@ -54,7 +54,7 @@ for name in df_grouped.product_id.unique():
     fig.update_layout(barmode='group', title_text=name)
 
     insights_name = name.replace(" ", "_") + "_grouped"
-    folder_path = dataiku.Folder("plots").get_path()
+    folder_path = dataiku.Folder("tweepy_plots").get_path()
     fig_path = os.path.join(folder_path, insights_name)
     fig.write_html(fig_path+".html")
     insights.save_plotly(insights_name, fig)
