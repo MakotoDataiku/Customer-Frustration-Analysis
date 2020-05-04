@@ -34,7 +34,8 @@ df = pd.DataFrame()
 for company in companies:
     print(company)
     searchQuery = company + " -RT"# this is what we're searching for
-    maxTweets = 1000 # Some arbitrary large number
+    print("search query :", searchQuery)
+    maxTweets = 100000 # Some arbitrary large number
     tweetsPerQry = 100  # this is the max the API permits
     tweepy_REST_API = dataiku.Folder("tweepy_REST_API")
     folder_path = tweepy_REST_API.get_path()
@@ -103,11 +104,11 @@ for company in companies:
                                             'retweeted':tweet._json["retweeted"],
                                             'lang':tweet._json["lang"]
                                         })"""
-                    new_row = json_normalize(tweet._json)[['contributors', 
-                                                           # "coordinates", 
+                    new_row = json_normalize(tweet._json)[['contributors',
+                                                           # "coordinates",
                                                            "created_at",
-                                                           'entities.hashtags', 'entities.urls', 
-                                                           # 'geo', 
+                                                           'entities.hashtags', 'entities.urls',
+                                                           # 'geo',
                                                            'id',
                                                            "in_reply_to_screen_name", "in_reply_to_status_id", "in_reply_to_user_id",
                                                            "lang",
@@ -115,7 +116,9 @@ for company in companies:
                                                            'retweet_count', 'retweeted','text','user.created_at',
                                                            'user.followers_count', 'user.following','user.id', 'user.screen_name',
                                                            'user.time_zone']]
+                    new_row["company"] = company
                     df = df.append(new_row, ignore_index = True)
+
                 tweetCount += len(new_tweets)
                 print("Downloaded {0} tweets".format(tweetCount))
                 max_id = new_tweets[-1].id
@@ -123,7 +126,7 @@ for company in companies:
                 # Just exit if any error
                 print("some error : " + str(e))
                 break
-    df["company"] = company
+
     print ("Downloaded {0} tweets for {1}, Saved to {2}".format(tweetCount, company, fName))
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
