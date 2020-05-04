@@ -34,7 +34,7 @@ for company in companies:
     print(company)
     searchQuery = company + " -RT"# this is what we're searching for
     print("search query :", searchQuery)
-    maxTweets = 10 # Some arbitrary large number
+    maxTweets = 100 # Some arbitrary large number
     tweetsPerQry = 100  # this is the max the API permits
     tweepy_REST_API = dataiku.Folder("tweepy_REST_API")
     folder_path = tweepy_REST_API.get_path()
@@ -77,11 +77,26 @@ for company in companies:
                 for tweet in new_tweets:
                     f.write(jsonpickle.encode(tweet._json, unpicklable=False) + '\n')
 
-                    """new_row = pd.DataFrame({
-                                            'created_at':tweet._json['created_at'],
-                                            'id':[tweet._json["id"]],
+                    if len(tweet._json['entities']['urls']) == 0:
+                        links = ""
+                    else:
+                        links = tweet._json['entities']['urls'][0]["expanded_url"]
+
+                    if tweet._json["place"]==None:
+                        country = ""
+                    else:
+                        country = tweet._json["place"]['country']
+
+                    if tweet._json["geo"] != None:
+                        coordinates = str(tweet._json["geo"]['coordinates'])
+                    else:
+                        coordinates = ""
+
+                    new_row = pd.DataFrame({'timestamp':tweet._json['created_at'],
+                                            'tweet_id':[tweet._json["id"]],
                                             'text':tweet._json["text"],
                                             'hashtags':[tweet._json["entities"]["hashtags"]],
+                                            "links":links,
                                             # 'user_mentions':tweet._json["entities"]["user_mentions"][0]["screen_name"],
                                             # 'user_mentions_id':tweet._json["entities"]["user_mentions"][0]["id"],
                                             # 'user_mentions_indices':[tweet._json["entities"]["user_mentions"][0]["indices"]],
@@ -96,14 +111,14 @@ for company in companies:
                                             'friends_count':tweet._json["user"]["friends_count"],
                                             'user_creation':tweet._json["user"]["created_at"],
                                             'favourites_count':tweet._json["user"]["favourites_count"],
-                                            # 'coordinates':tweet._json["coordinates"],
+                                            'coordinates':coordinates,
                                             # 'geo':tweet._json["geo"],
-                                            'place':tweet._json["place"],
+                                            'country':country,
                                             'retweet_count':tweet._json["retweet_count"],
                                             'retweeted':tweet._json["retweeted"],
                                             'lang':tweet._json["lang"]
-                                        })"""
-                    new_row = json_normalize(tweet._json)[['contributors',
+                                        })
+                    """new_row = json_normalize(tweet._json)[[ # 'contributors',
                                                            # "coordinates",
                                                            "created_at",
                                                            'entities.hashtags', 'entities.urls',
@@ -114,7 +129,7 @@ for company in companies:
                                                            # 'place.country', 'place.country_code', 'place.full_name', 'place.id','place.name', 'place.place_type', 'place.url',
                                                            'retweet_count', 'retweeted','text','user.created_at',
                                                            'user.followers_count', 'user.following','user.id', 'user.screen_name',
-                                                           'user.time_zone']]
+                                                           'user.time_zone']]"""
                     new_row["company"] = company
                     df = df.append(new_row, ignore_index = True)
 
@@ -129,8 +144,8 @@ for company in companies:
     print ("Downloaded {0} tweets for {1}, Saved to {2}".format(tweetCount, company, fName))
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-py_recipe_output = dataiku.Dataset("tweepy_REST_API")
-py_recipe_output.write_with_schema(df)
+df.head()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df
+py_recipe_output = dataiku.Dataset("tweepy_REST_API")
+py_recipe_output.write_with_schema(df)
