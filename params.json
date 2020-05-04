@@ -28,6 +28,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "tweepy_analysis_by_companies",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -126,11 +135,18 @@
         "containerSelection": {
           "containerMode": "INHERIT"
         },
+        "overrideGlobalK8sExposition": false,
         "exposition": {
           "type": "local_process",
           "params": {}
         },
-        "nbReplicas": 1
+        "scaling": {
+          "initialReplicas": 1,
+          "hpa": false,
+          "hpaTargetCPUPercent": 0,
+          "hpaMinPods": 0,
+          "hpaMaxPods": 0
+        }
       }
     }
   },
@@ -193,11 +209,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1586522135229
+    "lastModifiedOn": 1588630588600
   },
   "creationTag": {
     "versionNumber": 0,
