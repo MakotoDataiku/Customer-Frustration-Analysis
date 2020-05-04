@@ -25,12 +25,9 @@ if (not api):
 import sys
 import jsonpickle
 import os
+companies = dataiku.get_custom_variables(typed=True)["company"]
 
-
-
-import dataiku
-companies = dataiku.get_custom_variables()["companies"]
-
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df = pd.DataFrame()
 
 for company in companies:
