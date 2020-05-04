@@ -1,25 +1,25 @@
 {
   "mode": "CUSTOM",
   "selectedColumns": [
-    "company",
-    "hashtags",
-    "links",
-    "retweets",
-    "screen_name",
-    "text",
     "timestamp",
     "tweet_id",
-    "tweet_url",
+    "text",
+    "hashtags",
+    "links",
     "user_id",
     "username",
+    "screen_name",
     "user_location",
     "followers_count",
     "friends_count",
     "user_creation",
     "coordinates",
     "country",
+    "retweets",
     "retweeted",
-    "lang"
+    "lang",
+    "company",
+    "tweet_url"
   ],
   "originColumnName": "original_dataset",
   "engineParams": {
@@ -62,15 +62,12 @@
         "distinct": false,
         "enabled": false
       },
-      "originLabel": "tweets_new",
+      "originLabel": "tweepy_REST_API",
       "index": 0
     },
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "tweepy_REST_API",
+      "preFilter": {},
+      "originLabel": "tweets_stacked",
       "index": 1
     }
   ],
@@ -79,7 +76,15 @@
       "schema": {
         "columns": [
           {
-            "name": "company",
+            "name": "timestamp",
+            "type": "string"
+          },
+          {
+            "name": "tweet_id",
+            "type": "string"
+          },
+          {
+            "name": "text",
             "type": "string"
           },
           {
@@ -91,35 +96,15 @@
             "type": "string"
           },
           {
-            "name": "retweets",
-            "type": "bigint"
-          },
-          {
-            "name": "screen_name",
-            "type": "string"
-          },
-          {
-            "name": "text",
-            "type": "string"
-          },
-          {
-            "name": "timestamp",
-            "type": "string"
-          },
-          {
-            "name": "tweet_id",
-            "type": "bigint"
-          },
-          {
-            "name": "tweet_url",
-            "type": "string"
-          },
-          {
             "name": "user_id",
-            "type": "bigint"
+            "type": "string"
           },
           {
             "name": "username",
+            "type": "string"
+          },
+          {
+            "name": "screen_name",
             "type": "string"
           },
           {
@@ -147,11 +132,23 @@
             "type": "string"
           },
           {
+            "name": "retweets",
+            "type": "string"
+          },
+          {
             "name": "retweeted",
             "type": "boolean"
           },
           {
             "name": "lang",
+            "type": "string"
+          },
+          {
+            "name": "company",
+            "type": "string"
+          },
+          {
+            "name": "tweet_url",
             "type": "string"
           }
         ],
