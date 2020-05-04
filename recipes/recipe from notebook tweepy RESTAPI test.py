@@ -104,7 +104,7 @@ for company in companies:
                                             'in_reply_to_user_id':tweet._json["in_reply_to_user_id"],
                                             'in_reply_to_screen_name':tweet._json["in_reply_to_screen_name"],
                                             'user_id':tweet._json["user"]["id"],
-                                            'user_name':tweet._json["user"]["name"],
+                                            'username':tweet._json["user"]["name"],
                                             'user_screen_name':tweet._json["user"]["screen_name"],
                                             'user_location':tweet._json["user"]["location"],
                                             'followers_count':tweet._json["user"]["followers_count"],
