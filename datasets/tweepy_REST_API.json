@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588594363114
+    "lastModifiedOn": 1588594500128
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,85 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "name": "contributors",
+        "type": "string"
+      },
+      {
+        "name": "created_at",
+        "type": "string"
+      },
+      {
+        "name": "entities.hashtags",
+        "type": "string"
+      },
+      {
+        "name": "entities.urls",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "bigint"
+      },
+      {
+        "name": "in_reply_to_screen_name",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_status_id",
+        "type": "string"
+      },
+      {
+        "name": "in_reply_to_user_id",
+        "type": "string"
+      },
+      {
+        "name": "lang",
+        "type": "string"
+      },
+      {
+        "name": "retweet_count",
+        "type": "bigint"
+      },
+      {
+        "name": "retweeted",
+        "type": "boolean"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "user.created_at",
+        "type": "string"
+      },
+      {
+        "name": "user.followers_count",
+        "type": "bigint"
+      },
+      {
+        "name": "user.following",
+        "type": "string"
+      },
+      {
+        "name": "user.id",
+        "type": "bigint"
+      },
+      {
+        "name": "user.screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user.time_zone",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
