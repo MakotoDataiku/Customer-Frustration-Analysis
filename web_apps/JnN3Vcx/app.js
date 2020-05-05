@@ -143,7 +143,7 @@ function addBarChart(data, labels) {
 */
 
 function addGroupBarChart(data, labels) {
-    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
+    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="ctrl.onClick"></canvas>';
     i = 1
     arr = []
     data.forEach(function(d){
