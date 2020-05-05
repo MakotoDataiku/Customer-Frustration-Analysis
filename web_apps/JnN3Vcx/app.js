@@ -5,6 +5,7 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
+/*
 document.getElementById("bar-chart-group").onclick = function(points, evt, barClicked) {
     console.log("Chart clicked", evt);
     console.log("points", points);
@@ -14,6 +15,7 @@ document.getElementById("bar-chart-group").onclick = function(points, evt, barCl
         console.log("Point", points[0].value);
     }
 }
+*/
 
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
