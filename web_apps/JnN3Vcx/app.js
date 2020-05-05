@@ -6,7 +6,7 @@ console.log($(document).ready(function() {
 }))
 
 document.getElementById("bar-card").onclick = function(points, evt) {
-    console.log("Chart clicked", points, evt);
+    console.log("Chart clicked", evt);
     console.log("points", points);
     if(points.length > 0){
         console.log("Bar chart clicked");
