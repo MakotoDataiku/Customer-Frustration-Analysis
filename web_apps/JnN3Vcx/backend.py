@@ -7,6 +7,7 @@ import time
 from dataiku.core.sql import SQLExecutor2
 
 score_table = "tweepy_analysis_by_companies"
+tweet_id_table = "tweepy_aspect_sentiment_categorised"
 
 
 
