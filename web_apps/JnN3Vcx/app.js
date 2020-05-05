@@ -35,7 +35,7 @@ document.getElementById('button').onclick = function(){
 
 /* returns the company and category chosen from the chart*/
 document.getElementById("").onclick = function() {
-    let activePoints = myLineChart.getPointsAtEvent(evt);
+    let activePoints = addGroupBarChart.groupBarChart.getPointsAtEvent(evt);
     let company = ""
     let category = ""
     let headers = new Headers()
@@ -148,7 +148,8 @@ function addGroupBarChart(data, labels) {
         datasets: arr
               };
     
-    this.groupBarChart = new Chart(document.getElementById("bar-chart-group"), {
+    // this.groupBarChart = 
+    new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
         data: data_grouped,
         options: {
