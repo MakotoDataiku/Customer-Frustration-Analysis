@@ -5,9 +5,7 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-document.getElementById("bar-chart-group").onclick = function() {
-    
-}
+document.getElementById("bar-chart-group").onclick 
 /*
 document.getElementById("bar-chart-group").onclick = function(points, evt, barClicked) {
     console.log("Chart clicked", evt);
