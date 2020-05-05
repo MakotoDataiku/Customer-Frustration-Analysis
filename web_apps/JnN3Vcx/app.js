@@ -40,7 +40,7 @@ document.getElementById('button').onclick = function(){
                    });
 }
 
-/* returns the company and category chosen from the chart*/
+/* returns the company and category chosen from the chart
 document.getElementById("bar-card").onclick = function() {
     let activePoints = groupBarChart.getPointsAtEvent(evt);
     let company = ""
@@ -64,6 +64,8 @@ document.getElementById("bar-card").onclick = function() {
                        })
                    });
 }
+*/
+
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
     // let select = document.getElementById(id);
