@@ -7,11 +7,11 @@ console.log($(document).ready(function() {
 
 document.getElementById("bar-card").onclick = function(points, evt) {
     console.log("Chart clicked", points, evt);
-                                console.log(points);
-                                if(points.length > 0){
-                                    console.log("Bar chart clicked");
-                                    console.log("Point", points[0].value);
-}
+    console.log("points", points);
+    if(points.length > 0){
+        console.log("Bar chart clicked");
+        console.log("Point", points[0].value);
+    }
 }
 
 /* returns the company value chosen from the dropdowns */
