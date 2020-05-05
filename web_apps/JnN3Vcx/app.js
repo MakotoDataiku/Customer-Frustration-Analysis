@@ -5,7 +5,7 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-ctrl.onClick = function(barClicked) {
+$scope.onClick = function(barClicked) {
   if (barClicked) {
     let associatedLabel = barClicked.;
     console.log("Label of the bar you clicked is ", associatedLabel);
