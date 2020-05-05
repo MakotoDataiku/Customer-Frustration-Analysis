@@ -148,7 +148,7 @@ function addGroupBarChart(data, labels) {
         datasets: arr
               };
     
-    let groupBarChart = new Chart(document.getElementById("bar-chart-group"), {
+    let this.groupBarChart = new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
         data: data_grouped,
         options: {
