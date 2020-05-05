@@ -6,7 +6,7 @@ import json
 import time
 from dataiku.core.sql import SQLExecutor2
 
-table_name = "Cat_analysis_by_companies"
+table_name = "tweepy_analysis_by_companies"
 
 
 # function to get the dataframe based on the choice from the dropdown
