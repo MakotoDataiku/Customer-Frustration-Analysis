@@ -5,9 +5,10 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-document.getElementById("bar-card").onclick = function(points, evt) {
+document.getElementById("bar-card").onclick = function(points, evt, barClicked) {
     console.log("Chart clicked", evt);
     console.log("points", points);
+    console.log("barClicked", barClicked);
     if(points.length > 0){
         console.log("Bar chart clicked");
         console.log("Point", points[0].value);
