@@ -5,11 +5,12 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-document.getElementById("bar-card").onclick = function(barClicked) {
-  if (barClicked) {
-    let associatedLabel = barClicked;
-    console.log("Label of the bar you clicked is ", associatedLabel);
-  }
+document.getElementById("bar-card").onclick = function(points, evt) {
+  console.log("Chart clicked", points, evt);
+                                console.log(points);
+                                if(points.length > 0){
+                                    console.log("Bar chart clicked");
+                                    console.log("Point", points[0].value);
 }
 
 /* returns the company value chosen from the dropdowns */
