@@ -31,9 +31,32 @@ document.getElementById('button').onclick = function(){
                                                  data.barChartGroup.labels);
                                 })
                    });
-    
 }
 
+/* returns the company and category chosen from the chart*/
+document.getElementById("").onclick = function() {
+    let activePoints = myLineChart.getPointsAtEvent(evt);
+    let company = ""
+    let category = ""
+    let headers = new Headers()
+    let init = {
+        method : 'GET',
+        headers : headers
+    }
+    let params = {
+        'company':company,
+        'category':category
+    }
+    
+    let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params)
+    let promise = fetch(url, init) 
+                   .then(function(response) {
+                       response.json()
+                       .then(function(data){
+                           // function to add table
+                       })
+                   });
+}
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
     // let select = document.getElementById(id);
@@ -125,7 +148,7 @@ function addGroupBarChart(data, labels) {
         datasets: arr
               };
     
-    new Chart(document.getElementById("bar-chart-group"), {
+    let groupBarChart = new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
         data: data_grouped,
         options: {
