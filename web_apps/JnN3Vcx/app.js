@@ -148,7 +148,7 @@ function addGroupBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
     i = 1
     arr = []
-    console.log("data", data[0]['Air France'])
+    console.log("data", data[0]['Air France']['data'])
     data.forEach(function(d){
         company = Object.keys(d);
         values = d[company]['data'];
