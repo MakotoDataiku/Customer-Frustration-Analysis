@@ -5,7 +5,6 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-document.getElementById("bar-chart-group").onclick 
 /*
 document.getElementById("bar-chart-group").onclick = function(points, evt, barClicked) {
     console.log("Chart clicked", evt);
@@ -143,7 +142,7 @@ function addBarChart(data, labels) {
 */
 
 function addGroupBarChart(data, labels) {
-    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" ></canvas>';
+    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
     i = 1
     arr = []
     data.forEach(function(d){
