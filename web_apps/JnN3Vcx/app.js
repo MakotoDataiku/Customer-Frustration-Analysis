@@ -34,8 +34,8 @@ document.getElementById('button').onclick = function(){
 }
 
 /* returns the company and category chosen from the chart*/
-document.getElementById("").onclick = function() {
-    let activePoints = addGroupBarChart.groupBarChart.getPointsAtEvent(evt);
+document.getElementById("bar-card").onclick = function() {
+    let activePoints = groupBarChart.getPointsAtEvent(evt);
     let company = ""
     let category = ""
     let headers = new Headers()
@@ -83,8 +83,8 @@ function setFilterOptions(){
     }
 
     let url = getWebAppBackendUrl('/get_filter_values')
-    let promise = fetch(url, init) 
-                   .then(function(response){ 
+    let promise = fetch(url, init)
+                   .then(function(response){
                        response.json()
                                .then(function(data){
                                 let companiesList = data.companies;
