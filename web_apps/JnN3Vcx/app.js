@@ -44,10 +44,11 @@ function getSelectedOption(id){
     return $("#" + id).val();
 }
 
-
+/*
 function getSelectedOption(id){
     
 }
+*/
 
 
 function setFilterOptions(){
