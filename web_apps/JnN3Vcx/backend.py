@@ -33,7 +33,6 @@ def get_filter_values():
 @app.route('/get_stats/<path:params>')
 def get_stats(params):
     params_dict = json.loads(params)
-    
     selected_companies = params_dict.get('companies')
     print("selected_companies is", selected_companies)
     df = get_dataset_selection(selected_companies)
@@ -62,4 +61,37 @@ def get_stats(params):
     
     return json.dumps({'barChartGroup':bar_chart_group})
     
-
+@app.route('/get_table/<path:params>')
+def get_table(params):
+    params_dict = json.loads(params)
+    selected_company = params_dict.get('company')
+    selected_category = params_dict.get('category')
+    print("selected_company is", selected_company)
+    print("selected_category is", selected_category)
+    df = dataiku.Dataset(tweet_id_table).get_dataframe()
+    df_sorted = df[(df.product_id == selected_company) & (df.group == selected_category)].sort_values("tb_importance", ascending = False)
+    top5_pos = df_sorted.head(5)
+    top5_neg = df_sorted.tail(5)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
