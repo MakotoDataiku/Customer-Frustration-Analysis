@@ -31,6 +31,9 @@ df_grouped = df.groupby(["product_id", 'noun_lemmatized']).agg({'product_id':'si
                                                                                                              'polarity_textblob':'mean_polarity_textblob'}).reset_index()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df_grouped.head(10)
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 print("There are %d nouns extracted" %(df_grouped.shape[0]))
 
 model_path= dataiku.get_custom_variables()['model_path']
