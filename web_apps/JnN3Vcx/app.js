@@ -5,9 +5,9 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-$scope.onClick = function(barClicked) {
+document.getElementById("bar-card").onclick = function(barClicked) {
   if (barClicked) {
-    let associatedLabel = barClicked.;
+    let associatedLabel = barClicked;
     console.log("Label of the bar you clicked is ", associatedLabel);
   }
 }
