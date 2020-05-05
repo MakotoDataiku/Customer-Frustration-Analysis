@@ -6,13 +6,14 @@ import json
 import time
 from dataiku.core.sql import SQLExecutor2
 
-table_name = "tweepy_analysis_by_companies"
+score_table = "tweepy_analysis_by_companies"
+
 
 
 # function to get the dataframe based on the choice from the dropdown
 # columns included: 'group', 'weighted_ave_tb'
 def get_dataset_selection(company):
-    df = dataiku.Dataset(table_name).get_dataframe()
+    df = dataiku.Dataset(score_table).get_dataframe()
     # df = df[df.product_id == company][['group', 'weighted_ave_tb']]
     new = df["product_id"].isin(company)
     df = df[new][['product_id', 'group', 'weighted_ave_tb']]
@@ -23,7 +24,7 @@ def get_dataset_selection(company):
 @app.route('/get_filter_values')
 # function to get unique values for airline companies to show in drop down
 def get_filter_values():
-    df = dataiku.Dataset(table_name).get_dataframe()    
+    df = dataiku.Dataset(score_table).get_dataframe()    
     companies_list = df['product_id'].unique().tolist()
     print(companies_list)
     return json.dumps({'companies': companies_list})
