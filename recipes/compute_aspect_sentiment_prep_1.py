@@ -91,6 +91,7 @@ for company in companies:
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_grouped['k_means_clusters'] = df_grouped.k_means_clusters.astype(int)
+df_grouped["tb_importance"] = df_grouped["count"] * df_grouped["mean_polarity_textblob"]
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
