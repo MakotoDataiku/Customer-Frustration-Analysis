@@ -256,8 +256,8 @@
             "tileParams": {
               "showXAxis": true,
               "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
+              "showLegend": true,
+              "showTooltips": false,
               "autoPlayAnimation": true
             },
             "autoLoad": true,
@@ -278,11 +278,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 32,
+    "versionNumber": 33,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588669966110
+    "lastModifiedOn": 1588669992922
   },
   "creationTag": {
     "versionNumber": 0,
