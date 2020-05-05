@@ -13,7 +13,8 @@
       "mean_polarity_textblob": 180,
       "review_id": 300,
       "k_means_clusters": 135,
-      "group": 100
+      "group": 100,
+      "tb_importance": 113
     },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
@@ -22,7 +23,7 @@
     },
     "sorting": [
       {
-        "column": "count",
+        "column": "tb_importance",
         "ascending": false
       }
     ],
