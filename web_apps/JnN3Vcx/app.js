@@ -5,7 +5,7 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-ctrl.onClick
+$ctrl.onClick
 
 
 /*
