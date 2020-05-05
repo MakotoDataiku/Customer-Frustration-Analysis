@@ -5,7 +5,7 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
-$scope.ctrl.onClick
+$scope.onClick
 
 
 /*
@@ -145,7 +145,7 @@ function addBarChart(data, labels) {
 */
 
 function addGroupBarChart(data, labels) {
-    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="ctrl.onClick"></canvas>';
+    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
     i = 1
     arr = []
     data.forEach(function(d){
