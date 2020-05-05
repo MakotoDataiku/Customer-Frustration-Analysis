@@ -5,6 +5,13 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
+ctrl.onClick = function(_points, _event, barClicked) {
+  if (barClicked) {
+    let associatedLabel = barClicked.;
+    console.log("Label of the bar you clicked is ", associatedLabel);
+  }
+}
+
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
     // let company = getSelectedOption('companies');
