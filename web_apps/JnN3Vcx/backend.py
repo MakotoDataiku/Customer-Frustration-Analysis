@@ -77,8 +77,7 @@ def get_table(params):
     # top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
     # top5_neg = top5_neg.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
     print("top5_pos", top5_pos)
-    # return json.dumps({'table_pos':top5_pos, "table_neg":top5_neg})
-    return [top5_pos, top5_neg]
+    return json.dumps({'table_pos':top5_pos, "table_neg":top5_neg})
     
     
     
