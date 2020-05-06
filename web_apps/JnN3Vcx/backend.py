@@ -64,6 +64,7 @@ def get_stats(params):
 @app.route('/get_table/<path:params>')
 def get_table(params):
     params_dict = json.loads(params)
+    print("params_dict", params_dict)
     selected_company = params_dict.get('company')
     selected_category = params_dict.get('category')
     print("selected_company is", selected_company)
