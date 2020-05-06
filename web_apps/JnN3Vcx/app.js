@@ -30,8 +30,9 @@ function onBarClicked(company, category) {
                            let title_neg = 'Negative sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title_pos;
                            document.getElementById('title_neg').innerHTML = title_neg;
-                           addRows("insert_table_pos", data["table_pos"])
-                           addRows("insert_table_neg", data["table_neg"])
+                           addRows("insert_table_pos", data["table_pos"]);
+                           addRows("insert_table_neg", data["table_neg"]);
+                           addRowHandlers();
                        })
                    });
 };
@@ -85,7 +86,7 @@ function modifyText() {
 const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
 */
-addRowHandlers();
+
 function addRowHandlers() {
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
