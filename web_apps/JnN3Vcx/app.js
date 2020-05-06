@@ -30,8 +30,10 @@ function onBarClicked(company, category) {
                            let title_neg = 'Negative sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title_pos;
                            document.getElementById('title_neg').innerHTML = title_neg;
-                           document.getElementById('table_stats_pos').innerHTML = data.table_pos;
-                           document.getElementById('table_stats_neg').innerHTML = data.table_neg;
+                           //document.getElementById('table_stats_pos').innerHTML = data.table_pos;
+                           //document.getElementById('table_stats_neg').innerHTML = data.table_neg;
+                           console.log("data.table_pos", data.table_pos)
+                           addROws("table_stats_pos", data.table_pos)
                        })
                    });
 };
@@ -140,6 +142,15 @@ function setFilterOptions(){
                                 })
                    });
                        
+}
+
+function addRows(id, itemList){
+    /* function to add company choice to the dropdowns */
+    itemList.forEach(function(value, index){
+        let tr = document.createElement('tr');
+        tr.text = value;
+        document.getElementById(id).appendChild(tr)
+    })
 }
 
 function addOptions(id, itemList){
