@@ -76,7 +76,18 @@ if (tbl_pos != null) {
     }
 }
 */
+function modifyText() {
+  const t2 = document.getElementById("t2");
+  if (t2.firstChild.nodeValue == "three") {
+    t2.firstChild.nodeValue = "two";
+  } else {
+    t2.firstChild.nodeValue = "three";
+  }
+}
 
+// Add event listener to table
+const el = document.getElementById("insert_table_pos");
+el.addEventListener("click", modifyText, false);
 
 
 /* returns the company value chosen from the dropdowns */
@@ -152,6 +163,7 @@ function addRows(id, itemList){
         // console.log("importanceScores", importanceScores)
         let tbl = document.getElementById(id)        
         let row = tbl.insertRow(i)
+        tr.id = "rowID_" + i
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
