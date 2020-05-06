@@ -58,7 +58,7 @@ function onTableClicked(company, category, topic) {
 */
 $(document).ready(function(){
     let test = document.getElementById("bar-chart-group")
-    console.log("test", test)
+    console.log("test is ", test)
 })
 
 
