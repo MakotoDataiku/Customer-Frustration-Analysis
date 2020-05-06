@@ -20,6 +20,7 @@ function onBarClicked(company, category) {
         'company':company,
         'category':category
     };
+    console.log("strinfify json", JSON.stringify(params))
     
     let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params);
     let promise = fetch(url, init) 
