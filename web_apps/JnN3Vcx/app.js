@@ -100,13 +100,16 @@ function addRowHandlers(id, data) {
             console.log("clicked topic", topic);
             
             let dataJson=JSON.parse(data)
-            Object.keys(dataJson).forEach(function(d){
+            function getReviewId(d){
                 if (topic = dataJson[d]['topics']) {
                     console.log("review id found")
                     let review_id = dataJson[d]['review_id']
                     console.log("this is review_id", review_id)
                 }
-            });
+                return review_id
+            }
+            
+            Object.keys(dataJson).forEach(let r = getReviewId);
             console.log("review_id", review_id)
             
             let headers = new Headers();
