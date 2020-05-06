@@ -101,6 +101,7 @@ function addRowHandlers(id, data) {
             
             let dataJson=JSON.parse(data)
             Object.keys(dataJson).forEach(function(d){
+                console.log("dataJson[d]['topics']", dataJson[d]['topics'])
                 if (topic = dataJson[d]['topics']) {
                     let review_id = dataJson[d]['review_id']
                 }
