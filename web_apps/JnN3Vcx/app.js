@@ -123,8 +123,9 @@ function setFilterOptions(){
 function addRows(id, itemList){
     /* function to add rows to a table */
     for (var key of Object.keys(itemList)) {
-    console.log("key", itemList[key])
+    console.log("key", key)
     }
+    /*
     Object.keys(itemList).forEach(function(key){
         console.log("itemList", itemList)
         console.log("key", itemList[key])
@@ -141,6 +142,7 @@ function addRows(id, itemList){
         tr.text = value;
         document.getElementById(id).appendChild(tr)
     })
+    */
 }
 
 function addOptions(id, itemList){
