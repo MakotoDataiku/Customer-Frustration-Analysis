@@ -101,8 +101,8 @@ function addRowHandlers(id, data) {
             
             let dataJson=JSON.parse(data)
             console.log("Object.keys(dataJson)", Object.keys(dataJson))
-            const found = dataJson.find(element => element > 10);
-            
+            const found_key = Object.keys(dataJson).find(key => dataJson[key]['topics'] === topic);
+            console.log("found_key", found_key)
             
             function getReviewId(d){
                 if (topic === dataJson[d]['topics']) {
