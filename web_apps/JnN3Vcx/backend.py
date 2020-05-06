@@ -65,7 +65,7 @@ def get_stats(params):
 def get_table(params):
     params_dict = json.loads(params)
     print("params_dict", params_dict)
-    selected_company = params_dict.get('company')
+    selected_company = params_dict.get('company')[0]
     selected_category = params_dict.get('category')
     print("selected_company is", selected_company)
     print("selected_category is", selected_category)
