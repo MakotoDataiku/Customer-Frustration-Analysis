@@ -88,7 +88,6 @@ el.addEventListener("click", modifyText, false);
 */
 
 function addRowHandlers(id, data) {
-    console.log("data looks like", data)
     var table = document.getElementById(id);
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
@@ -96,11 +95,17 @@ function addRowHandlers(id, data) {
         console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
-            let r = this.getElementsByTagName("th")
             let cell = this.getElementsByTagName("td")[0];
             let topic = cell.innerHTML;
-            console.log("clicked tr", r);
             console.log("clicked topic", topic);
+            
+            let dataJson=JSON.parse(data)
+            Object.keys(dataJson)forEach(d){
+                if (topic = dataJson[d]['topics']) {
+                    let review_id = dataJson[d]['review_id']
+                }
+            }
+            console.log("review_id", review_id)
             
             let headers = new Headers();
             let init = {
