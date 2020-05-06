@@ -96,9 +96,10 @@ function addRowHandlers(id, data) {
         console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
-            var cell = this.getElementsByTagName("td");
-            var topic = cell.innerHTML;
-            console.log("clicked cell", cell);
+            let r = this.getElementsByTagName("tr")
+            let cell = this.getElementsByTagName("td")[0];
+            let topic = cell.innerHTML;
+            console.log("clicked tr", r);
             console.log("clicked topic", topic);
             
             let headers = new Headers();
