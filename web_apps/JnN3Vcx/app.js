@@ -103,7 +103,10 @@ function addRowHandlers(id, data) {
             console.log("Object.keys(dataJson)", Object.keys(dataJson))
             const found_key = Object.keys(dataJson).find(key => dataJson[key]['topics'] === topic);
             console.log("found_key", found_key)
+            let review_id = dataJson[found_key]['review_id']
+            console.log("review_id", review_id)
             
+            /*
             function getReviewId(d){
                 if (topic === dataJson[d]['topics']) {
                     console.log("review id found")
@@ -114,8 +117,8 @@ function addRowHandlers(id, data) {
             }
             
             Object.keys(dataJson).forEach(getReviewId);
-
-            console.log("review_id", review_id)
+            */
+            
             
             let headers = new Headers();
             let init = {
