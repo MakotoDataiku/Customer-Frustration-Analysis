@@ -122,9 +122,10 @@ function setFilterOptions(){
 
 function addRows(id, itemList){
     /* function to add rows to a table */
-    console.log("itemList", typeof(JSON.parse(itemList)))
+    let itemList=JSON.parse(itemList)
+    console.log("itemList", typeof())
     Object.keys(itemList).forEach(function(key) {
-  //console.table('Key : ' + key + ', Value : ' + itemList[key])
+  console.table('Key : ' + key + ', Value : ' + itemList[key])
 })
     /*
     Object.keys(itemList).forEach(function(key){
