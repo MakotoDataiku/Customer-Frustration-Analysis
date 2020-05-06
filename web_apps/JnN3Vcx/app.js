@@ -30,7 +30,6 @@ function onBarClicked(company, category) {
                            let title_neg = 'Negative sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title_pos;
                            document.getElementById('title_neg').innerHTML = title_neg;
-                           console.log("data.table_pos", data["table_pos"])
                            addRows("insert_table_pos", data["table_pos"])
                            addRows("insert_table_neg", data["table_neg"])
                        })
@@ -137,13 +136,13 @@ function addRows(id, itemList){
     i = 0
     Object.keys(itemJson).forEach(function(key) {
         // this iterates over rows
-        console.table('Key : ' + key + ', Value : ' + itemJson[key]);
+        // console.table('Key : ' + key + ', Value : ' + itemJson[key]);
         let topics = itemJson[key]["topics"]
         let averageScores = itemJson[key]["average scores"]
         let importanceScores = itemJson[key]["importance scores"]
-        console.log("topics", topics)
-        console.log("averageScores", averageScores)
-        console.log("importanceScores", importanceScores)
+        // console.log("topics", topics)
+        // console.log("averageScores", averageScores)
+        // console.log("importanceScores", importanceScores)
         let tbl = document.getElementById(id)        
         let row = tbl.insertRow(i)
         let cell1 = row.insertCell(0);
