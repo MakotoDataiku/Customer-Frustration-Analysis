@@ -90,7 +90,7 @@ function addRowHandlers() {
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
     for (i = 1; i < rows.length; i++) {
-        console.log(i)
+        console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
                           var cell = this.getElementsByTagName("td")[0];
