@@ -32,7 +32,7 @@ function onBarClicked(company, category) {
                            document.getElementById('title_neg').innerHTML = title_neg;
                            addRows("insert_table_pos", data["table_pos"]);
                            addRows("insert_table_neg", data["table_neg"]);
-                           addRowHandlers();
+                           addRowHandlers(data["table_pos"]);
                        })
                    });
 };
@@ -87,7 +87,7 @@ const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
 */
 
-function addRowHandlers() {
+function addRowHandlers(data) {
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
@@ -95,10 +95,22 @@ function addRowHandlers() {
         console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
-                          var cell = this.getElementsByTagName("td")[0];
-                          var id = cell.innerHTML;
-            console.log("clicked id is", id)
-                          alert("id:" + id);
+            //var cell = this.getElementsByTagName("td")[0];
+            //var id = cell.innerHTML;
+            
+            console.log("clicked row is", i);
+            let headers = new Headers();
+            let init = {
+                method : 'GET',
+                headers : headers
+            };
+            let params = {
+                'company':company,
+                'category'category,
+                'review_id':review_id
+            };
+            let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
+
                       };
     }
 }
