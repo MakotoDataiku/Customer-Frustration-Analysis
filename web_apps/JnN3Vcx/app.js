@@ -55,7 +55,7 @@ function onTableClicked(company, category, topic) {
                    }
                         )
 }
-*/
+
 $(document).ready(function(){
     let test = document.getElementById("bar-chart-group")
     console.log("test is ", test)
@@ -75,6 +75,8 @@ if (tbl_pos != null) {
         }
     }
 }
+*/
+
 
 
 /* returns the company value chosen from the dropdowns */
