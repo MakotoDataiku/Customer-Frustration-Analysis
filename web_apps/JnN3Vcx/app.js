@@ -91,7 +91,7 @@ function addRowHandlers() {
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
-    for (i = 1; i < rows.length; i++) {
+    for (i = 0; i < rows.length; i++) {
         console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
