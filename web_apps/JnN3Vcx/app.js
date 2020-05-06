@@ -127,6 +127,7 @@ function addRows(id, itemList){
         let topics = itemList[key]["topics"]
         let averageScores = itemList[key]["average scores"]
         let importanceScores = itemList[key]["importance scores"]
+        console.log("topics", topics)
         let tr = document.createElement('tr')
         $tr.attr("id","")
 
