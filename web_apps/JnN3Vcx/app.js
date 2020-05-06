@@ -32,7 +32,7 @@ function onBarClicked(company, category) {
                            document.getElementById('title_neg').innerHTML = title_neg;
                            addRows("insert_table_pos", data["table_pos"]);
                            addRows("insert_table_neg", data["table_neg"]);
-                           addRowHandlers(data["table_pos"]);
+                           addRowHandlers("insert_table_pos", data["table_pos"]);
                        })
                    });
 };
@@ -87,9 +87,9 @@ const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
 */
 
-function addRowHandlers(data) {
+function addRowHandlers(id, data) {
     console.log("data looks like", data)
-    var table = document.getElementById("insert_table_pos");
+    var table = document.getElementById(id);
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
     for (i = 0; i < rows.length; i++) {
@@ -98,8 +98,8 @@ function addRowHandlers(data) {
         row.onclick = function(){
             var cell = this.getElementsByTagName("td")[0];
             var topic = cell.innerHTML;
+            console.log("clicked cell", cell);
             console.log("clicked topic", topic);
-            console.log("clicked row", row)
             
             let headers = new Headers();
             let init = {
