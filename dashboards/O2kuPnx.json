@@ -282,7 +282,7 @@
               "top": 0,
               "left": 0,
               "width": 8,
-              "height": 5
+              "height": 7
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
@@ -305,11 +305,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 36,
+    "versionNumber": 37,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588772314427
+    "lastModifiedOn": 1588772318180
   },
   "creationTag": {
     "versionNumber": 0,
