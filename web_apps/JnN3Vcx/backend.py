@@ -5,9 +5,11 @@ from requests.auth import HTTPBasicAuth
 import json
 import time
 from dataiku.core.sql import SQLExecutor2
+import random
 
 score_table = "tweepy_analysis_by_companies"
 tweet_id_table = "tweepy_aspect_sentiment_categorised"
+tweets_table = "tweepy_stacked"
 
 
 
@@ -85,17 +87,14 @@ def get_table(params):
 @app.route('/get_tweets_table/<path:params>')
 def get_tweets_table(params):
     params_dict = json.loads(params)
+    company = params_dict.get('company')
     tweet_id = params_dict.get('review_id')
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    id_random_select = random.choice(tweet_id, 5)
+    df = dataiku.Dataset(tweets_table).get_dataframe()
+    df = df[['timestamp', 'tweet_id', 'text', 'username', 'user_location']]
+    df = df[(df.company==company)&(df.tweet_id in id_random_select)].reset_index(drop=True).to_json(orient='index')
+    return json.dumps(df)
+
     
     
     
