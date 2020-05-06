@@ -28,7 +28,7 @@ function onBarClicked(company, category) {
                        response.json()
                        .then(function(data){
                            //console.log("data.table.table_pos", data.table.table_pos)
-                           document.getElementById('card_title_pos').innerHTML = 'company = ' + company + ', category = ' + category
+                           document.getElementById('table_stats_pos').innerHTML = '<p>test</p>';
                            document.getElementById('table_stats_pos').innerHTML = data.table_pos;
                            document.getElementById('table_stats_neg').innerHTML = data.table_neg;
                        })
