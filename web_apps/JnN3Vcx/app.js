@@ -109,7 +109,7 @@ function addRowHandlers(id, data) {
                 return review_id
             }
             
-            Object.keys(dataJson).forEach(let r = getReviewId);
+            Object.keys(dataJson).forEach(getReviewId);
             console.log("review_id", review_id)
             
             let headers = new Headers();
