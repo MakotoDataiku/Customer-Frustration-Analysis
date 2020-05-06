@@ -141,9 +141,14 @@ function addRows(id, itemList){
         let colAverageScores = document.createElement('th').innerHTML = averageScores
         let colImportanceScores = document.createElement('th').innerHTML = importanceScores
         */
-        
+        var orderArrayHeader = ["Topics","Average scores","Importance scores"];
         let tbl = document.getElementById(id)
-        tbl.headers = "header"
+        var thead = document.createElement('thead');
+        tbl.appendChild(thead);
+        for(var i=0;i<orderArrayHeader.length;i++){
+            thead.appendChild(document.createElement("th")).
+            appendChild(document.createTextNode(orderArrayHeader[i]));
+        }
         let row = tbl.insertRow(i)
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
