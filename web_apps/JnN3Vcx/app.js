@@ -95,11 +95,11 @@ function addRowHandlers(data) {
     for (i = 0; i < rows.length; i++) {
         console.log("row is", i)
         row = table.rows[i];
-        row.onclick = function(i){
+        row.onclick = function(){
             var cell = this.getElementsByTagName("td")[0];
             var topic = cell.innerHTML;
             console.log("clicked topic", topic);
-            console.log("clicked row", i)
+            console.log("clicked row", row)
             
             let headers = new Headers();
             let init = {
