@@ -145,9 +145,9 @@ function addRows(id, itemList){
         let tbl = document.getElementById(id)
         var thead = document.createElement('thead');
         tbl.appendChild(thead);
-        for(var i=0;i<orderArrayHeader.length;i++){
+        for(var j=0;j<orderArrayHeader.length;j++){
             thead.appendChild(document.createElement("th")).
-            appendChild(document.createTextNode(orderArrayHeader[i]));
+            appendChild(document.createTextNode(orderArrayHeader[j]));
         }
         let row = tbl.insertRow(i)
         let cell1 = row.insertCell(0);
