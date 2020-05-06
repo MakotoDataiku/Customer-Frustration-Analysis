@@ -30,14 +30,44 @@ function onBarClicked(company, category) {
                            let title_neg = 'Negative sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title_pos;
                            document.getElementById('title_neg').innerHTML = title_neg;
-                           //document.getElementById('table_stats_pos').innerHTML = data.table_pos;
-                           //document.getElementById('table_stats_neg').innerHTML = data.table_neg;
                            console.log("data.table_pos", data["table_pos"])
                            addRows("insert_table_pos", data["table_pos"])
                            addRows("insert_table_neg", data["table_neg"])
                        })
                    });
 };
+
+function onTableClicked(company, category, topic) {
+    let headers = new Headers();
+    let init = {
+        method : 'GET',
+        headers : headers
+    };
+    let params = {
+        'company':company,
+        'category'category,
+        'review_id':review_id
+    };
+    let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
+    let promise = fetch(url, init) 
+                   .then(function(response) {
+                       
+                   }
+                        )
+}
+
+let tbl_pos = document.getElementById("insert_table_pos");
+if (tbl_pos != null) {
+    for (let i = 0; i < tbl_pos.rows.length; i++) {
+        for (let j = 0; j < tbl_pos.rows[i].cells.length; j++) {
+            tbl_pos.rows[i].cells[j].onclick = (function (i, j) {
+                return function () {
+                    alert('R' + (i + 1) + 'C' + (j + 1));
+                };
+            }(i, j));
+        }
+    }
+}
 
 
 /* returns the company value chosen from the dropdowns */
@@ -74,12 +104,6 @@ function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
     return $("#" + id).val();
 }
-
-/*
-function getSelectedOption(id){
-    
-}
-*/
 
 
 function setFilterOptions(){
