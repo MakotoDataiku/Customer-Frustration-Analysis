@@ -183,7 +183,7 @@ function addRows(id, itemList){
         for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
             tblToClick.rows[i].cells[j].onclick = (function (i, j) {
                 return function () {
-                    alert('R' + (i + 1) + 'C' + (j + 1));
+                    // alert('R' + (i + 1) + 'C' + (j + 1));
                 };
             }(i, j));
         }
