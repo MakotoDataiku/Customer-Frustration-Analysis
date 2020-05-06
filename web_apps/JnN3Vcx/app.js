@@ -27,9 +27,9 @@ function onBarClicked(company, category) {
                    .then(function(response) {
                        response.json()
                        .then(function(data){
-                           console.log("data.table.table_pos", data.table.table_pos)
-                           document.getElementById('table_stats_pos').innerHTML = data.table.table_pos;
-                           document.getElementById('table_stats_neg').innerHTML = data.table.table_neg;
+                           //console.log("data.table.table_pos", data.table.table_pos)
+                           document.getElementById('table_stats_pos').innerHTML = data.table_pos;
+                           document.getElementById('table_stats_neg').innerHTML = data.table_neg;
                        })
                    });
 };
