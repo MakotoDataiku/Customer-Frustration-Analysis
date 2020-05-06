@@ -131,6 +131,8 @@ function addRows(id, itemList){
         let averageScores = itemJson[key]["average scores"]
         let importanceScores = itemJson[key]["importance scores"]
         console.log("topics", topics)
+        console.log("averageScores", averageScores)
+        console.log("importanceScores", importanceScores)
         let tr = document.createElement('tr')
         let colTopic = document.createElement('th').innerHTML = topics
         let colAverageScores = document.createElement('th').innerHTML = averageScores
