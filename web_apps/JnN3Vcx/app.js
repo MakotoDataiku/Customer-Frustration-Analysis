@@ -102,9 +102,9 @@ function addRowHandlers(id, data) {
             let dataJson=JSON.parse(data)
             
             function getReviewId(d){
-                if (topic = dataJson[d]['topics']) {
+                if (topic === dataJson[d]['topics']) {
                     console.log("review id found")
-                    let review_id === dataJson[d]['review_id']
+                    let review_id = dataJson[d]['review_id']
                     console.log("this is review_id", review_id)
                 }
                 return review_id
