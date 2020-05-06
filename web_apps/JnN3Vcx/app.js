@@ -58,6 +58,9 @@ function onTableClicked(company, category, topic) {
 */
 let test = document.getElementById("bar-chart-group")
 console.log("test", test)
+if (test) {
+    console.log("exists")
+}
 
 let tbl_pos = document.getElementById("insert_table_pos");
 console.log("tbl_pos.rows.length", tbl_pos.rows.length)
