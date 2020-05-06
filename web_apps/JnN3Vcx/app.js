@@ -152,6 +152,7 @@ function addRows(id, itemList){
         cell2.innerHTML = averageScores;
         cell3.innerHTML = importanceScores;
         i += 1
+        console.log("tbl.rows.length", tbl.rows.length)
 })
     var orderArrayHeader = ["Topics", "Average scores","Importance scores"];
     var thead = document.createElement('thead');
