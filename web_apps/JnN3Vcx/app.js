@@ -124,6 +124,7 @@ function addRows(id, itemList){
     /* function to add rows to a table */
     let itemJson=JSON.parse(itemList)
     console.log("itemJson", typeof(itemJson))
+    i = 0
     Object.keys(itemJson).forEach(function(key) {
         // this iterates over rows
         console.table('Key : ' + key + ', Value : ' + itemJson[key]);
@@ -133,16 +134,31 @@ function addRows(id, itemList){
         console.log("topics", topics)
         console.log("averageScores", averageScores)
         console.log("importanceScores", importanceScores)
+        
+        /*
         let tr = document.createElement('tr')
         let colTopic = document.createElement('th').innerHTML = topics
         let colAverageScores = document.createElement('th').innerHTML = averageScores
         let colImportanceScores = document.createElement('th').innerHTML = importanceScores
+        */
+        
+        let tbl = document.getElementById(id)
+        row = tbl.insertRow(i)
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell2 = row.insertCell(2);
+        cell1.innerHTML = topics;
+        cell2.innerHTML = averageScores;
+        cell2.innerHTML = importanceScores;
+        i += 1
+        /*
         let rowID = "row_" + key
         tr.setAttribute("id", rowID)
         document.getElementById(rowID).appendChild(colTopic)
         document.getElementById(rowID).appendChild(colAverageScores)
         document.getElementById(rowID).appendChild(colImportanceScores)
-        document.getElementById(id).appendChild(tr)
+        */
+        
 })
     /*
     Object.keys(itemList).forEach(function(key){
