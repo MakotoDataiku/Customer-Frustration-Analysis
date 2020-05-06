@@ -100,6 +100,9 @@ function addRowHandlers(id, data) {
             console.log("clicked topic", topic);
             
             let dataJson=JSON.parse(data)
+            console.log("Object.keys(dataJson)", Object.keys(dataJson))
+            const found = dataJson.find(element => element > 10);
+            
             
             function getReviewId(d){
                 if (topic === dataJson[d]['topics']) {
@@ -111,8 +114,7 @@ function addRowHandlers(id, data) {
             }
             
             Object.keys(dataJson).forEach(getReviewId);
-            console.log("Object.keys(dataJson)", Object.keys(dataJson))
-            const found = dataJson.find(element => element > 10);
+
             console.log("review_id", review_id)
             
             let headers = new Headers();
