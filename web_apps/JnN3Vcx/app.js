@@ -159,7 +159,7 @@ function addRows(id, itemList){
         // console.log("importanceScores", importanceScores)
         let tbl = document.getElementById(id)        
         let row = tbl.insertRow(i)
-        tr.id = "rowID_" + i;
+        row.id = "rowID_" + i;
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
