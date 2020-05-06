@@ -71,7 +71,7 @@ def get_table(params):
     print("selected_category is", selected_category)
     df = dataiku.Dataset(tweet_id_table).get_dataframe()
     df_sorted = df[(df.product_id == selected_company) & (df.group == selected_category)].sort_values("tb_importance", ascending = False)
-    df_sorted = df_sorted[["noun_lemmatized", "mean_polarity_textblob", "tb_importance"]].rename(columns={"noun_lemmatized":"topics", "mean_polarity_textblob":"average scores", "tb_importance":"importance score"})
+    df_sorted = df_sorted[["noun_lemmatized", "mean_polarity_textblob", "tb_importance"]].rename(columns={"noun_lemmatized":"topics", "mean_polarity_textblob":"average scores", "tb_importance":"importance scores"})
     top5_pos = df_sorted.head(5).reset_index(drop=True).to_json(orient='index')
     top5_neg = df_sorted.tail(5).reset_index(drop=True).to_json(orient='index')
     # top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
