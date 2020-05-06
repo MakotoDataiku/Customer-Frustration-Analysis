@@ -81,31 +81,7 @@ document.getElementById('button').onclick = function(){
                    });
 }
 
-/* returns the company and category chosen from the chart
-document.getElementById("bar-card").onclick = function() {
-    let activePoints = groupBarChart.getPointsAtEvent(evt);
-    let company = ""
-    let category = ""
-    let headers = new Headers()
-    let init = {
-        method : 'GET',
-        headers : headers
-    }
-    let params = {
-        'company':company,
-        'category':category
-    }
-    
-    let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params)
-    let promise = fetch(url, init) 
-                   .then(function(response) {
-                       response.json()
-                       .then(function(data){
-                           // function to add table
-                       })
-                   });
-}
-*/
+
 
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
@@ -145,7 +121,16 @@ function setFilterOptions(){
 }
 
 function addRows(id, itemList){
-    /* function to add company choice to the dropdowns */
+    /* function to add rows to a table */
+    Object.keys(itemList).forEach(function(key){
+        console.log("key", key)
+        let topics = itemList[key]["topics"]
+        let averageScores = itemList[key]["average scores"]
+        let importanceScores = itemList[key]["importance scores"]
+        let tr = document.createElement('tr')
+        $tr.attr("id","")
+
+    })
     itemList.forEach(function(value, index){
         let tr = document.createElement('tr');
         tr.text = value;
