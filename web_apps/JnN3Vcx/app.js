@@ -134,21 +134,7 @@ function addRows(id, itemList){
         console.log("topics", topics)
         console.log("averageScores", averageScores)
         console.log("importanceScores", importanceScores)
-        
-        /*
-        let tr = document.createElement('tr')
-        let colTopic = document.createElement('th').innerHTML = topics
-        let colAverageScores = document.createElement('th').innerHTML = averageScores
-        let colImportanceScores = document.createElement('th').innerHTML = importanceScores
-        */
-        var orderArrayHeader = ["Topics","Average scores","Importance scores"];
-        let tbl = document.getElementById(id)
-        var thead = document.createElement('thead');
-        tbl.appendChild(thead);
-        for(var j=0;j<orderArrayHeader.length;j++){
-            thead.appendChild(document.createElement("th")).
-            appendChild(document.createTextNode(orderArrayHeader[j]));
-        }
+        let tbl = document.getElementById(id)        
         let row = tbl.insertRow(i)
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
@@ -157,15 +143,15 @@ function addRows(id, itemList){
         cell2.innerHTML = averageScores;
         cell3.innerHTML = importanceScores;
         i += 1
-        /*
-        let rowID = "row_" + key
-        tr.setAttribute("id", rowID)
-        document.getElementById(rowID).appendChild(colTopic)
-        document.getElementById(rowID).appendChild(colAverageScores)
-        document.getElementById(rowID).appendChild(colImportanceScores)
-        */
-        
 })
+    var orderArrayHeader = ["Topics", "Average scores","Importance scores"];
+    var thead = document.createElement('thead');
+    let finishedTable = document.getElementById(id)   
+    finishedTable.appendChild(thead);
+    for(var j=0;j<orderArrayHeader.length;j++){
+        thead.appendChild(document.createElement("th")).
+        appendChild(document.createTextNode(orderArrayHeader[j]));
+    }
     /*
     Object.keys(itemList).forEach(function(key){
         console.log("itemList", itemList)
