@@ -20,14 +20,15 @@ function onBarClicked(company, category) {
         'company':company,
         'category':category
     };
-    console.log("strinfify json", JSON.stringify(params))
+    console.log("stringify json", JSON.stringify(params))
     
     let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params);
     let promise = fetch(url, init) 
                    .then(function(response) {
                        response.json()
                        .then(function(data){
-                           // function to add table
+                           document.getElementById('table_stats_pos').innerHTML = data.table.table_pos;
+                           document.getElementById('table_stats_neg').innerHTML = data.table.table_neg;
                        })
                    });
 };

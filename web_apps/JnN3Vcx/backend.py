@@ -73,6 +73,9 @@ def get_table(params):
     df_sorted = df[(df.product_id == selected_company) & (df.group == selected_category)].sort_values("tb_importance", ascending = False)
     top5_pos = df_sorted.head(5)
     top5_neg = df_sorted.tail(5)
+    top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
+    top5_neg = top5_neg.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
+    return json.dumps({'table_pos':top5_pos, "table_neg":top5_neg})
     
     
     
