@@ -26,7 +26,7 @@ function onBarClicked(company, category) {
                    .then(function(response) {
                        response.json()
                        .then(function(data){
-                           let title = 'Positive sentiment contributors for ${company} in ${category}';
+                           let title = 'Positive sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title;
                            document.getElementById('table_stats_pos').innerHTML = data.table_pos;
                            document.getElementById('table_stats_neg').innerHTML = data.table_neg;
