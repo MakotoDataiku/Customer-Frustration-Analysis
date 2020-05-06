@@ -34,6 +34,7 @@ function onBarClicked(company, category) {
                            //document.getElementById('table_stats_neg').innerHTML = data.table_neg;
                            console.log("data.table_pos", data["table_pos"])
                            addRows("insert_table_pos", data["table_pos"])
+                           addRows("insert_table_neg", data["table_neg"])
                        })
                    });
 };
