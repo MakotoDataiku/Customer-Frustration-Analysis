@@ -85,7 +85,7 @@ function modifyText() {
 const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
 */
-
+addRowHandlers();
 function addRowHandlers() {
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
