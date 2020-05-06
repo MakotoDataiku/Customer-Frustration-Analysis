@@ -37,6 +37,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "JnN3Vcx",
+          "objectType": "WEB_APP"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -209,11 +218,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588630588600
+    "lastModifiedOn": 1588772299048
   },
   "creationTag": {
     "versionNumber": 0,
