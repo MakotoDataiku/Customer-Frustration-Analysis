@@ -123,6 +123,7 @@ function setFilterOptions(){
 function addRows(id, itemList){
     /* function to add rows to a table */
     Object.keys(itemList).forEach(function(key){
+        console.log("itemList", itemList)
         console.log("key", key)
         let topics = itemList[key]["topics"]
         let averageScores = itemList[key]["average scores"]
