@@ -5,6 +5,10 @@ console.log($(document).ready(function() {
  $("#companies").select2();
 }))
 
+function onBarClicked(company, category) {
+  console.log('company = ' + company + ", category = " + category);
+}
+
 
 
 
@@ -174,7 +178,12 @@ function addGroupBarChart(data, labels) {
           title: {
             display: false,
             text: "Sentiment by category"
-          }
+          },
+            onClick: event => {
+                const datasetIndex = chart.getElementAtEvent(event)[0]._datasetIndex;
+                const model = chart.getElementsAtEvent(event)[datasetIndex]._model;
+                onBarClicked(model.datasetLabel, model.label);
+            }
         }
     });
 }
