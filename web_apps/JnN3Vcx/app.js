@@ -40,20 +40,6 @@ function onBarClicked(company, category) {
 };
 
 
-
-
-/*
-document.getElementById("bar-chart-group").onclick = function(points, evt, barClicked) {
-    console.log("Chart clicked", evt);
-    console.log("points", points);
-    console.log("barClicked", barClicked);
-    if(points.length > 0){
-        console.log("Bar chart clicked");
-        console.log("Point", points[0].value);
-    }
-}
-*/
-
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
     // let company = getSelectedOption('companies');
@@ -86,11 +72,6 @@ document.getElementById('button').onclick = function(){
 
 function getSelectedOption(id){
 /* function to get the selected value from the dropdowns */
-    // let select = document.getElementById(id);
-    // console.log("select is", select)
-    // let value = select.options[select.selectedIndex].value;
-    // console.log("selected comapnies are", value)
-    // return value
     return $("#" + id).val();
 }
 
@@ -125,6 +106,7 @@ function addRows(id, itemList){
     /* function to add rows to a table */
     let itemJson=JSON.parse(itemList)
     console.log("itemJson", typeof(itemJson))
+    document.getElementById(id).innerHTML = '';
     i = 0
     Object.keys(itemJson).forEach(function(key) {
         // this iterates over rows
@@ -153,24 +135,6 @@ function addRows(id, itemList){
         thead.appendChild(document.createElement("th")).
         appendChild(document.createTextNode(orderArrayHeader[j]));
     }
-    /*
-    Object.keys(itemList).forEach(function(key){
-        console.log("itemList", itemList)
-        console.log("key", itemList[key])
-        let topics = itemList[key]["topics"]
-        let averageScores = itemList[key]["average scores"]
-        let importanceScores = itemList[key]["importance scores"]
-        console.log("topics", topics)
-        let tr = document.createElement('tr')
-        $tr.attr("id","")
-
-    })
-    itemList.forEach(function(value, index){
-        let tr = document.createElement('tr');
-        tr.text = value;
-        document.getElementById(id).appendChild(tr)
-    })
-    */
 }
 
 function addOptions(id, itemList){
@@ -181,30 +145,6 @@ function addOptions(id, itemList){
         document.getElementById(id).appendChild(option)
     })
 }
-
-/*
-function addBarChart(data, labels) {
-    console.log("labels in addBarChart is", labels)
-    document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart" ></canvas>';
-    new Chart(document.getElementById("bar-chart"), {
-        type: "bar",
-        data: {
-          labels: labels,
-          datasets: [{
-            label: "Sentiment by category",
-            data: data,
-            backgroundColor: default_colors  
-          }]
-        },
-        options: {
-          title: {
-            display: false,
-            text: "Sentiment by category"
-          }
-        }
-    });
-}
-*/
 
 function addGroupBarChart(data, labels) {
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
