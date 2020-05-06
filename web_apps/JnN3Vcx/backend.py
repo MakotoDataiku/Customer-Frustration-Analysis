@@ -64,14 +64,11 @@ def get_stats(params):
 @app.route('/get_table/<path:params>')
 def get_table(params):
     params_dict = json.loads(params)
-    print("params_dict", params_dict)
     selected_company = params_dict.get('company')[0]
     selected_category = params_dict.get('category')
-    print("selected_company is", selected_company)
-    print("selected_category is", selected_category)
     df = dataiku.Dataset(tweet_id_table).get_dataframe()
     df_sorted = df[(df.product_id == selected_company) & (df.group == selected_category)].sort_values("tb_importance", ascending = False)
-    df_sorted = df_sorted[["noun_lemmatized", "mean_polarity_textblob", "tb_importance"]].rename(columns={"noun_lemmatized":"topics", "mean_polarity_textblob":"average scores", "tb_importance":"importance scores"})
+    df_sorted = df_sorted[["noun_lemmatized", "mean_polarity_textblob", "tb_importance", "review_id"]].rename(columns={"noun_lemmatized":"topics", "mean_polarity_textblob":"average scores", "tb_importance":"importance scores"})
     top5_pos = df_sorted.head(5).reset_index(drop=True).to_json(orient='index')
     top5_neg = df_sorted.tail(5).reset_index(drop=True).to_json(orient='index')
     # top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
@@ -85,7 +82,14 @@ def get_table(params):
     
     
     
-    
+@app.route('/get_tweets_table/<path:params>')
+def get_tweets_table(params):
+    params_dict = json.loads(params)
+    selected_company = params_dict.get('company')
+    selected_category = params_dict.get('category')
+    selected_noun = params_dict.get('topic')
+    df = dataiku.Dataset(tweet_id_table).get_dataframe()
+    df_sorted = df[(df.product_id == selected_company) & (df.group == selected_category) & (df.noun_lemmatized == selected_noun)]
     
     
     
