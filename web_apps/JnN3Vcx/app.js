@@ -37,6 +37,7 @@ function onBarClicked(company, category) {
                    });
 };
 
+/*
 function onTableClicked(company, category, topic) {
     let headers = new Headers();
     let init = {
@@ -55,6 +56,7 @@ function onTableClicked(company, category, topic) {
                    }
                         )
 }
+*/
 
 let tbl_pos = document.getElementById("insert_table_pos");
 if (tbl_pos != null) {
