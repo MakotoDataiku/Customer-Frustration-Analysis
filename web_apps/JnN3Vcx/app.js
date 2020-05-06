@@ -32,7 +32,7 @@ function onBarClicked(company, category) {
                            document.getElementById('title_neg').innerHTML = title_neg;
                            addRows("insert_table_pos", data["table_pos"]);
                            addRows("insert_table_neg", data["table_neg"]);
-                           addRowHandlers("insert_table_pos", data["table_pos"]);
+                           addRowHandlers("insert_table_pos", data["table_pos"], company, category);
                        })
                    });
 };
@@ -87,7 +87,7 @@ const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
 */
 
-function addRowHandlers(id, data) {
+function addRowHandlers(id, data, company, category) {
     var table = document.getElementById(id);
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
@@ -105,20 +105,6 @@ function addRowHandlers(id, data) {
             console.log("found_key", found_key)
             let review_id = dataJson[found_key]['review_id']
             console.log("review_id", review_id)
-            
-            /*
-            function getReviewId(d){
-                if (topic === dataJson[d]['topics']) {
-                    console.log("review id found")
-                    let review_id = dataJson[d]['review_id']
-                    console.log("this is review_id", review_id)
-                }
-                return review_id
-            }
-            
-            Object.keys(dataJson).forEach(getReviewId);
-            */
-            
             
             let headers = new Headers();
             let init = {
