@@ -162,6 +162,17 @@ function addRows(id, itemList){
         thead.appendChild(document.createElement("th")).
         appendChild(document.createTextNode(orderArrayHeader[j]));
     }
+    
+    let tblToClick = document.getElementById(id);
+    for (let i = 0; i < tblToClick.rows.length; i++) {
+        for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
+            tblToClick.rows[i].cells[j].onclick = (function (i, j) {
+                return function () {
+                    alert('R' + (i + 1) + 'C' + (j + 1));
+                };
+            }(i, j));
+        }
+    }
 }
 
 function addOptions(id, itemList){
