@@ -97,6 +97,7 @@ function addRowHandlers() {
         row.onclick = function(){
                           var cell = this.getElementsByTagName("td")[0];
                           var id = cell.innerHTML;
+            console.log("clicked id is", id)
                           alert("id:" + id);
                       };
     }
