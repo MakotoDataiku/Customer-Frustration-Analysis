@@ -76,7 +76,7 @@ def get_table(params):
     top5_neg = df_sorted.tail(5).to_json(orient='index')
     # top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
     # top5_neg = top5_neg.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
-    # print("top5_pos", top5_pos)
+    print("top5_pos", top5_pos)
     return json.dumps({'table_pos':top5_pos, "table_neg":top5_neg})
     
     
