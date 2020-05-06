@@ -7,7 +7,25 @@ console.log($(document).ready(function() {
 
 function onBarClicked(company, category) {
   console.log('company = ' + company + ", category = " + category);
-}
+    let headers = new Headers();
+    let init = {
+        method : 'GET',
+        headers : headers
+    };
+    let params = {
+        'company':company,
+        'category':category
+    };
+    
+    let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params);
+    let promise = fetch(url, init) 
+                   .then(function(response) {
+                       response.json()
+                       .then(function(data){
+                           // function to add table
+                       })
+                   });
+};
 
 
 
