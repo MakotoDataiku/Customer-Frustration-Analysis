@@ -117,10 +117,15 @@ function addRowHandlers(id, data, company, category) {
                 'review_id':review_id
             };
             let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
-
-                      };
-    }
-}
+            let promise = fetch(url, init).then(function(response) {
+                response.json()
+                    .then(function(data){
+                    console.log("this is how tweets look like", data)
+                })
+            });
+        };
+    };
+};
 
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
