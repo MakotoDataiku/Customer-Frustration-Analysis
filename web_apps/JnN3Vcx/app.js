@@ -32,7 +32,7 @@ function onBarClicked(company, category) {
                            document.getElementById('title_neg').innerHTML = title_neg;
                            //document.getElementById('table_stats_pos').innerHTML = data.table_pos;
                            //document.getElementById('table_stats_neg').innerHTML = data.table_neg;
-                           console.log("data.table_pos", data.table_pos)
+                           console.log("data.table_pos", data)
                            addROws("table_stats_pos", data.table_pos)
                        })
                    });
