@@ -111,6 +111,8 @@ function addRowHandlers(id, data) {
             }
             
             Object.keys(dataJson).forEach(getReviewId);
+            console.log("Object.keys(dataJson)", Object.keys(dataJson))
+            const found = dataJson.find(element => element > 10);
             console.log("review_id", review_id)
             
             let headers = new Headers();
