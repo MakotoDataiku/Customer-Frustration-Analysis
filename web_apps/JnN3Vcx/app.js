@@ -149,7 +149,7 @@ function addRows(id, itemList){
         let cell3 = row.insertCell(2);
         cell1.innerHTML = topics;
         cell2.innerHTML = averageScores;
-        cell2.innerHTML = importanceScores;
+        cell3.innerHTML = importanceScores;
         i += 1
         /*
         let rowID = "row_" + key
