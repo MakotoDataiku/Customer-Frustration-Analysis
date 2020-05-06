@@ -106,7 +106,7 @@ function addRowHandlers(data) {
             };
             let params = {
                 'company':company,
-                'category'category,
+                'category':category,
                 'review_id':review_id
             };
             let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
