@@ -88,6 +88,7 @@ el.addEventListener("click", modifyText, false);
 */
 
 function addRowHandlers(data) {
+    console.log("data looks like", data)
     var table = document.getElementById("insert_table_pos");
     var rows = table.getElementsByTagName("tr");
     console.log("until here it's good")
