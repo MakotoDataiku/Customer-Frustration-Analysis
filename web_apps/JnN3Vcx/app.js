@@ -75,7 +75,7 @@ if (tbl_pos != null) {
         }
     }
 }
-*/
+
 function modifyText() {
   const row_0 = document.getElementById("rowID_0");
   alert("clicked" + row_0.value)
@@ -84,7 +84,20 @@ function modifyText() {
 // Add event listener to table
 const el = document.getElementById("insert_table_pos");
 el.addEventListener("click", modifyText, false);
+*/
 
+function addRowHandlers() {
+    var table = document.getElementById("insert_table_pos");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 1; i < rows.length; i++) {
+        row = table.rows[i];
+        row.onclick = function(){
+                          var cell = this.getElementsByTagName("td")[0];
+                          var id = cell.innerHTML;
+                          alert("id:" + id);
+                      };
+    }
+}
 
 /* returns the company value chosen from the dropdowns */
 document.getElementById('button').onclick = function(){
