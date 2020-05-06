@@ -124,7 +124,7 @@ function addRows(id, itemList){
     /* function to add rows to a table */
     Object.keys(itemList).forEach(function(key){
         console.log("itemList", itemList)
-        console.log("key", key)
+        console.log("key", itemList[key])
         let topics = itemList[key]["topics"]
         let averageScores = itemList[key]["average scores"]
         let importanceScores = itemList[key]["importance scores"]
