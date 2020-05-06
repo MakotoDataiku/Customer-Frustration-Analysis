@@ -59,6 +59,7 @@ function onTableClicked(company, category, topic) {
 */
 
 let tbl_pos = document.getElementById("insert_table_pos");
+console.log("tbl_pos.rows.length", tbl_pos.rows.length)
 if (tbl_pos != null) {
     for (let i = 0; i < tbl_pos.rows.length; i++) {
         for (let j = 0; j < tbl_pos.rows[i].cells.length; j++) {
