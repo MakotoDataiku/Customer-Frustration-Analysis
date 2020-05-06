@@ -143,7 +143,7 @@ function addRows(id, itemList){
         */
         
         let tbl = document.getElementById(id)
-        tbl.headers = "test"
+        tbl.headers = "<th>header</th>"
         let row = tbl.insertRow(i)
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
