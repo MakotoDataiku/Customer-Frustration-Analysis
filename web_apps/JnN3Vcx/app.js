@@ -125,7 +125,11 @@ function addRows(id, itemList){
     let itemJson=JSON.parse(itemList)
     console.log("itemJson", typeof(itemJson))
     Object.keys(itemJson).forEach(function(key) {
-  console.table('Key : ' + key + ', Value : ' + itemJson[key])
+        console.table('Key : ' + key + ', Value : ' + itemJson[key]);
+        let topics = itemJson[key]["topics"]
+        let averageScores = itemJson[key]["average scores"]
+        let importanceScores = itemJson[key]["importance scores"]
+        console.log("topics", topics)
 })
     /*
     Object.keys(itemList).forEach(function(key){
