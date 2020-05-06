@@ -171,7 +171,7 @@ function addGroupBarChart(data, labels) {
               };
     
     // this.groupBarChart = 
-    new Chart(document.getElementById("bar-chart-group"), {
+    var chart = new Chart(document.getElementById("bar-chart-group"), {
         type: "bar",
         data: data_grouped,
         options: {
