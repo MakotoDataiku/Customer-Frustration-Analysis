@@ -100,7 +100,8 @@ def get_tweets_table(params):
     print("randomly selected tweet ids ", id_random_select)
     df = dataiku.Dataset(tweets_table).get_dataframe()
     df = df[['timestamp', "company", 'tweet_id', 'text', 'username', 'user_location']]
-    df = df[(df["company"]==company) and (df["tweet_id"] in id_random_select)] #.reset_index(drop=True).to_json(orient='index')
+    df = df[df["company"]==company] #.reset_index(drop=True).to_json(orient='index')
+    df = df[df["tweet_id"] in id_random_select]
     print(df.columns)
     return json.dumps(df)
 
