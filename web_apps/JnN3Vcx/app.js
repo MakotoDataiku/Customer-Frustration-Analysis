@@ -104,7 +104,7 @@ function addRowHandlers(id, data, company, category) {
             const found_key = Object.keys(dataJson).find(key => dataJson[key]['topics'] === topic);
             console.log("found_key", found_key)
             let review_id = dataJson[found_key]['review_id']
-            console.log("review_id", review_id)
+            // console.log("review_id", review_id)
             
             let headers = new Headers();
             let init = {
