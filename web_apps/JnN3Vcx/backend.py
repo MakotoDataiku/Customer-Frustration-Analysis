@@ -85,7 +85,7 @@ def get_table(params):
 @app.route('/get_tweets_table/<path:params>')
 def get_tweets_table(params):
     params_dict = json.loads(params)
-    company = params_dict.get('company')
+    company = params_dict.get('company')[0]
     tweet_id = params_dict.get('review_id')
     id_random_select = random.choice(tweet_id, 5)
     df = dataiku.Dataset(tweets_table).get_dataframe()
