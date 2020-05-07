@@ -297,6 +297,7 @@
           }
         ]
       },
+      "title": "webapp",
       "showTitle": false
     }
   ],
@@ -305,11 +306,11 @@
   "name": "Analysis of Customer Frustrations in Airline Industries\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 38,
+    "versionNumber": 39,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588851877035
+    "lastModifiedOn": 1588851883036
   },
   "creationTag": {
     "versionNumber": 0,
