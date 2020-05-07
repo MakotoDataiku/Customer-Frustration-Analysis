@@ -188,7 +188,7 @@ function addRows(id, itemList){
 
 function addTweetRows(id, itemList){
     /* function to add rows to a table */
-    let itemJson=JSON.parse(itemList)
+    let itemJson=itemList
     console.log("itemJson", typeof(itemJson))
     document.getElementById(id).innerHTML = '';
     let orderArrayHeader = []
