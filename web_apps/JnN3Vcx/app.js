@@ -189,7 +189,7 @@ function addRows(id, itemList){
 function addTweetRows(id, itemList){
     /* function to add rows to a table */
     console.log("itemList", typeof(itemList));
-    if (typeof(itemList) != object) {
+    if (typeof(itemList) != 'object') {
         let itemJson=JSON.parse(itemList);
     } else {
         itemJson = itemList
