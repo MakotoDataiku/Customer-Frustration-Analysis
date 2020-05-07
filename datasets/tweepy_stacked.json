@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588631975314
+    "lastModifiedOn": 1588869778604
   },
   "creationTag": {
     "versionNumber": 0,
@@ -88,11 +88,11 @@
     "columns": [
       {
         "name": "timestamp",
-        "type": "string"
+        "type": "date"
       },
       {
         "name": "tweet_id",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "text",
@@ -100,15 +100,21 @@
       },
       {
         "name": "hashtags",
-        "type": "string"
+        "type": "array",
+        "arrayContent": {
+          "type": "string"
+        }
       },
       {
         "name": "links",
-        "type": "string"
+        "type": "array",
+        "arrayContent": {
+          "type": "string"
+        }
       },
       {
         "name": "user_id",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "username",
@@ -136,7 +142,10 @@
       },
       {
         "name": "coordinates",
-        "type": "string"
+        "type": "array",
+        "arrayContent": {
+          "type": "string"
+        }
       },
       {
         "name": "country",
@@ -144,11 +153,11 @@
       },
       {
         "name": "retweets",
-        "type": "string"
+        "type": "bigint"
       },
       {
         "name": "retweeted",
-        "type": "boolean"
+        "type": "string"
       },
       {
         "name": "lang",
