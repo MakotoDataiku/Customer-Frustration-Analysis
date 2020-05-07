@@ -122,6 +122,7 @@ function addRowHandlers(id, data, company, category) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data)
+                    document.getElementById('tweet_table').innerHTML = data;
                 })
             });
         };
