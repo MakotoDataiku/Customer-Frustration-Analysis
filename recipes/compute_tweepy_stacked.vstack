@@ -78,7 +78,7 @@
           },
           {
             "name": "tweet_id",
-            "type": "bigint"
+            "type": "string"
           },
           {
             "name": "text",
