@@ -72,7 +72,7 @@ function addRowHandlers(id, data, company, category) {
             let promise = fetch(url, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how tweets look like", typeof(data))
+                    console.log("this is how tweets look like", data)
                     // document.getElementById('tweet_table').innerHTML = data;
                     let title = 'Tweets about "' + topic + '" for ' + company;
                     document.getElementById('title_tweets').innerHTML = title;
@@ -165,7 +165,6 @@ function addRows(id, itemList){
         cell2.innerHTML = averageScores;
         cell3.innerHTML = importanceScores;
         i += 1
-        console.log("tbl.rows.length", tbl.rows.length)
 })
     var orderArrayHeader = ["Topics", "Average scores","Importance scores"];
     var thead = document.createElement('thead');
