@@ -74,7 +74,7 @@ function addRowHandlers(id, data, company, category) {
                     .then(function(data){
                     console.log("this is how tweets look like", typeof(data))
                     // document.getElementById('tweet_table').innerHTML = data;
-                    let title = 'Tweets about "' + topic + '" for' + company;
+                    let title = 'Tweets about "' + topic + '" for ' + company;
                     document.getElementById('title_tweets').innerHTML = title;
                     addTweetRows('insert_tweet_table', data)
                     
