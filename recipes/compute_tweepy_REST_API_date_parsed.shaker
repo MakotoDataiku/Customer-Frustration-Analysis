@@ -25,8 +25,82 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": true,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "+0000",
+            "to": ""
+          },
+          {
+            "from": "Mon",
+            "to": ""
+          },
+          {
+            "from": "Tue",
+            "to": ""
+          },
+          {
+            "from": "Wed",
+            "to": ""
+          },
+          {
+            "from": "Thu",
+            "to": ""
+          },
+          {
+            "from": "Fri",
+            "to": ""
+          },
+          {
+            "from": "Sat",
+            "to": ""
+          },
+          {
+            "from": "Sun",
+            "to": ""
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "timestamp"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "",
+        "formats": [
+          "EEE MMM dd HH:mm:ss Z yyyy"
+        ],
+        "columns": [
+          "timestamp"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -34,7 +108,31 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "friends_count": 113,
+    "country": 113,
+    "timestamp_parsed": 135,
+    "hashtags": 211,
+    "tweet_id": 148,
+    "in_reply_to_status_id": 173,
+    "favourites_count": 135,
+    "coordinates": 106,
+    "retweeted": 100,
+    "in_reply_to_screen_name": 188,
+    "user_id": 148,
+    "screen_name": 127,
+    "followers_count": 128,
+    "user_creation": 225,
+    "in_reply_to_user_id": 158,
+    "links": 300,
+    "company": 120,
+    "text": 300,
+    "user_location": 204,
+    "retweets": 100,
+    "lang": 100,
+    "timestamp": 225,
+    "username": 218
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
