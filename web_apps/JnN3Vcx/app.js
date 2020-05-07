@@ -175,13 +175,12 @@ function addRows(id, itemList){
     }
     */
     
-    console.log("itemList", typeof(itemList));
     if (typeof(itemList) === 'str') {
         let itemJson=JSON.parse(itemList);
     } else {
         itemJson = itemList
     }
-    console.log("typeof(itemJson)", typeof(itemJson))
+    console.log("typeof(itemJson)", typeof(itemJson)==="object")
     document.getElementById(id).innerHTML = '';
     let orderArrayHeader = []
     i = 0
