@@ -210,7 +210,7 @@ function addTweetRows(id, itemList){
             cellValue = itemJson[key][sub_key];
             let cell = row.insertCell(j);
             cell.innerHTML = cellValue;
-            if (orderArrayHeader.length <= Object.keys(itemJson[key]).length){
+            if (orderArrayHeader.length < Object.keys(itemJson[key]).length){
                 orderArrayHeader.push(sub_key)
             }
             j+=1
