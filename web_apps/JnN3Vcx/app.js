@@ -74,7 +74,7 @@ function addRowHandlers(id, data, company, category) {
                     .then(function(data){
                     console.log("this is how tweets look like", typeof(data))
                     // document.getElementById('tweet_table').innerHTML = data;
-                    addTweetRows('tweet_table', data)
+                    addTweetRows('insert_tweet_table', data)
                     
                 });
             });
