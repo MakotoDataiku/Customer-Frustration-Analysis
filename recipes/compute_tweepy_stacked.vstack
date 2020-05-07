@@ -58,16 +58,13 @@
   },
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "tweepy_REST_API",
+      "preFilter": {},
+      "originLabel": "tweepy_REST_API_date_parsed",
       "index": 0
     },
     {
       "preFilter": {},
-      "originLabel": "tweets_stacked",
+      "originLabel": "tweets_stacked_date_parsed",
       "index": 1
     }
   ],
@@ -77,11 +74,11 @@
         "columns": [
           {
             "name": "timestamp",
-            "type": "string"
+            "type": "date"
           },
           {
             "name": "tweet_id",
-            "type": "string"
+            "type": "bigint"
           },
           {
             "name": "text",
@@ -89,15 +86,15 @@
           },
           {
             "name": "hashtags",
-            "type": "string"
+            "type": "array"
           },
           {
             "name": "links",
-            "type": "string"
+            "type": "array"
           },
           {
             "name": "user_id",
-            "type": "string"
+            "type": "bigint"
           },
           {
             "name": "username",
@@ -125,7 +122,7 @@
           },
           {
             "name": "coordinates",
-            "type": "string"
+            "type": "array"
           },
           {
             "name": "country",
@@ -133,11 +130,11 @@
           },
           {
             "name": "retweets",
-            "type": "string"
+            "type": "bigint"
           },
           {
             "name": "retweeted",
-            "type": "boolean"
+            "type": "string"
           },
           {
             "name": "lang",
