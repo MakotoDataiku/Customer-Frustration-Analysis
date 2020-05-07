@@ -87,7 +87,7 @@ def get_table(params):
 def get_tweets_table(params):
     params_dict = json.loads(params)
     company = params_dict.get('company')[0]
-    tweet_id = params_dict.get('review_id').replace("/n", "").replace(",", ", ")
+    tweet_id = params_dict.get('review_id').replace(" ", ", ")
     tweet_id = eval(tweet_id)
     print("type of ids", type(tweet_id))
     id_random_select = random.sample(tweet_id, 5)
