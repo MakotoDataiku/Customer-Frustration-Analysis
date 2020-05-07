@@ -87,6 +87,7 @@ def get_table(params):
 def get_tweets_table(params):
     params_dict = json.loads(params)
     company = params_dict.get('company')[0]
+    print("fetched raw tweet ids are", params_dict.get('review_id'))
     tweet_id = ast.literal_eval(params_dict.get('review_id'))
     print("fetched tweet ids are", tweet_id)
     id_random_select = random.choice(tweet_id, 5)
