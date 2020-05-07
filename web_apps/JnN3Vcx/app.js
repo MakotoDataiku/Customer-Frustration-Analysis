@@ -177,6 +177,7 @@ function addRows(id, itemList){
     
     console.log("itemList", typeof(itemList));
     if (typeof(itemList) != 'object') {
+        console.log("itemList is not a json object")
         let itemJson=JSON.parse(itemList);
     } else {
         itemJson = itemList
