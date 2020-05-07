@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588869577753
+    "lastModifiedOn": 1588869606154
   },
   "creationTag": {
     "versionNumber": 0,
@@ -160,7 +160,7 @@
       },
       {
         "name": "timestamp",
-        "type": "string"
+        "type": "date"
       },
       {
         "name": "timestamp_epochs",
