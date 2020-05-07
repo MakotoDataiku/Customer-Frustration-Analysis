@@ -72,7 +72,7 @@ function addRowHandlers(id, data, company, category) {
             let promise = fetch(url, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how tweets look like", typeos(data))
+                    console.log("this is how tweets look like", typeof(data))
                     // document.getElementById('tweet_table').innerHTML = data;
                     addTweetRows('tweet_table', data)
                     
