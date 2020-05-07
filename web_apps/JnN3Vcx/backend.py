@@ -89,7 +89,7 @@ def get_tweets_table(params):
     company = params_dict.get('company')[0]
     tweet_id = params_dict.get('review_id')
     id_random_select = random.sample(tweet_id, 5)
-    print("type of ids", type(id_random_select))
+    print("type of ids", type(tweet_id))
     print("randomly selected tweet ids ", id_random_select)
     df = dataiku.Dataset(tweets_table).get_dataframe()
     df = df[['timestamp', 'tweet_id', 'text', 'username', 'user_location']]
