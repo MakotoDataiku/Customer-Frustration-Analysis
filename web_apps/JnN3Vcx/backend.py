@@ -6,6 +6,7 @@ import json
 import time
 from dataiku.core.sql import SQLExecutor2
 import random
+import ast
 
 score_table = "tweepy_analysis_by_companies"
 tweet_id_table = "tweepy_aspect_sentiment_categorised"
@@ -86,7 +87,7 @@ def get_table(params):
 def get_tweets_table(params):
     params_dict = json.loads(params)
     company = params_dict.get('company')[0]
-    tweet_id = params_dict.get('review_id')
+    tweet_id = ast.literal_eval(params_dict.get('review_id'))
     id_random_select = random.choice(tweet_id, 5)
     df = dataiku.Dataset(tweets_table).get_dataframe()
     df = df[['timestamp', 'tweet_id', 'text', 'username', 'user_location']]
