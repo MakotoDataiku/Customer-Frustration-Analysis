@@ -72,7 +72,7 @@ function addRowHandlers(id, data, company, category) {
             let promise = fetch(url, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how tweets look like", data)
+                    console.log("this is how tweets look like", data['0'])
                     // document.getElementById('tweet_table').innerHTML = data;
                     let title = 'Tweets about "' + topic + '" for ' + company;
                     document.getElementById('title_tweets').innerHTML = title;
