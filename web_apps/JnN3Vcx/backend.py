@@ -59,7 +59,6 @@ def get_stats(params):
                           "data":sentiment_score_list}}
         l.append(d)
     bar_chart_group = {"company":l, "labels":global_label}
-    print("bar_chart_group", bar_chart_group)
     
     return json.dumps({'barChartGroup':bar_chart_group})
     
@@ -75,7 +74,6 @@ def get_table(params):
     top5_neg = df_sorted.tail(5).reset_index(drop=True).to_json(orient='index')
     # top5_pos = top5_pos.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
     # top5_neg = top5_neg.to_html(classes=['table', 'table-bordered'], index=False, na_rep='')
-    print("top5_pos", top5_pos)
     data = { 'table_pos' : top5_pos, 'table_neg' : top5_neg }
     json.dumps(data)
     # return json.dumps({'table_pos':top5_pos, "table_neg":top5_neg})
@@ -93,6 +91,7 @@ def get_tweets_table(params):
     df = dataiku.Dataset(tweets_table).get_dataframe()
     df = df[['timestamp', 'tweet_id', 'text', 'username', 'user_location']]
     df = df[(df.company==company)&(df.tweet_id in id_random_select)].reset_index(drop=True).to_json(orient='index')
+    print(df.columns)
     return json.dumps(df)
 
     
