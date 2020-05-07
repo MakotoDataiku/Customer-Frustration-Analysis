@@ -1,0 +1,162 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {
+      "product_id": 120,
+      "review_id": 148,
+      "noun": 197,
+      "adj": 169,
+      "rule": 100,
+      "polarity_nltk": 113,
+      "polarity_textblob": 143
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "RANDOM_FIXED_RATIO",
+        "maxRecords": 10000,
+        "targetRatio": 1.0,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 1
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [
+      {
+        "column": "review_id",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "review_id",
+          "columnType": "NUMERICAL",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "review_id",
+          "values": [
+            "12431962374253814"
+          ],
+          "params": {
+            "mode": "substring",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "review_id",
+          "params": {
+            "type": "LongMeaning",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "product_id",
+        "type": "columnFilter",
+        "currentMode": "FACET",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "product_id",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "product_id",
+          "values": [],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "product_id",
+          "params": {
+            "type": "Text",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      },
+      {
+        "column": "noun",
+        "type": "columnFilter",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "noun",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "noun",
+          "values": [
+            "collection"
+          ],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "noun",
+          "params": {
+            "type": "Text",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      }
+    ],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": []
+}
