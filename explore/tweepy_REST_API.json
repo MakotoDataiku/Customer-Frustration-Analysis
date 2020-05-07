@@ -87,7 +87,10 @@
       "user_creation": 225,
       "favourites_count": 135,
       "coordinates": 106,
-      "country": 113
+      "country": 113,
+      "username": 218,
+      "screen_name": 127,
+      "retweets": 100
     },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
@@ -109,14 +112,14 @@
           "enabled": false,
           "rules": []
         },
-        "samplingMethod": "HEAD_SEQUENTIAL",
+        "samplingMethod": "RANDOM_FIXED_NB_EXACT",
         "maxRecords": 10000,
         "targetRatio": 0.02,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 0
+      "_refreshTrigger": 4
     },
     "vizSampling": {
       "autoRefreshSample": false,
