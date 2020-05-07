@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588881315561
+    "lastModifiedOn": 1588881322838
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,7 +92,8 @@
       },
       {
         "name": "tweet_id",
-        "type": "int"
+        "type": "int",
+        "meaning": "LongMeaning"
       },
       {
         "name": "text",
