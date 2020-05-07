@@ -33,6 +33,7 @@ function onBarClicked(company, category) {
                            addRows("insert_table_pos", data["table_pos"]);
                            addRows("insert_table_neg", data["table_neg"]);
                            addRowHandlers("insert_table_pos", data["table_pos"], company, category);
+                           addRowHandlers("insert_table_neg", data["table_neg"], company, category);
                        })
                    });
 };
