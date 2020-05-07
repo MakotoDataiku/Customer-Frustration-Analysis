@@ -75,6 +75,57 @@
         "stem": false
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "PythonUDF",
+      "params": {
+        "mode": "CELL",
+        "envSelection": {
+          "envMode": "INHERIT"
+        },
+        "stopOnError": true,
+        "pythonSourceCode": "# Modify the process function to fit your needs\ndef process(row):\n    # In \u0027cell\u0027 mode, the process function must return\n    # a single cell value for each row,\n    # which will be affected to a new column.\n    # The \u0027row\u0027 argument is a dictionary of columns of the row\n    return len(row[\u0027text\u0027])\n",
+        "useKernel": false,
+        "column": "length",
+        "sourceColumnsList": [],
+        "usePythonUnicode": true,
+        "vectorSize": 256,
+        "vectorize": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnNumericalRange",
+      "params": {
+        "min": 55.0,
+        "booleanMode": "AND",
+        "columns": [
+          "length"
+        ],
+        "action": "KEEP_ROW",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "length"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -108,6 +159,7 @@
     "timestamp": 148,
     "has_media": 100,
     "coordinates": 100,
+    "length": 100,
     "is_reply_to": 100,
     "replies": 100,
     "user_id": 148,
@@ -116,7 +168,12 @@
     "user_location": 113,
     "username": 211
   },
-  "sorting": [],
+  "sorting": [
+    {
+      "column": "length",
+      "ascending": true
+    }
+  ],
   "globalSearchQuery": "",
   "coloring": {
     "scheme": "MEANING_AND_STATUS",
