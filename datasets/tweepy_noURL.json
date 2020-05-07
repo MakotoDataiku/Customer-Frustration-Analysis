@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588623921992
+    "lastModifiedOn": 1588881780540
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,7 +87,15 @@
   "schema": {
     "columns": [
       {
-        "name": "company",
+        "name": "timestamp",
+        "type": "string"
+      },
+      {
+        "name": "tweet_id",
+        "type": "bigint"
+      },
+      {
+        "name": "text",
         "type": "string"
       },
       {
@@ -99,35 +107,15 @@
         "type": "string"
       },
       {
-        "name": "retweets",
-        "type": "bigint"
-      },
-      {
-        "name": "screen_name",
-        "type": "string"
-      },
-      {
-        "name": "text",
-        "type": "string"
-      },
-      {
-        "name": "timestamp",
-        "type": "string"
-      },
-      {
-        "name": "tweet_id",
-        "type": "bigint"
-      },
-      {
-        "name": "tweet_url",
-        "type": "string"
-      },
-      {
         "name": "user_id",
         "type": "bigint"
       },
       {
         "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "screen_name",
         "type": "string"
       },
       {
@@ -155,11 +143,23 @@
         "type": "string"
       },
       {
+        "name": "retweets",
+        "type": "bigint"
+      },
+      {
         "name": "retweeted",
         "type": "string"
       },
       {
         "name": "lang",
+        "type": "string"
+      },
+      {
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "name": "tweet_url",
         "type": "string"
       }
     ],
