@@ -30,8 +30,8 @@ function onBarClicked(company, category) {
                            let title_neg = 'Negative sentiment contributors for ' + company + " in " + category;
                            document.getElementById('title_pos').innerHTML = title_pos;
                            document.getElementById('title_neg').innerHTML = title_neg;
-                           addTweetRows("insert_table_pos", data["table_pos"]);
-                           addTweetRows("insert_table_neg", data["table_neg"]);
+                           addRows("insert_table_pos", data["table_pos"]);
+                           addRows("insert_table_neg", data["table_neg"]);
                            addRowHandlers("insert_table_pos", data["table_pos"], company, category);
                        })
                    });
