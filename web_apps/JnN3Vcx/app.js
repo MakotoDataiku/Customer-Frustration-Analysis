@@ -37,55 +37,6 @@ function onBarClicked(company, category) {
                    });
 };
 
-/*
-function onTableClicked(company, category, topic) {
-    let headers = new Headers();
-    let init = {
-        method : 'GET',
-        headers : headers
-    };
-    let params = {
-        'company':company,
-        'category'category,
-        'review_id':review_id
-    };
-    let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
-    let promise = fetch(url, init) 
-                   .then(function(response) {
-                       
-                   }
-                        )
-}
-
-$(document).ready(function(){
-    let test = document.getElementById("bar-chart-group")
-    console.log("test is ", test)
-})
-
-
-let tbl_pos = document.getElementById("insert_table_pos");
-console.log("tbl_pos.rows.length", tbl_pos.rows.length)
-if (tbl_pos != null) {
-    for (let i = 0; i < tbl_pos.rows.length; i++) {
-        for (let j = 0; j < tbl_pos.rows[i].cells.length; j++) {
-            tbl_pos.rows[i].cells[j].onclick = (function (i, j) {
-                return function () {
-                    alert('R' + (i + 1) + 'C' + (j + 1));
-                };
-            }(i, j));
-        }
-    }
-}
-
-function modifyText() {
-  const row_0 = document.getElementById("rowID_0");
-  alert("clicked" + row_0.value)
-}
-
-// Add event listener to table
-const el = document.getElementById("insert_table_pos");
-el.addEventListener("click", modifyText, false);
-*/
 
 function addRowHandlers(id, data, company, category) {
     var table = document.getElementById(id);
@@ -122,7 +73,9 @@ function addRowHandlers(id, data, company, category) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data)
-                    document.getElementById('tweet_table').innerHTML = data;
+                    // document.getElementById('tweet_table').innerHTML = data;
+                    addTweetRows('tweet_table', data)
+                    
                 })
             });
         };
@@ -230,6 +183,42 @@ function addRows(id, itemList){
                 };
             }(i, j));
         }
+    }
+}
+
+function addTweetRows(id, itemList){
+    /* function to add rows to a table */
+    let itemJson=JSON.parse(itemList)
+    console.log("itemJson", typeof(itemJson))
+    document.getElementById(id).innerHTML = '';
+    let orderArrayHeader = []
+    i = 0
+    Object.keys(itemJson).forEach(function(key) {
+        // this iterates over rows
+        // console.table('Key : ' + key + ', Value : ' + itemJson[key]);
+        let tbl = document.getElementById(id) 
+        let row = tbl.insertRow(i)
+        row.id = "rowID_" + i;
+        
+        j=0
+        Object.keys(itemJson[key]).forEach(function(sub_key){
+            cellValue = itemJson[key][sub_key];
+            let cell = row.insertCell(j);
+            cell.innerHTML = cellValue;
+            if (orderArrayHeader.length <= Object.keys(itemJson[key]).length){
+                orderArrayHeader.push(sub_key)
+            }
+            j+=1
+        })
+        i += 1
+})
+    
+    var thead = document.createElement('thead');
+    let finishedTable = document.getElementById(id)   
+    finishedTable.appendChild(thead);
+    for(var j=0;j<orderArrayHeader.length;j++){
+        thead.appendChild(document.createElement("th")).
+        appendChild(document.createTextNode(orderArrayHeader[j]));
     }
 }
 
