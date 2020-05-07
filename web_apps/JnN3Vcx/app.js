@@ -139,7 +139,7 @@ function setFilterOptions(){
 }
 
 function addRows(id, itemList){
-    /* function to add rows to a table 
+    /* function to add rows to a table */
     let itemJson=JSON.parse(itemList)
     console.log("itemJson", typeof(itemJson))
     document.getElementById(id).innerHTML = '';
@@ -173,44 +173,9 @@ function addRows(id, itemList){
         thead.appendChild(document.createElement("th")).
         appendChild(document.createTextNode(orderArrayHeader[j]));
     }
-    */
     
-    if (typeof(itemList) === 'str') {
-        let itemJson=JSON.parse(itemList);
-    } else {
-        itemJson = itemList
-    }
-    console.log("typeof(itemJson)", typeof(itemJson)==="object")
-    document.getElementById(id).innerHTML = '';
-    let orderArrayHeader = []
-    i = 0
-    Object.keys(itemJson).forEach(function(key) {
-        // this iterates over rows
-        // console.table('Key : ' + key + ', Value : ' + itemJson[key]);
-        let tbl = document.getElementById(id);
-        let row = tbl.insertRow(i);
-        row.id = "rowID_" + i;
-        
-        j=0
-        Object.keys(itemJson[key]).forEach(function(sub_key){
-            cellValue = itemJson[key][sub_key];
-            let cell = row.insertCell(j);
-            cell.innerHTML = cellValue;
-            if (orderArrayHeader.length < Object.keys(itemJson[key]).length){
-                orderArrayHeader.push(sub_key)
-            }
-            j+=1
-        })
-        i += 1
-})
     
-    let thead = document.createElement('thead');
-    let finishedTable = document.getElementById(id);   
-    finishedTable.appendChild(thead);
-    for(let j=0;j<orderArrayHeader.length;j++){
-        thead.appendChild(document.createElement("th")).
-        appendChild(document.createTextNode(orderArrayHeader[j]));
-    }
+
     
     let tblToClick = document.getElementById(id);
     for (let i = 0; i < tblToClick.rows.length; i++) {
