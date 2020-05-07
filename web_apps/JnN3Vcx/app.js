@@ -188,6 +188,7 @@ function addRows(id, itemList){
 
 function addTweetRows(id, itemList){
     /* function to add rows to a table */
+    console.log("itemList", typeof(itemList));
     let itemJson=JSON.parse(itemList);
     console.log("itemJson", typeof(itemJson));
     document.getElementById(id).innerHTML = '';
@@ -196,8 +197,8 @@ function addTweetRows(id, itemList){
     Object.keys(itemJson).forEach(function(key) {
         // this iterates over rows
         // console.table('Key : ' + key + ', Value : ' + itemJson[key]);
-        let tbl = document.getElementById(id) 
-        let row = tbl.insertRow(i)
+        let tbl = document.getElementById(id);
+        let row = tbl.insertRow(i);
         row.id = "rowID_" + i;
         
         j=0
@@ -213,10 +214,10 @@ function addTweetRows(id, itemList){
         i += 1
 })
     
-    var thead = document.createElement('thead');
-    let finishedTable = document.getElementById(id)   
+    let thead = document.createElement('thead');
+    let finishedTable = document.getElementById(id);   
     finishedTable.appendChild(thead);
-    for(var j=0;j<orderArrayHeader.length;j++){
+    for(let j=0;j<orderArrayHeader.length;j++){
         thead.appendChild(document.createElement("th")).
         appendChild(document.createTextNode(orderArrayHeader[j]));
     }
