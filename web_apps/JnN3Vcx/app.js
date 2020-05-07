@@ -114,7 +114,8 @@ function addRowHandlers(id, data, company, category) {
             let params = {
                 'company':company,
                 'category':category,
-                'review_id':review_id
+                'review_id':review_id,
+                'topic':topic
             };
             let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
             let promise = fetch(url, init).then(function(response) {

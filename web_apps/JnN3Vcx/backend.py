@@ -87,6 +87,8 @@ def get_table(params):
 def get_tweets_table(params):
     params_dict = json.loads(params)
     company = params_dict.get('company')[0]
+    topic = params_dict.get('topic')
+    print("topic is", topic)
     tweet_id = params_dict.get('review_id').replace(" ", ", ").replace("/n", "")
     print("tweet_id:", tweet_id)
     tweet_id = eval(tweet_id)
