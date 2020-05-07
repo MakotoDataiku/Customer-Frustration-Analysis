@@ -102,7 +102,7 @@ def get_tweets_table(params):
     df = df[['timestamp', "company", 'tweet_id', 'text', 'username', 'user_location']]
     df = df[(df["company"]==company) & (df["tweet_id"].isin(id_random_select))].reset_index(drop=True).to_dict(orient='index')
     print(df)
-    return json.dumps(df)
+    return json.dumps("tweets":df)
 
     
     
