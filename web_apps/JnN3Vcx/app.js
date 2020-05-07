@@ -177,12 +177,11 @@ function addRows(id, itemList){
     
     console.log("itemList", typeof(itemList));
     if (typeof(itemList) != 'object') {
-        console.log("itemList is not a json object")
         let itemJson=JSON.parse(itemList);
     } else {
         itemJson = itemList
     }
-    
+    console.log(itemJson)
     document.getElementById(id).innerHTML = '';
     let orderArrayHeader = []
     i = 0
