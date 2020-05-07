@@ -181,7 +181,7 @@ function addRows(id, itemList){
     } else {
         itemJson = itemList
     }
-    console.log(itemJson)
+    console.log("typeof(itemJson)", typeof(itemJson))
     document.getElementById(id).innerHTML = '';
     let orderArrayHeader = []
     i = 0
