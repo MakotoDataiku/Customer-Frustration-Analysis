@@ -41,9 +41,7 @@ function onBarClicked(company, category) {
 function addRowHandlers(id, data, company, category) {
     var table = document.getElementById(id);
     var rows = table.getElementsByTagName("tr");
-    console.log("until here it's good")
     for (i = 0; i < rows.length; i++) {
-        console.log("row is", i)
         row = table.rows[i];
         row.onclick = function(){
             let cell = this.getElementsByTagName("td")[0];
