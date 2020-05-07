@@ -103,6 +103,7 @@ def get_tweets_table(params):
     df = dataiku.Dataset(tweets_table).get_dataframe()
     df = df[['timestamp', "company", 'tweet_id', 'text', 'username', 'user_location']]
     df['tweet_id'] = df.tweet_id.astype(str)
+    df['timestamp'] = df.timestamp.astype(str)
     print("columns", df.shape)
     df = df[(df["company"]==company) & (df["tweet_id"].isin(id_random_select))].reset_index(drop=True).to_json(orient='index')
     print("this is how tweets are returned to JS", df)
