@@ -34,7 +34,7 @@ for company in companies:
     print(company)
     searchQuery = company + " -RT"# this is what we're searching for
     print("search query :", searchQuery)
-    maxTweets = 1000 # Some arbitrary large number
+    maxTweets = 2000 # Some arbitrary large number
     tweetsPerQry = 100  # this is the max the API permits
     tweepy_REST_API = dataiku.Folder("tweepy_REST_API")
     folder_path = tweepy_REST_API.get_path()
