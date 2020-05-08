@@ -5,11 +5,11 @@
   "name": "scrape_tweepy",
   "active": false,
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588944860769
+    "lastModifiedOn": 1588945186947
   },
   "checklists": {
     "checklists": []
@@ -23,7 +23,86 @@
   "triggers": [],
   "reporters": [],
   "params": {
-    "steps": []
+    "steps": [
+      {
+        "id": "build_0_true_d_tweepy_REST_API_date_parsed",
+        "type": "build_flowitem",
+        "name": "scrape tweepy",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_REST_API_date_parsed",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_1_true_d_tweepy_stacked",
+        "type": "build_flowitem",
+        "name": "stack with twitterscraper",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_stacked",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_3_true_d_tweepy_analysis_by_companies",
+        "type": "build_flowitem",
+        "name": "Step #3",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_analysis_by_companies",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_MISSING_ONLY_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      }
+    ]
   },
   "automationLocal": false,
   "customFields": {}
