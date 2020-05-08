@@ -5,11 +5,11 @@
   "name": "scrape_tweepy",
   "active": false,
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588945754454
+    "lastModifiedOn": 1588947482677
   },
   "checklists": {
     "checklists": []
@@ -28,7 +28,7 @@
         "id": "build_0_true_d_tweepy_REST_API_date_parsed",
         "type": "build_flowitem",
         "name": "scrape tweepy",
-        "runConditionType": "DISABLED",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
