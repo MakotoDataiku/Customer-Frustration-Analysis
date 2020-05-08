@@ -5,11 +5,11 @@
   "name": "scrape_tweepy",
   "active": false,
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588945621350
+    "lastModifiedOn": 1588945651633
   },
   "checklists": {
     "checklists": []
@@ -77,6 +77,32 @@
         }
       },
       {
+        "id": "build_1_true_d_tweepy_prep",
+        "type": "build_flowitem",
+        "name": "tweepy_prep",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_prep",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
         "id": "build_3_true_d_tweepy_analysis_by_companies",
         "type": "build_flowitem",
         "name": "final dataset",
@@ -103,9 +129,9 @@
         }
       },
       {
-        "id": "build_1_true_d_tweepy_prep",
+        "id": "build_1_true_d_tweepy_noURL",
         "type": "build_flowitem",
-        "name": "tweepy_prep",
+        "name": "no_URL",
         "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
           "SUCCESS",
@@ -119,7 +145,7 @@
           "builds": [
             {
               "type": "DATASET",
-              "itemId": "tweepy_prep",
+              "itemId": "tweepy_noURL",
               "partitionsSpec": ""
             }
           ],
