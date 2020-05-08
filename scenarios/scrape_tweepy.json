@@ -5,11 +5,11 @@
   "name": "scrape_tweepy",
   "active": false,
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588945651633
+    "lastModifiedOn": 1588945718934
   },
   "checklists": {
     "checklists": []
@@ -103,6 +103,58 @@
         }
       },
       {
+        "id": "build_1_true_d_tweepy_noURL",
+        "type": "build_flowitem",
+        "name": "no_URL",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_noURL",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_1_true_d_tweepy_aspect_sentiment_pairs",
+        "type": "build_flowitem",
+        "name": "aspect_sentiment_pairs",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "tweepy_aspect_sentiment_pairs",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "NON_RECURSIVE_FORCED_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
         "id": "build_3_true_d_tweepy_analysis_by_companies",
         "type": "build_flowitem",
         "name": "final dataset",
@@ -129,9 +181,9 @@
         }
       },
       {
-        "id": "build_1_true_d_tweepy_noURL",
+        "id": "build_1_true_d_tweepy_aspect_sentiment_categorised",
         "type": "build_flowitem",
-        "name": "no_URL",
+        "name": "aspect_sentiment_categorised",
         "runConditionType": "RUN_IF_STATUS_MATCH",
         "runConditionStatuses": [
           "SUCCESS",
@@ -145,7 +197,7 @@
           "builds": [
             {
               "type": "DATASET",
-              "itemId": "tweepy_noURL",
+              "itemId": "tweepy_aspect_sentiment_categorised",
               "partitionsSpec": ""
             }
           ],
