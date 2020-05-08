@@ -22,17 +22,17 @@
       "items": [
         {
           "ref": "tweepy_REST_API",
-          "appendMode": false
+          "appendMode": true
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 31,
+    "versionNumber": 32,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588944173749
+    "lastModifiedOn": 1588947504952
   },
   "creationTag": {
     "versionNumber": 0,
