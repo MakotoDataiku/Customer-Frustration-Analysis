@@ -141,7 +141,9 @@
           "columnType": "ALPHANUM",
           "currentMode": "ALPHANUM",
           "sort": "count",
-          "selectedValues": {}
+          "selectedValues": {
+            "Frommer\u0027s": true
+          }
         },
         "alphanumFilter": {
           "type": "alphanum",
