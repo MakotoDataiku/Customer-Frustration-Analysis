@@ -56,7 +56,43 @@
       "autoRefresh": true
     },
     "globalSearchQuery": "",
-    "explorationFilters": [],
+    "explorationFilters": [
+      {
+        "column": "review_id",
+        "type": "columnFilter",
+        "currentMode": "SIMPLE_ALPHANUM",
+        "active": true,
+        "facet": {
+          "type": "facet",
+          "column": "review_id",
+          "columnType": "NUMERICAL",
+          "currentMode": "NUMERICAL",
+          "sort": "count",
+          "selectedValues": {}
+        },
+        "alphanumFilter": {
+          "type": "alphanum",
+          "column": "review_id",
+          "values": [
+            "1255839573004910592"
+          ],
+          "params": {
+            "mode": "full_string",
+            "normalization": "exact"
+          }
+        },
+        "validityFilter": {
+          "type": "validity",
+          "column": "review_id",
+          "params": {
+            "type": "LongMeaning",
+            "ok": true,
+            "nok": true,
+            "empty": true
+          }
+        }
+      }
+    ],
     "previewMode": "ALL_ROWS"
   },
   "charts": []
