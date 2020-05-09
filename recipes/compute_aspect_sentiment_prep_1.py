@@ -18,6 +18,35 @@ df = aspect_sentiment_pairs.get_dataframe()
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df.head()
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
+# ### Recategorize nouns == company names
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+company_list = dataiku.get_custom_variables(typed=True)['company']
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+company_list_lower = [x.lower() for x in company_list]
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+dictionary = dict(zip(company_list_lower, company_list))
+dictionary
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+temp = df[df.noun.str.lower().isin(company_list_lower)][df.product_id.str.lower() != df.noun.str.lower()]
+index_list = temp.index
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df_replace = pd.DataFrame(df.loc[df.index.isin(index_list), ["product_id", "noun"]])
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df_replace = df_replace.replace({"noun": dictionary})
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df.loc[df.index.isin(index_list), "product_id"] = df_replace.noun
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
+# ## Grouping companies and nouns
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 lemmatizer = WordNetLemmatizer()
 df['noun_lemmatized'] = df.noun.str.lower().apply(lemmatizer.lemmatize)
