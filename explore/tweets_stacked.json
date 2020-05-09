@@ -68,43 +68,6 @@
     "globalSearchQuery": "",
     "explorationFilters": [
       {
-        "column": "username",
-        "type": "columnFilter",
-        "currentMode": "SIMPLE_ALPHANUM",
-        "active": true,
-        "facet": {
-          "type": "facet",
-          "column": "username",
-          "columnType": "ALPHANUM",
-          "currentMode": "ALPHANUM",
-          "sort": "count",
-          "selectedValues": {
-            "Ashley Walker": true
-          }
-        },
-        "alphanumFilter": {
-          "type": "alphanum",
-          "column": "username",
-          "values": [
-            "Ashley Walker"
-          ],
-          "params": {
-            "mode": "full_string",
-            "normalization": "exact"
-          }
-        },
-        "validityFilter": {
-          "type": "validity",
-          "column": "username",
-          "params": {
-            "type": "Text",
-            "ok": true,
-            "nok": true,
-            "empty": true
-          }
-        }
-      },
-      {
         "column": "tweet_id",
         "type": "columnFilter",
         "currentMode": "SIMPLE_ALPHANUM",
@@ -121,7 +84,7 @@
           "type": "alphanum",
           "column": "tweet_id",
           "values": [
-            "124319623742538"
+            "1243658630441979904"
           ],
           "params": {
             "mode": "substring",
