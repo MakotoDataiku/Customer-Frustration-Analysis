@@ -48,7 +48,7 @@
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 2
+      "_refreshTrigger": 3
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -77,11 +77,9 @@
           "column": "noun_lemmatized",
           "values": [
             "emirates",
+            "Emirates",
             "lufthansa",
-            "ryanair",
-            "easyjet",
-            "air france",
-            "delta air lines"
+            "emirate"
           ],
           "params": {
             "mode": "full_string",
