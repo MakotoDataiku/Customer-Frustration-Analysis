@@ -26,7 +26,7 @@ from run_extraction.init_nltk import init_nltk
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-tweets_noURL = dataiku.Dataset("tweepy_noURL")
+tweets_noURL = dataiku.Dataset("tweepy_prep")
 tweets_noURL_df = tweets_noURL.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
