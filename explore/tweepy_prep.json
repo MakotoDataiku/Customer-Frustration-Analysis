@@ -3,7 +3,85 @@
     "steps": [],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
-      "mode": "ALL"
+      "mode": "SELECT",
+      "list": [
+        {
+          "name": "timestamp",
+          "d": true
+        },
+        {
+          "name": "tweet_id",
+          "d": true
+        },
+        {
+          "name": "text",
+          "d": true
+        },
+        {
+          "name": "hashtags",
+          "d": false
+        },
+        {
+          "name": "links",
+          "d": false
+        },
+        {
+          "name": "user_id",
+          "d": false
+        },
+        {
+          "name": "username",
+          "d": true
+        },
+        {
+          "name": "screen_name",
+          "d": false
+        },
+        {
+          "name": "user_location",
+          "d": false
+        },
+        {
+          "name": "followers_count",
+          "d": false
+        },
+        {
+          "name": "friends_count",
+          "d": false
+        },
+        {
+          "name": "user_creation",
+          "d": false
+        },
+        {
+          "name": "coordinates",
+          "d": false
+        },
+        {
+          "name": "country",
+          "d": false
+        },
+        {
+          "name": "retweets",
+          "d": false
+        },
+        {
+          "name": "retweeted",
+          "d": false
+        },
+        {
+          "name": "lang",
+          "d": false
+        },
+        {
+          "name": "company",
+          "d": true
+        },
+        {
+          "name": "tweet_url",
+          "d": false
+        }
+      ]
     },
     "columnWidthsByName": {
       "timestamp": 204,
@@ -81,7 +159,8 @@
           "type": "alphanum",
           "column": "tweet_id",
           "values": [
-            "1255839573004910592"
+            "1255839573004910592",
+            "1255981250302676995"
           ],
           "params": {
             "mode": "full_string",
