@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1589021296243
+    "lastModifiedOn": 1589022847886
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,85 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "timestamp",
+        "type": "date"
+      },
+      {
+        "name": "tweet_id",
+        "type": "bigint"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "hashtags",
+        "type": "string"
+      },
+      {
+        "name": "links",
+        "type": "string"
+      },
+      {
+        "name": "user_id",
+        "type": "bigint"
+      },
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "screen_name",
+        "type": "string"
+      },
+      {
+        "name": "user_location",
+        "type": "string"
+      },
+      {
+        "name": "followers_count",
+        "type": "double"
+      },
+      {
+        "name": "friends_count",
+        "type": "double"
+      },
+      {
+        "name": "user_creation",
+        "type": "string"
+      },
+      {
+        "name": "coordinates",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "retweets",
+        "type": "bigint"
+      },
+      {
+        "name": "retweeted",
+        "type": "string"
+      },
+      {
+        "name": "lang",
+        "type": "string"
+      },
+      {
+        "name": "company",
+        "type": "string"
+      },
+      {
+        "name": "tweet_url",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
