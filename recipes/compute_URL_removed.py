@@ -22,7 +22,6 @@ def remove_URL(text):
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df['text']=df.text.apply(remove_URL)
-text = re.sub(r'twitter\.com\S+', '', text)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Compute recipe outputs from inputs
