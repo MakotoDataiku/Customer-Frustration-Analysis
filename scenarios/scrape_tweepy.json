@@ -5,11 +5,11 @@
   "name": "scrape_tweepy",
   "active": false,
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588947482677
+    "lastModifiedOn": 1589024287496
   },
   "checklists": {
     "checklists": []
@@ -116,13 +116,7 @@
         "delayBetweenRetries": 10,
         "maxRetriesOnFail": 0,
         "params": {
-          "builds": [
-            {
-              "type": "DATASET",
-              "itemId": "tweepy_noURL",
-              "partitionsSpec": ""
-            }
-          ],
+          "builds": [],
           "jobType": "NON_RECURSIVE_FORCED_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
