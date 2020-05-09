@@ -58,24 +58,25 @@
     "globalSearchQuery": "",
     "explorationFilters": [
       {
-        "column": "review_id",
+        "column": "noun",
         "type": "columnFilter",
-        "currentMode": "SIMPLE_ALPHANUM",
+        "currentMode": "FACET",
         "active": true,
         "facet": {
           "type": "facet",
-          "column": "review_id",
-          "columnType": "NUMERICAL",
-          "currentMode": "NUMERICAL",
+          "column": "noun",
+          "columnType": "ALPHANUM",
+          "currentMode": "ALPHANUM",
           "sort": "count",
-          "selectedValues": {}
+          "selectedValues": {
+            "Emirates": true,
+            "emirates": true
+          }
         },
         "alphanumFilter": {
           "type": "alphanum",
-          "column": "review_id",
-          "values": [
-            "1255839573004910592"
-          ],
+          "column": "noun",
+          "values": [],
           "params": {
             "mode": "full_string",
             "normalization": "exact"
@@ -83,9 +84,9 @@
         },
         "validityFilter": {
           "type": "validity",
-          "column": "review_id",
+          "column": "noun",
           "params": {
-            "type": "LongMeaning",
+            "type": "Text",
             "ok": true,
             "nok": true,
             "empty": true
