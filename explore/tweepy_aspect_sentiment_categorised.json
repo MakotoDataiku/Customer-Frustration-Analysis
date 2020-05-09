@@ -48,7 +48,7 @@
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 1
+      "_refreshTrigger": 2
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -62,7 +62,7 @@
       {
         "column": "noun_lemmatized",
         "type": "columnFilter",
-        "currentMode": "FACET",
+        "currentMode": "SIMPLE_ALPHANUM",
         "active": true,
         "facet": {
           "type": "facet",
@@ -75,7 +75,14 @@
         "alphanumFilter": {
           "type": "alphanum",
           "column": "noun_lemmatized",
-          "values": [],
+          "values": [
+            "emirates",
+            "lufthansa",
+            "ryanair",
+            "easyjet",
+            "air france",
+            "delta air lines"
+          ],
           "params": {
             "mode": "full_string",
             "normalization": "exact"
