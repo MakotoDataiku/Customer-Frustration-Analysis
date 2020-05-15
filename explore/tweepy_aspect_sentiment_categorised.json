@@ -58,46 +58,7 @@
       "autoRefresh": true
     },
     "globalSearchQuery": "",
-    "explorationFilters": [
-      {
-        "column": "noun_lemmatized",
-        "type": "columnFilter",
-        "currentMode": "SIMPLE_ALPHANUM",
-        "active": true,
-        "facet": {
-          "type": "facet",
-          "column": "noun_lemmatized",
-          "columnType": "ALPHANUM",
-          "currentMode": "ALPHANUM",
-          "sort": "count",
-          "selectedValues": {}
-        },
-        "alphanumFilter": {
-          "type": "alphanum",
-          "column": "noun_lemmatized",
-          "values": [
-            "emirates",
-            "Emirates",
-            "lufthansa",
-            "emirate"
-          ],
-          "params": {
-            "mode": "full_string",
-            "normalization": "exact"
-          }
-        },
-        "validityFilter": {
-          "type": "validity",
-          "column": "noun_lemmatized",
-          "params": {
-            "type": "Text",
-            "ok": true,
-            "nok": true,
-            "empty": true
-          }
-        }
-      }
-    ],
+    "explorationFilters": [],
     "previewMode": "ALL_ROWS"
   },
   "charts": []
