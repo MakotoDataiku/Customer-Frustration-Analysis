@@ -279,3 +279,17 @@ function addGroupBarChart(data, labels) {
         }
     });
 }
+
+function addNounChart(data) {
+    document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
+    var myBarChart = new Chart(document.getElementById("noun-chart-group"), {
+    type: 'bar',
+    data: data,
+    options: {
+        title: {
+            display: true,
+            text: "Sentiment comparison"
+          }
+    }
+});
+}
