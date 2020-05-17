@@ -440,5 +440,226 @@
     "key": "Dep1oh2YXMgEmQ2SEaRjlW0jpMnJlPiv",
     "label": "Key for Web app Airline Analysis 0.2(gmnYUpH)",
     "createdOn": 1588870319595
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [
+          "Cat_analysis_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "KM_analysis_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "URL_removed"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_categorised"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_pairs"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspect_sentiment_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_clustered"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_grouped"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "aspects_grouped_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "grouped_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "sentiment_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_KM"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_REST_API"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_REST_API_date_parsed"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_analysis_by_companies"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_aspect_sentiment_categorised"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_aspect_sentiment_pairs"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweepy_word_vectors"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_final"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new02"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_new02_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_noURL"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "tweets_stacked_date_parsed"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_PCA"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_prep"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "word_vectors_prep_clustered"
+        ],
+        "privileges": []
+      }
+    ],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false
+    },
+    "onBehalf": "7LEfDjC",
+    "id": "ep3wX06aP6PT1NME",
+    "key": "cmzzQAYnDxyskXOcgEgBxDUDxljW7RhC",
+    "label": "Key for Web app Airline Analysis 0.3(7LEfDjC)",
+    "createdOn": 1589753222831
   }
 ]
