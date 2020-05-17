@@ -111,7 +111,13 @@ def get_tweets_table(params):
     
     
     
-    
+@app.route('/compare_companies_from_nouns/<path:params>')
+def compare_companies_from_nouns(params):
+    params_dict = json.loads(params)
+    topic = params_dict.get('topic')
+    df = dataiku.Dataset(tweet_id_table).get_dataframe()
+    df_filterred = df[df.noun_lemmatized == topic][['product_id', 'noun_lemmatized', 'mean_polarity_textblob']].to_json(orient='index')
+    return df_filterred
     
     
     
