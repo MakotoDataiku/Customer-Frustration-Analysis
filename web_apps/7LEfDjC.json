@@ -37,11 +37,11 @@
   "name": "Airline Analysis 0.3",
   "apiKey": "cmzzQAYnDxyskXOcgEgBxDUDxljW7RhC",
   "versionTag": {
-    "versionNumber": 21,
+    "versionNumber": 22,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1589794910472
+    "lastModifiedOn": 1589794950382
   },
   "creationTag": {
     "versionNumber": 0,

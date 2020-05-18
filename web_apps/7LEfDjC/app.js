@@ -297,11 +297,11 @@ function addGroupBarChart(data, labels) {
 function addNounChart(id, data) {
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
     
-    var labels = jsonfile.jsonarray.map(function(e) {
+    var labels = data.map(function(e) {
         return e.product_id;
     });
     
-    var values = jsonfile.jsonarray.map(function(e) {
+    var values = data.map(function(e) {
         return e.mean_polarity_textblob;
     });;
     
