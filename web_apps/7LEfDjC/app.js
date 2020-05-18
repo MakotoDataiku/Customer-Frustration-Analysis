@@ -74,9 +74,23 @@ function addRowHandlers(id, data, company, category) {
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
                     // document.getElementById('tweet_table').innerHTML = data;
-                    let title = 'Tweets about "' + topic + '" for ' + company;
-                    document.getElementById('title_tweets').innerHTML = title;
-                    addTweetRows('insert_tweet_table', data)
+                    let titleTweetsTable = 'Tweets about "' + topic + '" for ' + company;
+                    document.getElementById('title_tweets').innerHTML = titleTweetsTable;
+                    addTweetRows('insert_tweet_table', data);
+                });
+            });
+            let url = getWebAppBackendUrl('/compare_companies_from_nouns')+'/'+JSON.stringify(params);
+            let promise = fetch(url, init).then(function(response) {
+                response.json()
+                    .then(function(data){
+                    console.log("this is how tweets look like", data['0'])
+                    // document.getElementById('tweet_table').innerHTML = data;
+                    // let titleTweetsTable = 'Tweets about "' + topic + '" for ' + company;
+                    // document.getElementById('title_tweets').innerHTML = titleTweetsTable;
+                    // addTweetRows('insert_tweet_table', data);
+                    let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
+                    document.getElementById('title_noun_chart').innerHTML = titleNounChart;
+                    // addNounChart('noun-chart', data);
                     
                 });
             });
