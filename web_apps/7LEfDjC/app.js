@@ -90,7 +90,7 @@ function addRowHandlers(id, data, company, category) {
                     // addTweetRows('insert_tweet_table', data);
                     let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
                     document.getElementById('title_noun_chart').innerHTML = titleNounChart;
-                    // addNounChart('noun-chart', data);
+                    addNounChart('noun-chart', data);
                     
                 });
             });
@@ -311,7 +311,7 @@ function addNounChart(id, data) {
         for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
             tblToClick.rows[i].cells[j].onclick = (function (i, j) {
                 return function () {
-                    // alert('R' + (i + 1) + 'C' + (j + 1));
+                    alert('R' + (i + 1) + 'C' + (j + 1));
                 };
             }(i, j));
         }
