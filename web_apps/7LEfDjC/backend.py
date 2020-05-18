@@ -105,7 +105,7 @@ def get_tweets_table(params):
     df['tweet_id'] = df.tweet_id.astype(str)
     df['timestamp'] = df.timestamp.astype(str)
     print("columns", df.shape)
-    df = df[(df["company"]==company) & (df["tweet_id"].isin(id_random_select))].reset_index(drop=True).to_json(orient='index')
+    df = df[(df["company"]==company) & (df["tweet_id"].isin(id_random_select))].drop("company", axis=1).reset_index(drop=True).to_json(orient='index')
     print("this is how tweets are returned to JS", df)
     return df
     
