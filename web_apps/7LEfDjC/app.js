@@ -273,6 +273,7 @@ function addGroupBarChart(data, labels) {
             label:company,
             backgroundColor: defaultBackGroundColors[i],
             borderColor: defaultBorderColors[i],
+            borderWidth: 1,
             data:values};
         console.log("dataset_company", dataset_company);
         arr.push(dataset_company);
@@ -321,7 +322,8 @@ function addNounChart(id, data) {
             datasets: [{
                 data: values,
                 backgroundColor: defaultBackGroundColors,
-                borderColor: defaultBorderColors
+                borderColor: defaultBorderColors,
+                borderWidth: 1
             }]
         },
         options: {
