@@ -69,7 +69,7 @@ function addRowHandlers(id, data, company, category) {
                 'topic':topic
             };
             let url1 = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
-            let promise = fetch(url1, init).then(function(response) {
+            let promise1 = fetch(url1, init).then(function(response) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
@@ -80,7 +80,7 @@ function addRowHandlers(id, data, company, category) {
                 });
             });
             let url2 = getWebAppBackendUrl('/compare_companies_from_nouns')+'/'+JSON.stringify(params);
-            let promise = fetch(url2, init).then(function(response) {
+            let promise2 = fetch(url2, init).then(function(response) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
