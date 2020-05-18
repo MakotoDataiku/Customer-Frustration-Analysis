@@ -87,7 +87,7 @@ function addRowHandlers(id, data, company, category) {
             let promise2 = fetch(url2, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how noun chart data looks like", data.barNounChart)
+                    console.log("this is how noun chart data looks like", data)
                     let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
                     document.getElementById('title_noun_chart').innerHTML = titleNounChart;
                     addNounChart('noun-chart', data);
@@ -296,6 +296,8 @@ function addGroupBarChart(data, labels) {
 
 function addNounChart(id, data) {
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
+    
+    
     var myBarChart = new Chart(document.getElementById("noun-chart-group"), {
     type: 'bar',
     data: data,
