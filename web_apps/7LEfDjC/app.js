@@ -68,8 +68,8 @@ function addRowHandlers(id, data, company, category) {
                 'review_id':review_id,
                 'topic':topic
             };
-            let url = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
-            let promise = fetch(url, init).then(function(response) {
+            let url1 = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
+            let promise = fetch(url1, init).then(function(response) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
@@ -79,8 +79,8 @@ function addRowHandlers(id, data, company, category) {
                     addTweetRows('insert_tweet_table', data);
                 });
             });
-            let url = getWebAppBackendUrl('/compare_companies_from_nouns')+'/'+JSON.stringify(params);
-            let promise = fetch(url, init).then(function(response) {
+            let url2 = getWebAppBackendUrl('/compare_companies_from_nouns')+'/'+JSON.stringify(params);
+            let promise = fetch(url2, init).then(function(response) {
                 response.json()
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
