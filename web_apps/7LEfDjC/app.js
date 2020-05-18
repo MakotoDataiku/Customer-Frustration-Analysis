@@ -87,7 +87,9 @@ function addRowHandlers(id, data, company, category) {
                     .then(function(data){
                     console.log("this is how tweets look like", data['0'])
                     // document.getElementById('tweet_table').innerHTML = data;
-                    let titleTweetsTable = 'Tweets about "' + topic + '" for ' + company;
+                    let shortMessage = "To refresh the sample tweets, click the noun again";
+                    document.getElementById("card-text-message").innerHTML = shortMessage;
+                    let titleTweetsTable = 'Randomly selected tweets about "' + topic + '" for ' + company;
                     document.getElementById('title_tweets').innerHTML = titleTweetsTable;
                     addTweetRows('insert_tweet_table', data);
                 });
