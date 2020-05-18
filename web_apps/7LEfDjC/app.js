@@ -1,8 +1,8 @@
-let default_colors = ['rgb(252, 66, 123, 0.5)', 'rgb(22, 160, 133, 0.5)','rgb(52, 152, 219, 0.5)','rgb(155, 89, 182, 0.5)',
+let defaultBackGroundColors = ['rgb(252, 66, 123, 0.5)', 'rgb(22, 160, 133, 0.5)','rgb(52, 152, 219, 0.5)','rgb(155, 89, 182, 0.5)',
                       'rgb(126, 214, 223, 0.5)','rgb(59, 62, 172, 0.5)','rgb(0, 153, 198, 0.5)','rgb(221, 68, 119, 0.5)',
-                      'rgb(102, 170, 0)','rgb(184, 46, 46)','rgb(49, 99, 149)','rgb(153, 68, 153)',
-                      'rgb(34, 170, 153)','rgb(170, 170, 17)','rgb(102, 51, 204)','rgb(230, 115, 0)',
-                      'rgb(139, 7, 7)','rgb(50, 146, 98)','rgb(85, 116, 166)','rgb(59, 62, 172)'];
+                      'rgb(102, 170, 0, 0.5)','rgb(184, 46, 46, 0.5)','rgb(49, 99, 149, 0.5)','rgb(153, 68, 153, 0.5)',
+                      'rgb(34, 170, 153, 0.5)','rgb(170, 170, 17, 0.5)','rgb(102, 51, 204, 0.5)','rgb(230, 115, 0, 0.5)',
+                      'rgb(139, 7, 7, 0.5)','rgb(50, 146, 98, 0.5)','rgb(85, 116, 166, 0.5)','rgb(59, 62, 172, 0.5)'];
 
 let defaultBorderColors = ['rgb(252, 66, 123)', 'rgb(22, 160, 133)','rgb(52, 152, 219)','rgb(155, 89, 182)',
                       'rgb(126, 214, 223)','rgb(59, 62, 172)','rgb(0, 153, 198)','rgb(221, 68, 119)',
@@ -271,7 +271,7 @@ function addGroupBarChart(data, labels) {
         values = d[company]['data'];
         dataset_company = {
             label:company,
-            backgroundColor: default_colors[i],
+            backgroundColor: defaultBackGroundColors[i],
             borderColor: defaultBorderColors[i],
             data:values};
         console.log("dataset_company", dataset_company);
@@ -320,7 +320,7 @@ function addNounChart(id, data) {
             labels: labels,
             datasets: [{
                 data: values,
-                backgroundColor: default_colors,
+                backgroundColor: defaultBackGroundColors,
                 borderColor: defaultBorderColors
             }]
         },
