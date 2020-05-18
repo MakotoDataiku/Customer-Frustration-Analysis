@@ -17,6 +17,8 @@ console.log($(document).ready(function() {
 }))
 
 function onBarClicked(company, category) {
+    /* function to get noun tables after a user clicks the bar chart */
+    
     let headers = new Headers();
     let init = {
         method : 'GET',
@@ -47,6 +49,8 @@ function onBarClicked(company, category) {
 
 
 function addRowHandlers(id, data, company, category) {
+    /* function to add an action when a user clicks nouns in the tables */
+    /* this function adds table of raw tweets and a noun chart */
     
     var table = document.getElementById(id);
     var rows = table.getElementsByTagName("tr");
@@ -262,6 +266,7 @@ function addOptions(id, itemList){
 }
 
 function addGroupBarChart(data, labels) {
+    /* function to add a bar chart for a selected companies */
     document.getElementById('bar-card').innerHTML = '<canvas id="bar-chart-group" chart-click="onClick"></canvas>';
     i = 1
     arr = []
@@ -304,6 +309,8 @@ function addGroupBarChart(data, labels) {
 }
 
 function addNounChart(id, data) {
+    /* function to add a bar chart for a selected noun */
+    
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
     Chart.defaults.global.legend.display = false;
     
