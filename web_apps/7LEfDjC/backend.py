@@ -117,10 +117,10 @@ def compare_companies_from_nouns(params):
     topic = params_dict.get('topic')
     df = dataiku.Dataset(tweet_id_table).get_dataframe()
     df_filterred = df[df.noun_lemmatized == topic][['product_id', 'noun_lemmatized', 'mean_polarity_textblob']].reset_index(drop=True)
-    # df_filterred = df_filterred.to_json(orient='index')
-    df_filterred_json = json.dumps({'barNounChart':df_filterred.tolist()})
-    print("df_filterred", df_filterred_json)
-    return df_filterred_json
+    df_filterred = df_filterred.to_json(orient='index')
+    # df_filterred_json = json.dumps({'barNounChart':df_filterred.tolist()})
+    print("df_filterred", df_filterred)
+    return df_filterred
     
     
     
