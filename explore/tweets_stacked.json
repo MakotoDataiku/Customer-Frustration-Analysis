@@ -84,10 +84,10 @@
           "type": "alphanum",
           "column": "tweet_id",
           "values": [
-            "1243658630441979904"
+            "1243179891501207553"
           ],
           "params": {
-            "mode": "substring",
+            "mode": "full_string",
             "normalization": "exact"
           }
         },
