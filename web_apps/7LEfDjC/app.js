@@ -87,7 +87,7 @@ function addRowHandlers(id, data, company, category) {
             let promise2 = fetch(url2, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how data looks like", data)
+                    console.log("this is how noun chart data looks like", data["barNounChart"])
                     let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
                     document.getElementById('title_noun_chart').innerHTML = titleNounChart;
                     addNounChart('noun-chart', data);
