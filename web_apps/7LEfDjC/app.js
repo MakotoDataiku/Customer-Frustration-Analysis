@@ -193,7 +193,7 @@ function addRows(id, itemList){
         cell3.innerHTML = importanceScores;
         i += 1
 })
-    var orderArrayHeader = ["Topics", "Average scores","Importance scores"];
+    var orderArrayHeader = ["Topics", "Average sentiment","Contribution score"];
     var thead = document.createElement('thead');
     let finishedTable = document.getElementById(id)   
     finishedTable.appendChild(thead);
