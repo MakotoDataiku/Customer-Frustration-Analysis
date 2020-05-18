@@ -297,7 +297,9 @@ function addGroupBarChart(data, labels) {
 function addNounChart(id, data) {
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
     Chart.defaults.global.legend.display = false;
-    
+    var randomColorGenerator = function () { 
+        return '#' + (Math.random().toString(16) + '0000000').slice(2, 8); 
+    };
     var labels = data.map(function(e) {
         return e.product_id;
     });
@@ -312,7 +314,11 @@ function addNounChart(id, data) {
             labels: labels,
             datasets: [{
                 data: values,
-                backgroundColor: default_colors
+                // backgroundColor: default_colors
+                fillColor: randomColorGenerator(), 
+                strokeColor: randomColorGenerator(), 
+                highlightFill: randomColorGenerator(),
+                highlightStroke: randomColorGenerator()
             }]
         },
         options: {
