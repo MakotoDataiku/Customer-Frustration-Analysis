@@ -314,7 +314,7 @@ function addNounChart(id, data) {
             labels: labels,
             datasets: [{
                 data: values,
-                // backgroundColor: default_colors
+                backgroundColor: randomColorGenerator,
                 fillColor: randomColorGenerator, 
                 strokeColor: randomColorGenerator, 
                 highlightFill: randomColorGenerator,
