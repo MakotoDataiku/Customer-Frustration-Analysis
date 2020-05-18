@@ -247,7 +247,7 @@ function addTweetRows(id, itemList){
             cellValue = itemJson[key][sub_key];
             let cell = row.insertCell(j);
             if (sub_key==="tweet_id") {
-                cell.innerHTML = '<a href="'+ hyperLink +'">'+ cellValue +'</a>';
+                cell.innerHTML = '<a href="'+ hyperLink +'" target="_blank">'+ cellValue +'</a>';
             } else {
                 cell.innerHTML = cellValue;
             }
