@@ -238,6 +238,7 @@ function addTweetRows(id, itemList){
         
         j=0
         Object.keys(itemJson[key]).forEach(function(sub_key){
+            console.log("sub_key is", sub_kwey)
             cellValue = itemJson[key][sub_key];
             let cell = row.insertCell(j);
             cell.innerHTML = cellValue;
