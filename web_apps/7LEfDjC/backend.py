@@ -101,7 +101,7 @@ def get_tweets_table(params):
     id_random_select = map(str, id_random_select)
     print("randomly selected tweet ids ", id_random_select)
     df = dataiku.Dataset(tweets_table).get_dataframe()
-    df = df[['timestamp', "company", 'tweet_id', 'text', 'username', 'user_location']]
+    df = df[['timestamp', "company", 'tweet_id', 'text', 'username', 'user_location', 'user_id']]
     df['tweet_id'] = df.tweet_id.astype(str)
     df['timestamp'] = df.timestamp.astype(str)
     print("columns", df.shape)
@@ -123,6 +123,3 @@ def compare_companies_from_nouns(params):
     df_filtered_json = json.dumps({'barNounChart':df_dict})
     print("df_filtered_json", df_filtered_json)
     return df_filtered_json
-    
-    
-    
