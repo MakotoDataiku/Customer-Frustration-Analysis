@@ -315,10 +315,10 @@ function addNounChart(id, data) {
             datasets: [{
                 data: values,
                 // backgroundColor: default_colors
-                fillColor: randomColorGenerator(), 
-                strokeColor: randomColorGenerator(), 
-                highlightFill: randomColorGenerator(),
-                highlightStroke: randomColorGenerator()
+                fillColor: randomColorGenerator, 
+                strokeColor: randomColorGenerator, 
+                highlightFill: randomColorGenerator,
+                highlightStroke: randomColorGenerator
             }]
         },
         options: {
