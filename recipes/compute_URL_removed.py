@@ -8,8 +8,7 @@ import unicodedata
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-tweepy_stacked = dataiku.Dataset("tweepy_stacked")
-df = tweepy_stacked.get_dataframe()
+df = dataiku.Dataset("tweepy_REST_API_date_parsed").get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df['text'] = df.text.str.replace(u'\xa0', u' ')
