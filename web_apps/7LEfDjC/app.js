@@ -68,6 +68,8 @@ function addRowHandlers(id, data, company, category) {
                 'review_id':review_id,
                 'topic':topic
             };
+            
+            // This is to add tweets tables
             let url1 = getWebAppBackendUrl('/get_tweets_table')+'/'+JSON.stringify(params);
             let promise1 = fetch(url1, init).then(function(response) {
                 response.json()
@@ -79,15 +81,13 @@ function addRowHandlers(id, data, company, category) {
                     addTweetRows('insert_tweet_table', data);
                 });
             });
+            
+            // This is to add a sentiment comparison chart
             let url2 = getWebAppBackendUrl('/compare_companies_from_nouns')+'/'+JSON.stringify(params);
             let promise2 = fetch(url2, init).then(function(response) {
                 response.json()
                     .then(function(data){
-                    console.log("this is how tweets look like", data['0'])
-                    // document.getElementById('tweet_table').innerHTML = data;
-                    // let titleTweetsTable = 'Tweets about "' + topic + '" for ' + company;
-                    // document.getElementById('title_tweets').innerHTML = titleTweetsTable;
-                    // addTweetRows('insert_tweet_table', data);
+                    console.log("this is how data looks like", data)
                     let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
                     document.getElementById('title_noun_chart').innerHTML = titleNounChart;
                     addNounChart('noun-chart', data);
@@ -306,6 +306,7 @@ function addNounChart(id, data) {
           }
     }
 });
+    /*
     let tblToClick = document.getElementById(id);
     for (let i = 0; i < tblToClick.rows.length; i++) {
         for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
@@ -316,4 +317,5 @@ function addNounChart(id, data) {
             }(i, j));
         }
     }
+    */
 }
