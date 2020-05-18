@@ -1,8 +1,15 @@
 let default_colors = ['rgb(252, 66, 123, 0.5)', 'rgb(22, 160, 133, 0.5)','rgb(52, 152, 219, 0.5)','rgb(155, 89, 182, 0.5)',
-                      '#7ed6df','#3B3EAC','#0099C6','#DD4477',
-                      '#66AA00','#B82E2E','#316395','#994499',
-                      '#22AA99','#AAAA11','#6633CC','#E67300',
-                      '#8B0707','#329262','#5574A6','#3B3EAC'];
+                      'rgb(126, 214, 223, 0.5)','rgb(59, 62, 172, 0.5)','rgb(0, 153, 198, 0.5)','rgb(221, 68, 119, 0.5)',
+                      'rgb(102, 170, 0)','rgb(184, 46, 46)','rgb(49, 99, 149)','rgb(153, 68, 153)',
+                      'rgb(34, 170, 153)','rgb(170, 170, 17)','rgb(102, 51, 204)','rgb(230, 115, 0)',
+                      'rgb(139, 7, 7)','rgb(50, 146, 98)','rgb(85, 116, 166)','rgb(59, 62, 172)'];
+
+let defaultBorderColors = ['rgb(252, 66, 123)', 'rgb(22, 160, 133)','rgb(52, 152, 219)','rgb(155, 89, 182)',
+                      'rgb(126, 214, 223)','rgb(59, 62, 172)','rgb(0, 153, 198)','rgb(221, 68, 119)',
+                      'rgb(102, 170, 0)','rgb(184, 46, 46)','rgb(49, 99, 149)','rgb(153, 68, 153)',
+                      'rgb(34, 170, 153)','rgb(170, 170, 17)','rgb(102, 51, 204)','rgb(230, 115, 0)',
+                      'rgb(139, 7, 7)','rgb(50, 146, 98)','rgb(85, 116, 166)','rgb(59, 62, 172)'];
+
 setFilterOptions();
 
 console.log($(document).ready(function() {
@@ -265,6 +272,7 @@ function addGroupBarChart(data, labels) {
         dataset_company = {
             label:company,
             backgroundColor: default_colors[i],
+            borderColor: defaultBorderColors[i]
             data:values};
         console.log("dataset_company", dataset_company);
         arr.push(dataset_company);
@@ -312,7 +320,8 @@ function addNounChart(id, data) {
             labels: labels,
             datasets: [{
                 data: values,
-                backgroundColor: default_colors
+                backgroundColor: default_colors,
+                borderColor: defaultBorderColors
             }]
         },
         options: {
