@@ -90,7 +90,7 @@ function addRowHandlers(id, data, company, category) {
                     console.log("this is how noun chart data looks like", data.barNounChart)
                     let titleNounChart = 'Sentiment comparison for "' + topic + '" among companies ';
                     document.getElementById('title_noun_chart').innerHTML = titleNounChart;
-                    addNounChart('noun-chart', data);
+                    addNounChart('noun-chart', data.barNounChart);
                     
                 });
             });
@@ -297,10 +297,23 @@ function addGroupBarChart(data, labels) {
 function addNounChart(id, data) {
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
     
+    var labels = jsonfile.jsonarray.map(function(e) {
+        return e.product_id;
+    });
+    
+    var values = jsonfile.jsonarray.map(function(e) {
+        return e.mean_polarity_textblob;
+    });;
     
     var myBarChart = new Chart(document.getElementById("noun-chart-group"), {
     type: 'bar',
-    data: data,
+    data: {
+      labels: labels,
+      datasets: [{
+         label: 'Sentiment comparison',
+         data: values
+      }]
+   },
     options: {
         title: {
             display: true,
