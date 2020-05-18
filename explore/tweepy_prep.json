@@ -3,85 +3,7 @@
     "steps": [],
     "maxProcessedMemTableBytes": -1,
     "columnsSelection": {
-      "mode": "SELECT",
-      "list": [
-        {
-          "name": "timestamp",
-          "d": true
-        },
-        {
-          "name": "tweet_id",
-          "d": true
-        },
-        {
-          "name": "text",
-          "d": true
-        },
-        {
-          "name": "hashtags",
-          "d": false
-        },
-        {
-          "name": "links",
-          "d": false
-        },
-        {
-          "name": "user_id",
-          "d": false
-        },
-        {
-          "name": "username",
-          "d": true
-        },
-        {
-          "name": "screen_name",
-          "d": false
-        },
-        {
-          "name": "user_location",
-          "d": false
-        },
-        {
-          "name": "followers_count",
-          "d": false
-        },
-        {
-          "name": "friends_count",
-          "d": false
-        },
-        {
-          "name": "user_creation",
-          "d": false
-        },
-        {
-          "name": "coordinates",
-          "d": false
-        },
-        {
-          "name": "country",
-          "d": false
-        },
-        {
-          "name": "retweets",
-          "d": false
-        },
-        {
-          "name": "retweeted",
-          "d": false
-        },
-        {
-          "name": "lang",
-          "d": false
-        },
-        {
-          "name": "company",
-          "d": true
-        },
-        {
-          "name": "tweet_url",
-          "d": false
-        }
-      ]
+      "mode": "ALL"
     },
     "columnWidthsByName": {
       "timestamp": 204,
@@ -141,44 +63,7 @@
       "autoRefresh": true
     },
     "globalSearchQuery": "",
-    "explorationFilters": [
-      {
-        "column": "tweet_id",
-        "type": "columnFilter",
-        "currentMode": "SIMPLE_ALPHANUM",
-        "active": true,
-        "facet": {
-          "type": "facet",
-          "column": "tweet_id",
-          "columnType": "NUMERICAL",
-          "currentMode": "NUMERICAL",
-          "sort": "count",
-          "selectedValues": {}
-        },
-        "alphanumFilter": {
-          "type": "alphanum",
-          "column": "tweet_id",
-          "values": [
-            "1255839573004910592",
-            "1255981250302676995"
-          ],
-          "params": {
-            "mode": "full_string",
-            "normalization": "exact"
-          }
-        },
-        "validityFilter": {
-          "type": "validity",
-          "column": "tweet_id",
-          "params": {
-            "type": "LongMeaning",
-            "ok": true,
-            "nok": true,
-            "empty": true
-          }
-        }
-      }
-    ],
+    "explorationFilters": [],
     "previewMode": "ALL_ROWS"
   },
   "charts": []
