@@ -306,31 +306,18 @@ function addNounChart(id, data) {
     });;
     
     var myBarChart = new Chart(document.getElementById("noun-chart-group"), {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-         label: 'Sentiment comparison',
-         data: values
-      }]
-   },
-    options: {
-        title: {
-            display: true,
-            text: "Sentiment comparison"
-          }
-    }
-});
-    /*
-    let tblToClick = document.getElementById(id);
-    for (let i = 0; i < tblToClick.rows.length; i++) {
-        for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
-            tblToClick.rows[i].cells[j].onclick = (function (i, j) {
-                return function () {
-                    alert('R' + (i + 1) + 'C' + (j + 1));
-                };
-            }(i, j));
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: values
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Sentiment comparison"
+            }
         }
-    }
-    */
+    });
 }
