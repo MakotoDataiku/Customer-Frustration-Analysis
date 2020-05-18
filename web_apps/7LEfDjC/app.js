@@ -280,7 +280,7 @@ function addGroupBarChart(data, labels) {
     });
 }
 
-function addNounChart(data) {
+function addNounChart(id, data) {
     document.getElementById('noun-chart').innerHTML = '<canvas id="noun-chart-group" chart-click="onClick"></canvas>';
     var myBarChart = new Chart(document.getElementById("noun-chart-group"), {
     type: 'bar',
@@ -292,4 +292,14 @@ function addNounChart(data) {
           }
     }
 });
+    let tblToClick = document.getElementById(id);
+    for (let i = 0; i < tblToClick.rows.length; i++) {
+        for (let j = 0; j < tblToClick.rows[i].cells.length; j++) {
+            tblToClick.rows[i].cells[j].onclick = (function (i, j) {
+                return function () {
+                    // alert('R' + (i + 1) + 'C' + (j + 1));
+                };
+            }(i, j));
+        }
+    }
 }
