@@ -237,11 +237,20 @@ function addTweetRows(id, itemList){
         row.id = "rowID_" + i;
         
         j=0
+        arrHyperLink = []
+        let user_id = itemJson[key]["user_id"];
+        let tweet_id = itemJson[key]["tweet_id"];
+        let hyperLink = "https://twitter.com/" + user_id + "/status/" + tweet_id;
+
         Object.keys(itemJson[key]).forEach(function(sub_key){
             console.log("sub_key is", sub_key)
             cellValue = itemJson[key][sub_key];
             let cell = row.insertCell(j);
-            cell.innerHTML = cellValue;
+            if (sub_key==="tweet_id") {
+                cell.innerHTML = '<a href="'+ hyperLink +'">'+ cellValue +'</a>';
+            } else {
+                cell.innerHTML = cellValue;
+            }
             if (orderArrayHeader.length < Object.keys(itemJson[key]).length){
                 orderArrayHeader.push(sub_key)
             }
