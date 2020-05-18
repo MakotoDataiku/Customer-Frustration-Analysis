@@ -312,7 +312,7 @@ function addNounChart(id, data) {
             labels: labels,
             datasets: [{
                 data: values,
-                backgroundColor: 'rgba(0, 119, 204, 0.3)'
+                backgroundColor: default_colors
             }]
         },
         options: {
