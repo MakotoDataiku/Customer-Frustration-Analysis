@@ -31,6 +31,7 @@ function onBarClicked(company, category) {
     console.log("stringify json", JSON.stringify(params))
     
     let url = getWebAppBackendUrl('/get_table')+'/'+JSON.stringify(params);
+    console.log("this is url", url)
     let promise = fetch(url, init) 
                    .then(function(response) {
                        response.json()
