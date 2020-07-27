@@ -53,6 +53,7 @@
     "objects": []
   },
   "projectType": "REGULAR",
+  "projectAppType": "APP_TEMPLATE",
   "owner": "admin",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -97,12 +98,16 @@
     },
     "codeEnvs": {
       "python": {
-        "useBuiltinEnv": false,
+        "mode": "EXPLICIT_ENV",
         "preventOverride": false,
         "envName": "python36"
       },
       "r": {
-        "useBuiltinEnv": true,
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "julia": {
+        "mode": "INHERIT",
         "preventOverride": false
       }
     },
@@ -153,9 +158,12 @@
           "initialReplicas": 1,
           "hpa": false,
           "hpaTargetCPUPercent": 0,
+          "hpaMetrics": [],
           "hpaMinPods": 0,
-          "hpaMaxPods": 0
-        }
+          "hpaMaxPods": 0,
+          "hpaAnnotations": []
+        },
+        "deploymentModifier": {}
       }
     }
   },
@@ -218,11 +226,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588772299048
+    "lastModifiedOn": 1595865732737
   },
   "creationTag": {
     "versionNumber": 0,
