@@ -21,7 +21,13 @@
     "showVersionControlFeatures": true
   },
   "useAppHomepage": true,
-  "homepageSections": [],
+  "homepageSections": [
+    {
+      "sectionTitle": "Parameters of the analysis",
+      "sectionText": "",
+      "tiles": []
+    }
+  ],
   "label": "Airline Customer Frustrations",
   "shortDesc": "The template *Analysis of Customer Frustrations in Airline Industries* was created by Makoto Miyazaki on Jul 27th 2020",
   "tags": [],
