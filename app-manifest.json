@@ -1,7 +1,7 @@
 {
   "projectExportManifest": {
-    "exportUploads": false,
-    "exportAllInputDatasets": false,
+    "exportUploads": true,
+    "exportAllInputDatasets": true,
     "exportAllDatasets": false,
     "exportManagedFS": false,
     "exportAnalysisModels": false,
@@ -15,14 +15,14 @@
     "exportGitRepository": false
   },
   "instanceFeatures": {
-    "showFlowNavLink": false,
-    "showLabNavLink": false,
-    "showCodeNavLink": false,
-    "showVersionControlFeatures": false
+    "showFlowNavLink": true,
+    "showLabNavLink": true,
+    "showCodeNavLink": true,
+    "showVersionControlFeatures": true
   },
   "useAppHomepage": true,
   "homepageSections": [],
-  "label": "Analysis of Customer Frustrations in Airline Industries",
+  "label": "Airline Customer Frustrations",
   "shortDesc": "The template *Analysis of Customer Frustrations in Airline Industries* was created by Makoto Miyazaki on Jul 27th 2020",
   "tags": [],
   "instantiationPermission": "USE_APP_MASTER_PERMISSIONS"
