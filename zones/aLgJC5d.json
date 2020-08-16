@@ -1,7 +1,48 @@
 {
   "name": "aspect-sentiment extraction",
   "color": "#31439C",
-  "items": [],
+  "items": [
+    {
+      "objectId": "tweepy_aspect_sentiment_pairs",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "tweepy_aspect_sentiment_categorised",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "tweepy_word_vectors",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "tweepy_KM",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "tweepy_analysis_by_companies",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_lgDPtGGq_1",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "t8cGYooP",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_aspect_sentiment_prep_1",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_sentiment_by_companies_2_1",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "sv85GTUn",
+      "objectType": "MANAGED_FOLDER"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
