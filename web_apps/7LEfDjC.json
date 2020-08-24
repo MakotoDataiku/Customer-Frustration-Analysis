@@ -4,7 +4,7 @@
   "params": {
     "backendEnabled": true,
     "enableJavascriptModules": false,
-    "autoStartBackend": false,
+    "autoStartBackend": true,
     "hideJSSecurityPanel": false,
     "envSelection": {
       "envMode": "INHERIT"
@@ -15,6 +15,7 @@
       "dataiku",
       "d3"
     ],
+    "runAs": "admin",
     "infra": {
       "containerSelection": {
         "containerMode": "INHERIT"
@@ -41,11 +42,11 @@
   "name": "Airline Analysis 0.3",
   "apiKey": "cmzzQAYnDxyskXOcgEgBxDUDxljW7RhC",
   "versionTag": {
-    "versionNumber": 51,
+    "versionNumber": 52,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1598260219874
+    "lastModifiedOn": 1598260411965
   },
   "creationTag": {
     "versionNumber": 0,
