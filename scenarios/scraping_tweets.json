@@ -5,11 +5,11 @@
   "name": "scraping_tweets",
   "active": false,
   "versionTag": {
-    "versionNumber": 29,
+    "versionNumber": 30,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1589748123648
+    "lastModifiedOn": 1615325964789
   },
   "checklists": {
     "checklists": []
@@ -28,14 +28,16 @@
       "delay": 5,
       "active": true,
       "params": {
+        "repeatFrequency": 1,
         "frequency": "Weekly",
+        "startingFrom": "2021-03-03T23:00:00.000Z",
         "daysOfWeek": [
           "Sunday"
         ],
-        "dayOfMonth": 1,
+        "monthlyRunOn": "ON_THE_DAY",
         "minute": 0,
         "hour": 1,
-        "count": 5
+        "timezone": "SERVER"
       }
     }
   ],
